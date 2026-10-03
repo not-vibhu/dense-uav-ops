@@ -1,4 +1,4 @@
-# Federated swarm architecture
+# dense-uav-ops architecture
 
 ## Scope and safety claim
 

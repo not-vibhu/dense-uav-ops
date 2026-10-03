@@ -1,4 +1,8 @@
-# Federated swarm
+# dense-uav-ops
+
+Repository: [not-vibhu/dense-uav-ops](https://github.com/not-vibhu/dense-uav-ops).
+
+Previously named Federated swarm. Python modules, command names and versioned schema identifiers remain compatible. Archived experiments, trained-model provenance and the source-pinned comparison report renderer retain their original identifiers for reproducibility.
 
 An open-source architecture for real-time tactical deconfliction of dense, low-altitude UAS traffic using Network and Direct Remote ID observations. Cooperative aircraft negotiate efficient maneuvers; broadcast-only aircraft are modeled as independently moving obstacles. Every participating aircraft retains local authority to reject an unsafe maneuver.
 
