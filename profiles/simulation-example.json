@@ -1,0 +1,63 @@
+{
+  "profile_id": "federated-swarm-simulation-v0",
+  "status": "unvalidated-design-assumptions",
+  "flight_authorized": false,
+  "standards": {
+    "network_rid": "ASTM F3411-22a",
+    "uss_interoperability": "ASTM F3548-21",
+    "tactical_protocol": "proposed-federated-swarm-v0"
+  },
+  "units": "SI",
+  "vehicle_model": "double-integrator-with-validated-inner-loop-required",
+  "timing": {
+    "safety_period_ms": 20,
+    "nominal_period_ms": 100,
+    "negotiation_deadline_ms": 60,
+    "maximum_negotiation_rounds": 2,
+    "prediction_horizon_s": 5,
+    "fresh_track_age_upper_bound_s": 0.5,
+    "audit_checkpoint_target_s": 1
+  },
+  "negotiation": {
+    "maximum_cooperative_cluster_size": 4,
+    "maximum_candidates_per_aircraft": 6,
+    "on_overflow": "unilateral-safety-and-restrict-admissions",
+    "safety_track_limit": null,
+    "allow_required_reciprocity": false,
+    "learning_enabled": false
+  },
+  "separation": {
+    "shape": "conservative-sphere",
+    "minimum_center_distance_before_uncertainty_m": 10,
+    "navigation_position_bound_per_aircraft_m": 4,
+    "velocity_error_bound_per_aircraft_mps": 0.5,
+    "tracking_error_bound_per_aircraft_m": 1,
+    "sample_margin_m": null,
+    "sample_margin_status": "must-be-derived-from-dynamics-timing-and-numerics",
+    "body_and_operational_margin": "must-be-measured-and-may-exceed-center-floor",
+    "collision_slack_allowed": false,
+    "well_clear_profile": null
+  },
+  "dynamics": {
+    "maximum_speed_mps": 10,
+    "legacy_acceleration_bound_mps2": 4,
+    "ownship_control_limits": null,
+    "ownship_tracking_model": null,
+    "disturbance_bounds": null,
+    "backup_certificate": null
+  },
+  "integrity": {
+    "rid_accuracy_is_hard_bound": false,
+    "signed_position_is_physically_verified": false,
+    "stale_tracks_deleted": false,
+    "cooperative_promise_reduces_collision_bound": false,
+    "independent_coverage_evidence": null
+  },
+  "release_gate": {
+    "proof_obligations_discharged": false,
+    "hardware_deadlines_validated": false,
+    "coverage_validated": false,
+    "interoperability_qualified": false,
+    "operational_profile_approved": false
+  }
+}
