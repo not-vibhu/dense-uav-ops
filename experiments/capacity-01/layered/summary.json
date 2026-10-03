@@ -1,0 +1,129 @@
+{
+  "schema": "federated-swarm.airspace-capacity.v1",
+  "capacity_unit": "UAS offered operations/hour conditional on declared manned demand and requirements",
+  "maximum_observed_passing_uas_demand_per_hour": 120,
+  "maximum_statistically_supported_tested_uas_demand_per_hour": null,
+  "operationally_certified_capacity": null,
+  "maximum_is_only_over_tested_grid": true,
+  "per_profile_capacity": [
+    {
+      "profile_id": "67c943246a02ba34",
+      "highest_observed_passing_total_demand_per_hour": 180,
+      "highest_statistically_supported_tested_total_demand_per_hour": null,
+      "highest_supported_observed_concurrent_aircraft": null
+    }
+  ],
+  "envelope": [
+    {
+      "uas_demand_per_hour": 120,
+      "occupancy_limit": 10,
+      "observed_requirements_pass": true,
+      "statistical_requirements_pass": false
+    },
+    {
+      "uas_demand_per_hour": 360,
+      "occupancy_limit": 10,
+      "observed_requirements_pass": false,
+      "statistical_requirements_pass": false
+    },
+    {
+      "uas_demand_per_hour": 720,
+      "occupancy_limit": 10,
+      "observed_requirements_pass": false,
+      "statistical_requirements_pass": false
+    }
+  ],
+  "cells": [
+    {
+      "profile_id": "67c943246a02ba34",
+      "profile_name": "layered-corridor-research",
+      "scenario": "corridor",
+      "uas_demand_per_hour": 120,
+      "occupancy_limit": 10,
+      "independent_runs": 3,
+      "total_demand_per_hour": 180,
+      "modeled_safety_failure_runs": 0,
+      "failure_probability_upper": 0.7445635225354822,
+      "failure_probability_target": 0.01,
+      "observed_requirements_pass": true,
+      "statistical_requirements_pass": false,
+      "blockers": [
+        "insufficient_statistical_safety_evidence"
+      ],
+      "observed_uas_throughput_min_per_hour": 120.0,
+      "observed_manned_throughput_min_per_hour": 60.0,
+      "observed_total_throughput_min_per_hour": 180.0,
+      "observed_peak_total_occupancy": 2,
+      "observed_peak_uas_occupancy": 2,
+      "worst_command_max_ms": 3.38529099826701,
+      "zero_failure_runs_required": 408
+    },
+    {
+      "profile_id": "67c943246a02ba34",
+      "profile_name": "layered-corridor-research",
+      "scenario": "corridor",
+      "uas_demand_per_hour": 360,
+      "occupancy_limit": 10,
+      "independent_runs": 3,
+      "total_demand_per_hour": 420,
+      "modeled_safety_failure_runs": 1,
+      "failure_probability_upper": 0.923487471840107,
+      "failure_probability_target": 0.01,
+      "observed_requirements_pass": false,
+      "statistical_requirements_pass": false,
+      "blockers": [
+        "no_admissible_aircraft_steps",
+        "insufficient_statistical_safety_evidence"
+      ],
+      "observed_uas_throughput_min_per_hour": 330.0,
+      "observed_manned_throughput_min_per_hour": 60.0,
+      "observed_total_throughput_min_per_hour": 390.0,
+      "observed_peak_total_occupancy": 5,
+      "observed_peak_uas_occupancy": 4,
+      "worst_command_max_ms": 4.344833985669538,
+      "zero_failure_runs_required": 408
+    },
+    {
+      "profile_id": "67c943246a02ba34",
+      "profile_name": "layered-corridor-research",
+      "scenario": "corridor",
+      "uas_demand_per_hour": 720,
+      "occupancy_limit": 10,
+      "independent_runs": 3,
+      "total_demand_per_hour": 780,
+      "modeled_safety_failure_runs": 3,
+      "failure_probability_upper": 1.0,
+      "failure_probability_target": 0.01,
+      "observed_requirements_pass": false,
+      "statistical_requirements_pass": false,
+      "blockers": [
+        "backlog_growth_requirement",
+        "body_volume_exit_aircraft",
+        "no_admissible_aircraft_steps",
+        "occupancy_overflow_steps",
+        "insufficient_statistical_safety_evidence"
+      ],
+      "observed_uas_throughput_min_per_hour": 600.0,
+      "observed_manned_throughput_min_per_hour": 60.0,
+      "observed_total_throughput_min_per_hour": 660.0,
+      "observed_peak_total_occupancy": 11,
+      "observed_peak_uas_occupancy": 10,
+      "worst_command_max_ms": 7.48333299998194,
+      "zero_failure_runs_required": 408
+    }
+  ],
+  "limits": [
+    "Null capacity means no positive demonstrated value; it does not establish that physical capacity is zero.",
+    "No monotonicity assumption, binary search or interpolation between tested levels.",
+    "Statistical bound concerns independent fixed-duration scenario runs, not failures per flight/hour.",
+    "All supplied profiles are required; favorable scenarios cannot offset a failing profile.",
+    "Finite windows and backlog checks do not establish long-run queue stability.",
+    "Host timing and an explicit synthetic multiplier do not establish target hardware WCET.",
+    "Manned traffic uses simplified bounded trajectories; wake, ATC, pilot and aircraft flight models are absent.",
+    "Separation and surveillance thresholds are research inputs, not regulatory minima.",
+    "No joint invariant safety proof, field validation, airworthiness or legal authorization."
+  ],
+  "source_sha256": "da850e5693e083ec1378bd61b720c680a56f36fce6dcb54f7b2a4925238540da",
+  "manifest_sha256": "41f1340ea26ed1d1c62ccfa0f06a71470362f334872fbe007b8667e59363d8c2",
+  "runs_sha256": "5570d7ec9d2c623eed62151d097f67b484bf10a9d8cb1349a9848be637f72224"
+}

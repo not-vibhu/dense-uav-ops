@@ -15,9 +15,11 @@ learning = ["torch>=2.6,<3"]
 
 [project.scripts]
 swarm-sim = "swarm_sim.cli:main"
+airspace-capacity = "airspace_capacity.__main__:main"
 
 [tool.setuptools]
-packages = ["swarm_sim"]
+packages = ["swarm_sim", "airspace_capacity"]
 
 [tool.setuptools.package-data]
 swarm_sim = ["web/*.html", "web/*.js", "web/*.css"]
+airspace_capacity = ["web/*.html", "web/*.js", "web/*.css"]

@@ -1,0 +1,182 @@
+{
+  "schema": "federated-swarm.airspace-capacity.v1",
+  "capacity_unit": "UAS offered operations/hour conditional on declared manned demand and requirements",
+  "maximum_observed_passing_uas_demand_per_hour": null,
+  "maximum_statistically_supported_tested_uas_demand_per_hour": null,
+  "operationally_certified_capacity": null,
+  "maximum_is_only_over_tested_grid": true,
+  "per_profile_capacity": [
+    {
+      "profile_id": "87c01e01d0b6e7e1",
+      "highest_observed_passing_total_demand_per_hour": null,
+      "highest_statistically_supported_tested_total_demand_per_hour": null,
+      "highest_supported_observed_concurrent_aircraft": null
+    }
+  ],
+  "envelope": [
+    {
+      "uas_demand_per_hour": 3600.0,
+      "occupancy_limit": 50,
+      "observed_requirements_pass": false,
+      "statistical_requirements_pass": false
+    },
+    {
+      "uas_demand_per_hour": 3600.0,
+      "occupancy_limit": 200,
+      "observed_requirements_pass": false,
+      "statistical_requirements_pass": false
+    },
+    {
+      "uas_demand_per_hour": 10800.0,
+      "occupancy_limit": 50,
+      "observed_requirements_pass": false,
+      "statistical_requirements_pass": false
+    },
+    {
+      "uas_demand_per_hour": 10800.0,
+      "occupancy_limit": 200,
+      "observed_requirements_pass": false,
+      "statistical_requirements_pass": false
+    }
+  ],
+  "cells": [
+    {
+      "profile_id": "87c01e01d0b6e7e1",
+      "profile_name": "density-research",
+      "scenario": "crossing",
+      "uas_demand_per_hour": 3600.0,
+      "occupancy_limit": 50,
+      "independent_runs": 2,
+      "total_demand_per_hour": 3660.0,
+      "modeled_safety_failure_runs": 2,
+      "failure_probability_upper": 1.0,
+      "failure_probability_target": 0.01,
+      "observed_requirements_pass": false,
+      "statistical_requirements_pass": false,
+      "blockers": [
+        "backlog_growth_requirement",
+        "body_volume_exit_aircraft",
+        "collision_pairs",
+        "no_admissible_aircraft_steps",
+        "protected_volume_breach_pairs",
+        "insufficient_statistical_safety_evidence"
+      ],
+      "observed_uas_throughput_min_per_hour": 2820.0,
+      "observed_manned_throughput_min_per_hour": 60.0,
+      "observed_total_throughput_min_per_hour": 2880.0,
+      "observed_peak_total_occupancy": 34,
+      "observed_peak_uas_occupancy": 34,
+      "worst_command_max_ms": 28.723124996758997,
+      "zero_failure_runs_required": 437
+    },
+    {
+      "profile_id": "87c01e01d0b6e7e1",
+      "profile_name": "density-research",
+      "scenario": "crossing",
+      "uas_demand_per_hour": 3600.0,
+      "occupancy_limit": 200,
+      "independent_runs": 2,
+      "total_demand_per_hour": 3660.0,
+      "modeled_safety_failure_runs": 2,
+      "failure_probability_upper": 1.0,
+      "failure_probability_target": 0.01,
+      "observed_requirements_pass": false,
+      "statistical_requirements_pass": false,
+      "blockers": [
+        "backlog_growth_requirement",
+        "body_volume_exit_aircraft",
+        "collision_pairs",
+        "no_admissible_aircraft_steps",
+        "protected_volume_breach_pairs",
+        "insufficient_statistical_safety_evidence"
+      ],
+      "observed_uas_throughput_min_per_hour": 2820.0,
+      "observed_manned_throughput_min_per_hour": 60.0,
+      "observed_total_throughput_min_per_hour": 2880.0,
+      "observed_peak_total_occupancy": 34,
+      "observed_peak_uas_occupancy": 34,
+      "worst_command_max_ms": 95.20720900036395,
+      "zero_failure_runs_required": 437
+    },
+    {
+      "profile_id": "87c01e01d0b6e7e1",
+      "profile_name": "density-research",
+      "scenario": "crossing",
+      "uas_demand_per_hour": 10800.0,
+      "occupancy_limit": 50,
+      "independent_runs": 2,
+      "total_demand_per_hour": 10860.0,
+      "modeled_safety_failure_runs": 2,
+      "failure_probability_upper": 1.0,
+      "failure_probability_target": 0.01,
+      "observed_requirements_pass": false,
+      "statistical_requirements_pass": false,
+      "blockers": [
+        "backlog_growth_requirement",
+        "body_volume_exit_aircraft",
+        "collision_pairs",
+        "command_deadline_misses",
+        "kinematic_violation_aircraft_steps",
+        "no_admissible_aircraft_steps",
+        "occupancy_overflow_steps",
+        "protected_volume_breach_pairs",
+        "queue_wait_requirement",
+        "uas_completion_requirement",
+        "insufficient_statistical_safety_evidence"
+      ],
+      "observed_uas_throughput_min_per_hour": 5940.0,
+      "observed_manned_throughput_min_per_hour": 60.0,
+      "observed_total_throughput_min_per_hour": 6000.0,
+      "observed_peak_total_occupancy": 62,
+      "observed_peak_uas_occupancy": 62,
+      "worst_command_max_ms": 214.36170800006948,
+      "zero_failure_runs_required": 437
+    },
+    {
+      "profile_id": "87c01e01d0b6e7e1",
+      "profile_name": "density-research",
+      "scenario": "crossing",
+      "uas_demand_per_hour": 10800.0,
+      "occupancy_limit": 200,
+      "independent_runs": 2,
+      "total_demand_per_hour": 10860.0,
+      "modeled_safety_failure_runs": 2,
+      "failure_probability_upper": 1.0,
+      "failure_probability_target": 0.01,
+      "observed_requirements_pass": false,
+      "statistical_requirements_pass": false,
+      "blockers": [
+        "backlog_growth_requirement",
+        "body_volume_exit_aircraft",
+        "collision_pairs",
+        "command_deadline_misses",
+        "kinematic_violation_aircraft_steps",
+        "no_admissible_aircraft_steps",
+        "protected_volume_breach_pairs",
+        "uas_completion_requirement",
+        "insufficient_statistical_safety_evidence"
+      ],
+      "observed_uas_throughput_min_per_hour": 7080.0,
+      "observed_manned_throughput_min_per_hour": 60.0,
+      "observed_total_throughput_min_per_hour": 7140.0,
+      "observed_peak_total_occupancy": 122,
+      "observed_peak_uas_occupancy": 122,
+      "worst_command_max_ms": 309.683582992875,
+      "zero_failure_runs_required": 437
+    }
+  ],
+  "limits": [
+    "Null capacity means no positive demonstrated value; it does not establish that physical capacity is zero.",
+    "No monotonicity assumption, binary search or interpolation between tested levels.",
+    "Statistical bound concerns independent fixed-duration scenario runs, not failures per flight/hour.",
+    "All supplied profiles are required; favorable scenarios cannot offset a failing profile.",
+    "Finite windows and backlog checks do not establish long-run queue stability.",
+    "Host timing and an explicit synthetic multiplier do not establish target hardware WCET.",
+    "Manned traffic uses simplified bounded trajectories; wake, ATC, pilot and aircraft flight models are absent.",
+    "Separation and surveillance thresholds are research inputs, not regulatory minima.",
+    "No joint invariant safety proof, field validation, airworthiness or legal authorization."
+  ],
+  "source_sha256": "da850e5693e083ec1378bd61b720c680a56f36fce6dcb54f7b2a4925238540da",
+  "manifest_sha256": "2047658ae8f8f21c2a4c7afe763e2b12704167ca5c1c42b71544a8df7f3116f7",
+  "runs_sha256": "585b1eb6f9f8612996a6ca759307b4d415a2878766f125396943cb6017c13040"
+}

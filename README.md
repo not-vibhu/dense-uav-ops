@@ -52,6 +52,24 @@ The [948-run development decision](experiments/iteration-03/README.md) found no 
 
 See [the implementation and assurance scope](docs/third-iteration.md) before interpreting a backup certificate or comparing the learned policies. The default finite horizon does not establish a robust terminal hover for every multirotor, and fixed-wing backups remain finite-horizon turns.
 
+## Airspace capacity research metric
+
+Configure mixed multirotor, fixed-wing drone and manned traffic conditions, then test offered operations/hour against explicit safety, service, surveillance and timing requirements. The metric separates offered demand, measured throughput and concurrent occupancy, and reports uncertainty and blocking requirements. It cannot establish certified operational capacity.
+
+```bash
+.venv/bin/python -m airspace_capacity --serve --out artifacts/capacity-lab
+# Local expert lab: http://127.0.0.1:8766
+
+.venv/bin/python -m airspace_capacity --profile profiles/capacity-research.json \
+  --scenarios crossing corridor urban manned_intrusion sensor_outage wind_gust \
+  --rates 120 360 720 --occupancy-limits 10 50 --seeds 7000 7001 7002 \
+  --out artifacts/capacity-study
+```
+
+See the [capacity definition, parameters and calibration guide](docs/airspace-capacity.md). Manned traffic is exogenous and uses external surveillance; cooperation and behavioral compliance are independent. Full-profile JSON allows experts to define conditions and requirements. Missing service, surveillance, feasible maneuvers or timing cannot be hidden by a zero-collision result.
+
+The [179-run capacity assessment](experiments/capacity-01/README.md) reached 122 concurrent aircraft in density tests but qualified no statistical capacity. A layered corridor passed observed requirements at 120 UAS plus 60 manned requests/hour; that exploratory result remains evidence-limited and does not establish an operational safety limit.
+
 ## Documents
 
 | Document | Contents |
@@ -66,6 +84,7 @@ See [the implementation and assurance scope](docs/third-iteration.md) before int
 | [Initial comparison decision](docs/initial-comparison.md) | Observed results from the completed 7,680-run mixed-fleet campaign |
 | [Policy development](docs/learning-policy.md) | Predictive planning, evolutionary optimization and the proposed shielded MARL design |
 | [Admission and recurrent learning](docs/third-iteration.md) | Implemented pipeline, mathematical bounds, training and evaluation scope |
+| [Airspace capacity](docs/airspace-capacity.md) | Conditional operations/hour, occupancy, expert configuration, evidence and mixed-manned limitations |
 | [Predictive iteration decision](docs/second-iteration.md) | Independent catalog results, learning outcome, limitations and next safety work |
 
 Read the architecture first, then the safety case before implementing adapters or controllers. ASTM conformance tests and tactical safety validation are separate acceptance gates.
