@@ -9,6 +9,7 @@ from .controllers import nominal, barrier_filter, vehicle_project
 from .oracle import swept_pairs, swept_obstacles, outside_volume
 from .scenarios import build_world
 from .telemetry import Telemetry
+from .predictive import predictive_control
 
 
 def config_id(cfg):
@@ -37,7 +38,8 @@ def simulate(cfg: Config, record=False):
                 "shield_interventions": 0, "negotiations": 0, "partial_certificates": 0,
                 "stale_drone_steps": 0, "separation_pair_step_seconds": 0.,
                 "participating_separation_pair_step_seconds": 0., "participating_pair_seconds": 0.,
-                "solver_overrun_drone_steps": 0, "kinematic_violation_drone_steps": 0}
+                "solver_overrun_drone_steps": 0, "kinematic_violation_drone_steps": 0,
+                "predictive_no_admissible_drone_steps": 0}
     command_times = []
     next_replay = 0.
     first_participant_collision = None
@@ -67,6 +69,10 @@ def simulate(cfg: Config, record=False):
             counters["filter_infeasible_drone_steps"] += int(np.sum(coop & active & (stats["residual"] > 1e-3)))
             counters["filter_invalid_initial_drone_steps"] += int(np.sum(coop & active & stats["invalid_initial"]))
             counters["shield_interventions"] += int(np.sum(coop & active & stats["interventions"]))
+        if cfg.controller in ("predictive", "evolved") and np.any(coop & active):
+            applied, stats = predictive_control(cfg, world, p, v, active, snapshot, wanted)
+            counters["predictive_no_admissible_drone_steps"] += int(np.sum(stats["unresolved"]))
+            counters["shield_interventions"] += int(np.sum(stats["interventions"]))
         command_times.append(clock.perf_counter() - local_start)
         # Legacy aircraft always fly their uncoordinated goal route.
         legacy_goal = Config(**{**asdict(cfg), "controller": "goal"})

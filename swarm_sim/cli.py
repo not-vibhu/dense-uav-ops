@@ -43,21 +43,35 @@ def campaign(args):
         raise ValueError("Duplicate experimental strata are not allowed")
     if len(args.discovery_seeds) != len(set(args.discovery_seeds)) or len(args.holdout_seeds) != len(set(args.holdout_seeds)):
         raise ValueError("Duplicate seeds are not allowed")
+    if len(args.controllers) != len(set(args.controllers)):
+        raise ValueError("Duplicate controllers are not allowed")
+    weights, profile = {}, None
+    if "evolved" in args.controllers and not args.policy:
+        raise ValueError("The evolved controller requires --policy")
+    if args.policy:
+        from .policy import load_policy
+        weights, profile = load_policy(args.policy)
+        if set(profile.get("training_seeds", [])) & set(args.discovery_seeds + args.holdout_seeds):
+            raise ValueError("Learned policy training seeds must be disjoint from comparison seeds")
     jobs = [asdict(Config(scenario=sc, controller=c, drones=n, cooperative_fraction=f,
                           fixed_wing_fraction=args.fixed_wing, seed=seed, duration=args.duration,
-                          dt=args.dt).validate())
+                          dt=args.dt, **(weights if c == "evolved" else {})).validate())
             for sc, n, f, c, seed in itertools.product(scenarios, args.counts, args.fractions,
-                                                      CONTROLLERS, args.discovery_seeds + args.holdout_seeds)]
+                                                      args.controllers, args.discovery_seeds + args.holdout_seeds)]
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     manifest = {"scenarios": scenarios, "counts": args.counts, "fractions": args.fractions,
-                "controllers": list(CONTROLLERS), "discovery_seeds": args.discovery_seeds,
+                "controllers": args.controllers, "discovery_seeds": args.discovery_seeds,
                 "holdout_seeds": args.holdout_seeds, "fixed_wing_fraction": args.fixed_wing,
                 "duration_s": args.duration, "dt_s": args.dt, "expected_runs": len(jobs),
                 "source_sha256": source_hash(), "vehicle_model": "mixed-point-mass-v0",
                 "ranking_order": ["participant collisions", "participant obstacle collisions",
                                   "participant volume exits", "worst stratum collisions",
                                   "separation exposure", "mission completion"]}
+    if profile:
+        from .policy import profile_digest
+        manifest["policy_profile"] = profile
+        manifest["policy_sha256"] = profile_digest(profile)
     prior_path = out / "manifest.json"
     if prior_path.exists() and json.loads(prior_path.read_text()) != manifest:
         raise ValueError("Output contains a different manifest/source revision; choose a new output directory")
@@ -114,6 +128,7 @@ def main():
     run.add_argument("--duration", type=float, default=36)
     run.add_argument("--dt", type=float, default=.2)
     run.add_argument("--out", default="artifacts/replay.json")
+    run.add_argument("--policy", help="JSON preference profile; predictive controller only")
     compare = sub.add_parser("compare")
     compare.add_argument("--scenarios", nargs="+", default=["all"])
     compare.add_argument("--counts", nargs="+", type=int, default=[10, 50, 100, 200])
@@ -124,7 +139,22 @@ def main():
     compare.add_argument("--duration", type=float, default=36)
     compare.add_argument("--dt", type=float, default=.2)
     compare.add_argument("--workers", type=int, default=min(4, os.cpu_count() or 1))
-    compare.add_argument("--out", default="artifacts/full-campaign")
+    compare.add_argument("--out", default="artifacts/predictive-campaign")
+    compare.add_argument("--controllers", nargs="+", choices=CONTROLLERS, default=list(CONTROLLERS[:-1]))
+    compare.add_argument("--policy", help="Frozen JSON preference profile")
+    train = sub.add_parser("learn", help="Cross-entropy optimization of predictive preferences")
+    train.add_argument("--scenarios", nargs="+", default=["head_on", "crossing", "overtaking", "urban"])
+    train.add_argument("--counts", nargs="+", type=int, default=[10, 50])
+    train.add_argument("--train-seeds", nargs="+", type=int, default=[20, 21])
+    train.add_argument("--cooperative", type=float, default=.5)
+    train.add_argument("--fixed-wing", type=float, default=.4)
+    train.add_argument("--duration", type=float, default=36)
+    train.add_argument("--dt", type=float, default=.2)
+    train.add_argument("--population", type=int, default=6)
+    train.add_argument("--generations", type=int, default=2)
+    train.add_argument("--search-seed", type=int, default=42)
+    train.add_argument("--workers", type=int, default=4)
+    train.add_argument("--out", default="artifacts/policy-search/preferences.json")
     server = sub.add_parser("serve")
     server.add_argument("--port", type=int, default=8765)
     args = parser.parse_args()
@@ -132,15 +162,26 @@ def main():
         for name, spec in SCENARIOS.items():
             print(f"{name:22} {spec.domain:15} {spec.description}")
     elif args.command == "run":
+        weights = {}
+        if args.policy:
+            from .policy import load_policy
+            if args.controller not in ("predictive", "evolved"):
+                parser.error("--policy requires a predictive or evolved controller")
+            weights, _ = load_policy(args.policy)
+        elif args.controller == "evolved":
+            parser.error("--controller evolved requires --policy")
         result = simulate(Config(scenario=args.scenario, controller=args.controller, drones=args.drones,
                                  cooperative_fraction=args.cooperative, fixed_wing_fraction=args.fixed_wing,
-                                 seed=args.seed, duration=args.duration, dt=args.dt), record=True)
+                                 seed=args.seed, duration=args.duration, dt=args.dt, **weights), record=True)
         write_json(args.out, result)
         print(json.dumps(result["metrics"], indent=2))
     elif args.command == "compare":
         if args.workers < 1 or args.workers > 16:
             parser.error("workers must be 1–16")
         campaign(args)
+    elif args.command == "learn":
+        from .policy import learn
+        learn(args)
     else:
         from .server import serve
         serve(args.port)

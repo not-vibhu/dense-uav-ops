@@ -1,0 +1,38 @@
+{
+  "schema": "federated-swarm-preferences-v1",
+  "method": "cross-entropy-evolutionary-search",
+  "weights": {
+    "policy_progress_weight": 1.0,
+    "policy_effort_weight": 0.029999999999999995,
+    "policy_turn_weight": 0.10000000000000002,
+    "policy_vertical_weight": 0.10000000000000002
+  },
+  "training_seeds": [
+    20,
+    21
+  ],
+  "training_scenarios": [
+    "head_on",
+    "crossing",
+    "overtaking",
+    "urban"
+  ],
+  "training_counts": [
+    10
+  ],
+  "training_fixed_wing_fraction": 0.4,
+  "training_cooperative_fraction": 0.5,
+  "training_fitness": [
+    0.0,
+    0.0,
+    0.0,
+    0.052222222222222225,
+    0.0,
+    -1.0,
+    546.0811770453597
+  ],
+  "search_seed": 42,
+  "source_sha256": "c3d4f662d87979c735ad3a81d0779a9124e3fa0df80897429f8f3e30b9cef660",
+  "training_evaluations": 96,
+  "limitations": "Narrow finite training suite; no test-set tuning, safety proof or neural RL."
+}

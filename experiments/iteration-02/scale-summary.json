@@ -1,0 +1,586 @@
+{
+  "manifest": {
+    "scenarios": [
+      "crossing",
+      "overload"
+    ],
+    "counts": [
+      100,
+      200
+    ],
+    "fractions": [
+      0.5
+    ],
+    "controllers": [
+      "goal",
+      "negotiated",
+      "predictive",
+      "evolved"
+    ],
+    "discovery_seeds": [
+      2000
+    ],
+    "holdout_seeds": [
+      3000
+    ],
+    "fixed_wing_fraction": 0.4,
+    "duration_s": 36,
+    "dt_s": 0.2,
+    "expected_runs": 32,
+    "source_sha256": "c3d4f662d87979c735ad3a81d0779a9124e3fa0df80897429f8f3e30b9cef660",
+    "vehicle_model": "mixed-point-mass-v0",
+    "ranking_order": [
+      "participant collisions",
+      "participant obstacle collisions",
+      "participant volume exits",
+      "worst stratum collisions",
+      "separation exposure",
+      "mission completion"
+    ],
+    "policy_profile": {
+      "schema": "federated-swarm-preferences-v1",
+      "method": "cross-entropy-evolutionary-search",
+      "weights": {
+        "policy_progress_weight": 1.0,
+        "policy_effort_weight": 0.029999999999999995,
+        "policy_turn_weight": 0.10000000000000002,
+        "policy_vertical_weight": 0.10000000000000002
+      },
+      "training_seeds": [
+        20,
+        21
+      ],
+      "training_scenarios": [
+        "head_on",
+        "crossing",
+        "overtaking",
+        "urban"
+      ],
+      "training_counts": [
+        10
+      ],
+      "training_fixed_wing_fraction": 0.4,
+      "training_cooperative_fraction": 0.5,
+      "training_fitness": [
+        0.0,
+        0.0,
+        0.0,
+        0.052222222222222225,
+        0.0,
+        -1.0,
+        546.0811770453597
+      ],
+      "search_seed": 42,
+      "source_sha256": "c3d4f662d87979c735ad3a81d0779a9124e3fa0df80897429f8f3e30b9cef660",
+      "training_evaluations": 96,
+      "limitations": "Narrow finite training suite; no test-set tuning, safety proof or neural RL."
+    },
+    "policy_sha256": "b06fc1c23b63f9403518340830b1bc6c7333c66a834bac5b0011a450c6637907"
+  },
+  "completed_runs": 32,
+  "expected_runs": 32,
+  "ranking_discovery": [
+    {
+      "controller": "evolved",
+      "eligible_runs": 4,
+      "participant_collision_run_rate": 0.5,
+      "participant_obstacle_run_rate": 0.0,
+      "participant_volume_exit_run_rate": 0.5,
+      "worst_stratum_collision_rate": 1.0,
+      "separation_exposure_ratio": 0.00016739518097133487,
+      "participant_completion_fraction": 0.1875,
+      "participant_collision_pairs": 7,
+      "legacy_only_collision_pairs": 72,
+      "filter_infeasible_drone_steps": 0,
+      "predictive_no_admissible_drone_steps": 31095,
+      "kinematic_violation_drone_steps": 0,
+      "mean_command_p99_ms": 399.4972617325403,
+      "risk_key": [
+        0.5,
+        0.0,
+        0.5,
+        1.0,
+        0.00016739518097133487,
+        -0.1875
+      ]
+    },
+    {
+      "controller": "predictive",
+      "eligible_runs": 4,
+      "participant_collision_run_rate": 0.5,
+      "participant_obstacle_run_rate": 0.0,
+      "participant_volume_exit_run_rate": 0.5,
+      "worst_stratum_collision_rate": 1.0,
+      "separation_exposure_ratio": 0.00016739518097133487,
+      "participant_completion_fraction": 0.1875,
+      "participant_collision_pairs": 7,
+      "legacy_only_collision_pairs": 72,
+      "filter_infeasible_drone_steps": 0,
+      "predictive_no_admissible_drone_steps": 31095,
+      "kinematic_violation_drone_steps": 0,
+      "mean_command_p99_ms": 403.6056184526207,
+      "risk_key": [
+        0.5,
+        0.0,
+        0.5,
+        1.0,
+        0.00016739518097133487,
+        -0.1875
+      ]
+    },
+    {
+      "controller": "goal",
+      "eligible_runs": 4,
+      "participant_collision_run_rate": 1.0,
+      "participant_obstacle_run_rate": 0.0,
+      "participant_volume_exit_run_rate": 0.0,
+      "worst_stratum_collision_rate": 1.0,
+      "separation_exposure_ratio": 0.002105463111513703,
+      "participant_completion_fraction": 1.0,
+      "participant_collision_pairs": 176,
+      "legacy_only_collision_pairs": 72,
+      "filter_infeasible_drone_steps": 0,
+      "predictive_no_admissible_drone_steps": 0,
+      "kinematic_violation_drone_steps": 0,
+      "mean_command_p99_ms": 0.3425368354874085,
+      "risk_key": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.002105463111513703,
+        -1.0
+      ]
+    },
+    {
+      "controller": "negotiated",
+      "eligible_runs": 4,
+      "participant_collision_run_rate": 1.0,
+      "participant_obstacle_run_rate": 0.0,
+      "participant_volume_exit_run_rate": 1.0,
+      "worst_stratum_collision_rate": 1.0,
+      "separation_exposure_ratio": 0.0007335145417150088,
+      "participant_completion_fraction": 0.05,
+      "participant_collision_pairs": 46,
+      "legacy_only_collision_pairs": 72,
+      "filter_infeasible_drone_steps": 41535,
+      "predictive_no_admissible_drone_steps": 0,
+      "kinematic_violation_drone_steps": 0,
+      "mean_command_p99_ms": 11.561127170625698,
+      "risk_key": [
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0007335145417150088,
+        -0.05
+      ]
+    }
+  ],
+  "ranking_holdout": [
+    {
+      "controller": "evolved",
+      "eligible_runs": 4,
+      "participant_collision_run_rate": 0.5,
+      "participant_obstacle_run_rate": 0.0,
+      "participant_volume_exit_run_rate": 1.0,
+      "worst_stratum_collision_rate": 1.0,
+      "separation_exposure_ratio": 0.00013191899450233028,
+      "participant_completion_fraction": 0.265,
+      "participant_collision_pairs": 10,
+      "legacy_only_collision_pairs": 42,
+      "filter_infeasible_drone_steps": 0,
+      "predictive_no_admissible_drone_steps": 30827,
+      "kinematic_violation_drone_steps": 0,
+      "mean_command_p99_ms": 391.3933152607207,
+      "risk_key": [
+        0.5,
+        0.0,
+        1.0,
+        1.0,
+        0.00013191899450233028,
+        -0.265
+      ]
+    },
+    {
+      "controller": "predictive",
+      "eligible_runs": 4,
+      "participant_collision_run_rate": 0.5,
+      "participant_obstacle_run_rate": 0.0,
+      "participant_volume_exit_run_rate": 1.0,
+      "worst_stratum_collision_rate": 1.0,
+      "separation_exposure_ratio": 0.00013191899450233028,
+      "participant_completion_fraction": 0.265,
+      "participant_collision_pairs": 10,
+      "legacy_only_collision_pairs": 42,
+      "filter_infeasible_drone_steps": 0,
+      "predictive_no_admissible_drone_steps": 30827,
+      "kinematic_violation_drone_steps": 0,
+      "mean_command_p99_ms": 397.08396965272226,
+      "risk_key": [
+        0.5,
+        0.0,
+        1.0,
+        1.0,
+        0.00013191899450233028,
+        -0.265
+      ]
+    },
+    {
+      "controller": "negotiated",
+      "eligible_runs": 4,
+      "participant_collision_run_rate": 0.75,
+      "participant_obstacle_run_rate": 0.0,
+      "participant_volume_exit_run_rate": 1.0,
+      "worst_stratum_collision_rate": 1.0,
+      "separation_exposure_ratio": 0.0005238322701659686,
+      "participant_completion_fraction": 0.035,
+      "participant_collision_pairs": 38,
+      "legacy_only_collision_pairs": 42,
+      "filter_infeasible_drone_steps": 42636,
+      "predictive_no_admissible_drone_steps": 0,
+      "kinematic_violation_drone_steps": 0,
+      "mean_command_p99_ms": 11.570745071967401,
+      "risk_key": [
+        0.75,
+        0.0,
+        1.0,
+        1.0,
+        0.0005238322701659686,
+        -0.035
+      ]
+    },
+    {
+      "controller": "goal",
+      "eligible_runs": 4,
+      "participant_collision_run_rate": 1.0,
+      "participant_obstacle_run_rate": 0.0,
+      "participant_volume_exit_run_rate": 0.0,
+      "worst_stratum_collision_rate": 1.0,
+      "separation_exposure_ratio": 0.001872761201505662,
+      "participant_completion_fraction": 1.0,
+      "participant_collision_pairs": 192,
+      "legacy_only_collision_pairs": 42,
+      "filter_infeasible_drone_steps": 0,
+      "predictive_no_admissible_drone_steps": 0,
+      "kinematic_violation_drone_steps": 0,
+      "mean_command_p99_ms": 0.38372513634385635,
+      "risk_key": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.001872761201505662,
+        -1.0
+      ]
+    }
+  ],
+  "selected_on_discovery": "evolved",
+  "selection_stable_on_holdout": true,
+  "passed_empirical_gate": false,
+  "recommendation": "no-configuration-cleared-safety-gate",
+  "per_scenario_holdout": {
+    "crossing": [
+      {
+        "controller": "evolved",
+        "eligible_runs": 2,
+        "participant_collision_run_rate": 0.5,
+        "participant_obstacle_run_rate": 0.0,
+        "participant_volume_exit_run_rate": 1.0,
+        "worst_stratum_collision_rate": 1.0,
+        "separation_exposure_ratio": 2.0177250707921e-05,
+        "participant_completion_fraction": 0.195,
+        "participant_collision_pairs": 3,
+        "legacy_only_collision_pairs": 17,
+        "filter_infeasible_drone_steps": 0,
+        "predictive_no_admissible_drone_steps": 16698,
+        "kinematic_violation_drone_steps": 0,
+        "mean_command_p99_ms": 397.25594564497476,
+        "risk_key": [
+          0.5,
+          0.0,
+          1.0,
+          1.0,
+          2.0177250707921e-05,
+          -0.195
+        ]
+      },
+      {
+        "controller": "predictive",
+        "eligible_runs": 2,
+        "participant_collision_run_rate": 0.5,
+        "participant_obstacle_run_rate": 0.0,
+        "participant_volume_exit_run_rate": 1.0,
+        "worst_stratum_collision_rate": 1.0,
+        "separation_exposure_ratio": 2.0177250707921e-05,
+        "participant_completion_fraction": 0.195,
+        "participant_collision_pairs": 3,
+        "legacy_only_collision_pairs": 17,
+        "filter_infeasible_drone_steps": 0,
+        "predictive_no_admissible_drone_steps": 16698,
+        "kinematic_violation_drone_steps": 0,
+        "mean_command_p99_ms": 388.6239018042405,
+        "risk_key": [
+          0.5,
+          0.0,
+          1.0,
+          1.0,
+          2.0177250707921e-05,
+          -0.195
+        ]
+      },
+      {
+        "controller": "negotiated",
+        "eligible_runs": 2,
+        "participant_collision_run_rate": 0.5,
+        "participant_obstacle_run_rate": 0.0,
+        "participant_volume_exit_run_rate": 1.0,
+        "worst_stratum_collision_rate": 1.0,
+        "separation_exposure_ratio": 0.00023517350322735882,
+        "participant_completion_fraction": 0.035,
+        "participant_collision_pairs": 8,
+        "legacy_only_collision_pairs": 17,
+        "filter_infeasible_drone_steps": 22565,
+        "predictive_no_admissible_drone_steps": 0,
+        "kinematic_violation_drone_steps": 0,
+        "mean_command_p99_ms": 10.286468748636254,
+        "risk_key": [
+          0.5,
+          0.0,
+          1.0,
+          1.0,
+          0.00023517350322735882,
+          -0.035
+        ]
+      },
+      {
+        "controller": "goal",
+        "eligible_runs": 2,
+        "participant_collision_run_rate": 1.0,
+        "participant_obstacle_run_rate": 0.0,
+        "participant_volume_exit_run_rate": 0.0,
+        "worst_stratum_collision_rate": 1.0,
+        "separation_exposure_ratio": 0.0008127830071699495,
+        "participant_completion_fraction": 1.0,
+        "participant_collision_pairs": 82,
+        "legacy_only_collision_pairs": 17,
+        "filter_infeasible_drone_steps": 0,
+        "predictive_no_admissible_drone_steps": 0,
+        "kinematic_violation_drone_steps": 0,
+        "mean_command_p99_ms": 0.256955726617889,
+        "risk_key": [
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0008127830071699495,
+          -1.0
+        ]
+      }
+    ],
+    "overload": [
+      {
+        "controller": "evolved",
+        "eligible_runs": 2,
+        "participant_collision_run_rate": 0.5,
+        "participant_obstacle_run_rate": 0.0,
+        "participant_volume_exit_run_rate": 1.0,
+        "worst_stratum_collision_rate": 1.0,
+        "separation_exposure_ratio": 0.0002751594824360201,
+        "participant_completion_fraction": 0.335,
+        "participant_collision_pairs": 7,
+        "legacy_only_collision_pairs": 25,
+        "filter_infeasible_drone_steps": 0,
+        "predictive_no_admissible_drone_steps": 14129,
+        "kinematic_violation_drone_steps": 0,
+        "mean_command_p99_ms": 385.5306848764667,
+        "risk_key": [
+          0.5,
+          0.0,
+          1.0,
+          1.0,
+          0.0002751594824360201,
+          -0.335
+        ]
+      },
+      {
+        "controller": "predictive",
+        "eligible_runs": 2,
+        "participant_collision_run_rate": 0.5,
+        "participant_obstacle_run_rate": 0.0,
+        "participant_volume_exit_run_rate": 1.0,
+        "worst_stratum_collision_rate": 1.0,
+        "separation_exposure_ratio": 0.0002751594824360201,
+        "participant_completion_fraction": 0.335,
+        "participant_collision_pairs": 7,
+        "legacy_only_collision_pairs": 25,
+        "filter_infeasible_drone_steps": 0,
+        "predictive_no_admissible_drone_steps": 14129,
+        "kinematic_violation_drone_steps": 0,
+        "mean_command_p99_ms": 405.544037501204,
+        "risk_key": [
+          0.5,
+          0.0,
+          1.0,
+          1.0,
+          0.0002751594824360201,
+          -0.335
+        ]
+      },
+      {
+        "controller": "goal",
+        "eligible_runs": 2,
+        "participant_collision_run_rate": 1.0,
+        "participant_obstacle_run_rate": 0.0,
+        "participant_volume_exit_run_rate": 0.0,
+        "worst_stratum_collision_rate": 1.0,
+        "separation_exposure_ratio": 0.0035170534947244186,
+        "participant_completion_fraction": 1.0,
+        "participant_collision_pairs": 110,
+        "legacy_only_collision_pairs": 25,
+        "filter_infeasible_drone_steps": 0,
+        "predictive_no_admissible_drone_steps": 0,
+        "kinematic_violation_drone_steps": 0,
+        "mean_command_p99_ms": 0.5104945460698237,
+        "risk_key": [
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0035170534947244186,
+          -1.0
+        ]
+      },
+      {
+        "controller": "negotiated",
+        "eligible_runs": 2,
+        "participant_collision_run_rate": 1.0,
+        "participant_obstacle_run_rate": 0.0,
+        "participant_volume_exit_run_rate": 1.0,
+        "worst_stratum_collision_rate": 1.0,
+        "separation_exposure_ratio": 0.0008869279972376266,
+        "participant_completion_fraction": 0.035,
+        "participant_collision_pairs": 30,
+        "legacy_only_collision_pairs": 25,
+        "filter_infeasible_drone_steps": 20071,
+        "predictive_no_admissible_drone_steps": 0,
+        "kinematic_violation_drone_steps": 0,
+        "mean_command_p99_ms": 12.85502139529855,
+        "risk_key": [
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0008869279972376266,
+          -0.035
+        ]
+      }
+    ]
+  },
+  "in_domain_holdout": [
+    {
+      "controller": "evolved",
+      "eligible_runs": 4,
+      "participant_collision_run_rate": 0.5,
+      "participant_obstacle_run_rate": 0.0,
+      "participant_volume_exit_run_rate": 1.0,
+      "worst_stratum_collision_rate": 1.0,
+      "separation_exposure_ratio": 0.00013191899450233028,
+      "participant_completion_fraction": 0.265,
+      "participant_collision_pairs": 10,
+      "legacy_only_collision_pairs": 42,
+      "filter_infeasible_drone_steps": 0,
+      "predictive_no_admissible_drone_steps": 30827,
+      "kinematic_violation_drone_steps": 0,
+      "mean_command_p99_ms": 391.3933152607207,
+      "risk_key": [
+        0.5,
+        0.0,
+        1.0,
+        1.0,
+        0.00013191899450233028,
+        -0.265
+      ]
+    },
+    {
+      "controller": "predictive",
+      "eligible_runs": 4,
+      "participant_collision_run_rate": 0.5,
+      "participant_obstacle_run_rate": 0.0,
+      "participant_volume_exit_run_rate": 1.0,
+      "worst_stratum_collision_rate": 1.0,
+      "separation_exposure_ratio": 0.00013191899450233028,
+      "participant_completion_fraction": 0.265,
+      "participant_collision_pairs": 10,
+      "legacy_only_collision_pairs": 42,
+      "filter_infeasible_drone_steps": 0,
+      "predictive_no_admissible_drone_steps": 30827,
+      "kinematic_violation_drone_steps": 0,
+      "mean_command_p99_ms": 397.08396965272226,
+      "risk_key": [
+        0.5,
+        0.0,
+        1.0,
+        1.0,
+        0.00013191899450233028,
+        -0.265
+      ]
+    },
+    {
+      "controller": "negotiated",
+      "eligible_runs": 4,
+      "participant_collision_run_rate": 0.75,
+      "participant_obstacle_run_rate": 0.0,
+      "participant_volume_exit_run_rate": 1.0,
+      "worst_stratum_collision_rate": 1.0,
+      "separation_exposure_ratio": 0.0005238322701659686,
+      "participant_completion_fraction": 0.035,
+      "participant_collision_pairs": 38,
+      "legacy_only_collision_pairs": 42,
+      "filter_infeasible_drone_steps": 42636,
+      "predictive_no_admissible_drone_steps": 0,
+      "kinematic_violation_drone_steps": 0,
+      "mean_command_p99_ms": 11.570745071967401,
+      "risk_key": [
+        0.75,
+        0.0,
+        1.0,
+        1.0,
+        0.0005238322701659686,
+        -0.035
+      ]
+    },
+    {
+      "controller": "goal",
+      "eligible_runs": 4,
+      "participant_collision_run_rate": 1.0,
+      "participant_obstacle_run_rate": 0.0,
+      "participant_volume_exit_run_rate": 0.0,
+      "worst_stratum_collision_rate": 1.0,
+      "separation_exposure_ratio": 0.001872761201505662,
+      "participant_completion_fraction": 1.0,
+      "participant_collision_pairs": 192,
+      "legacy_only_collision_pairs": 42,
+      "filter_infeasible_drone_steps": 0,
+      "predictive_no_admissible_drone_steps": 0,
+      "kinematic_violation_drone_steps": 0,
+      "mean_command_p99_ms": 0.38372513634385635,
+      "risk_key": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.001872761201505662,
+        -1.0
+      ]
+    }
+  ],
+  "out_of_bounds_holdout": [],
+  "zero_cooperation_runs": 0,
+  "statistics_note": "Descriptive finite-suite results; paired seeds and all strata are published. No universal safest or certification inference. Individual trajectories sharing a scenario are not independent trials.",
+  "software": {
+    "version": "0.2.0",
+    "python": "3.14.6"
+  },
+  "results_sha256": "a4761a3a4b9b89443fe9ea64b97565014ab7c806011f8733e5860c4dfbd7d137"
+}

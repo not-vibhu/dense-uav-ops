@@ -1,6 +1,6 @@
 # Mixed fleet simulation and controller comparison
 
-The first implementation is a reproducible research harness, with a browser replay and a batch comparison CLI. It tests 10–500 aircraft in a 220 × 220 m operating volume, altitudes 12–116 m, and an adjustable mixture of multirotors and fixed-wing aircraft. The default completed-campaign destination is `artifacts/full-campaign`; generated recordings are excluded from Git.
+The implementation is a reproducible research harness, with a browser replay and a batch comparison CLI. It tests 10–500 aircraft in a 220 × 220 m operating volume, altitudes 12–116 m, and an adjustable mixture of multirotors and fixed-wing aircraft. The current default campaign destination is `artifacts/predictive-campaign`; the original completed campaign remains under `artifacts/full-campaign`. Generated recordings are excluded from Git.
 
 Runtime defaults are defined in `swarm_sim/config.py`. The earlier `profiles/simulation-example.json` records production-design assumptions and incomplete proof inputs; it is not loaded as the simulator configuration. In particular, the batch experiment uses a 0.2 s step while the production design proposes a 0.02 s safety period. Resolution checks can reduce the simulation step without establishing a hardware deadline.
 
@@ -22,10 +22,14 @@ This release does not encode actual ASTM packets or emulate RF propagation. It d
 | `repulsion` | Distance and closest-approach repulsion from reported traffic and static obstacles. |
 | `barrier` | The same nominal avoidance, filtered with conservative affine higher-order barrier inequalities and full intruder acceleration bounds. |
 | `negotiated` | Barrier filtering plus emulated cooperative priority/yield proposals based on cumulative maneuver burden. Missing certificates revert to unilateral nominal behavior. |
+| `predictive` | A 22-maneuver, 2.4 s library with vehicle-limit rollouts and conservative swept uncertainty, obstacle and boundary checks; default preferences. |
+| `evolved` | The same predictive checker and fallback, with four preferences loaded from an evolutionary-search JSON profile. |
 
 All broadcast-only aircraft keep their goal-following legacy controller, regardless of selected controller. There is no implicit reciprocal avoidance from them. Negotiation is an emulation of proposals and partial receipt, not an implementation of the signed state machine or an optimization theorem. It uses vertical alternatives and speed adjustments; the shield does not reduce the intruder acceleration envelope for a cooperative promise.
 
 The barrier solver uses bounded iterative projection, followed by projection into vehicle limits. It is neither an exact QP nor a formally verified sampled-data controller. Every remaining constraint residual is counted as an unresolved filter step; a failed residual is not called a safe maneuver. Initial barrier-domain violations are counted separately. The `solver_overrun` scenario holds a prior command to demonstrate the risk of a missing certified backup. None of these mechanisms establishes the production architecture's formal guarantee.
+
+Predictive controllers explicitly count `predictive_no_admissible_drone_steps` whenever their library has no candidate clearing all horizon checks. Their independent best-effort fallback is not certified. The finite library has no invariant terminal set or recursive-feasibility guarantee. Loaded preferences cannot change hard thresholds or uncertainty bounds. See [policy development](learning-policy.md) for equations, learning commands and limitations.
 
 ## Scenario catalog and exclusions
 
@@ -63,7 +67,7 @@ For a saved single-run replay:
   --duration 36 --dt 0.1 --out artifacts/replay.json
 ```
 
-The web UI saves its own replay to `artifacts/replays/<run_id>.json`. Identical configurations have identical IDs and physical results; wall time and host timing vary.
+The web UI saves its own replay to `artifacts/replays/<run_id>.json`. Within the same frozen source revision, identical configurations have identical IDs and physical results; wall time and host timing vary. Run IDs hash configuration rather than software: retain source/campaign provenance when archiving replays across revisions.
 
 ## Compare every catalog scenario
 
@@ -73,10 +77,10 @@ The web UI saves its own replay to `artifacts/replays/<run_id>.json`. Identical 
   --fractions 0 0.1 0.5 0.9 1 --fixed-wing 0.4 \
   --discovery-seeds 0 1 --holdout-seeds 1001 1002 \
   --duration 36 --dt 0.2 --workers 4 \
-  --out artifacts/full-campaign
+  --out artifacts/predictive-campaign
 ```
 
-This runs 7,680 configurations. Each discovery and holdout block compares every controller with the same initial conditions and observations. Seed sets cannot overlap. Completed runs are flushed to `runs.jsonl`, and restarting the identical command resumes the same manifest. A changed manifest or source hash requires a new output directory. Do not edit simulator code during a campaign. A failed worker makes the campaign fail explicitly rather than omitting its result.
+This now runs 9,600 configurations with five default controllers. Add `--controllers goal repulsion barrier negotiated` to select the original four baselines, but use a new output directory for the changed source revision. To include the learned sixth controller, explicitly add `evolved` and `--policy profiles/predictive-preferences.json`; training and evaluation seeds must be disjoint. Each discovery and holdout block compares every controller with the same initial conditions and observations. Completed runs are flushed to `runs.jsonl`, and restarting the identical command resumes the same manifest. A changed manifest or source hash requires a new output directory. Do not edit simulator code during a campaign. A failed worker makes the campaign fail explicitly rather than omitting its result.
 
 Smaller initial checks can select scenario names and counts. For stronger sampling, use additional disjoint seeds and rerun into a new output directory. Increase the fixed-wing fraction to 1 for a pure fixed-wing sensitivity check and to 0 for a multirotor-only check. Recheck the selected profile with smaller time steps and longer encounter durations; thresholds and rankings can be timestep- and horizon-sensitive.
 
@@ -84,7 +88,7 @@ Smaller initial checks can select scenario names and counts. For stronger sampli
 
 Rank controllers lexicographically by participating-aircraft collision-run rate, obstacle-collision-run rate, operating-volume-exit rate, worst scenario/count/cooperation collision rate, separation exposure, then mission completion. The ordering is published before the campaign and applies identically to all controllers. This avoids a weighted objective that could trade a collision for shorter travel time.
 
-Choose the discovery winner before consulting holdout outcomes. Report its holdout performance, whether the ordering remained stable, and every failed scenario. The empirical gate requires zero participant collisions, zero obstacle collisions, zero volume exits, zero unresolved barrier steps, zero vehicle-limit violations, and at least 70% participant completion in holdout. Only filtered controllers can pass the gate. A finite-suite pass still cannot authorize flight or establish universal safety.
+Choose the discovery winner before consulting holdout outcomes. Report its holdout performance, whether the ordering remained stable, and every failed scenario. The empirical gate requires zero participant collisions, zero obstacle collisions, zero volume exits, zero unresolved barrier steps or failed predictive libraries, zero vehicle-limit violations, and at least 70% participant goal reach in holdout. Only filtered or predictive controllers can pass the gate. A finite-suite pass still cannot authorize flight or establish universal safety.
 
 If the gate fails, the answer is **no configuration cleared the gate**. The lowest-risk tested controller can still be identified as a research candidate, but it must not be labeled the safest operational system. Repeating a collision-prone setup with more seeds does not cure insufficient sensing, infeasible maneuvers or overloaded geometry. Route changes, independently validated sensing, admission control and a verified backup controller are separate design changes requiring new comparisons.
 

@@ -66,7 +66,11 @@ class Handler(BaseHTTPRequestHandler):
                 if name in data and (not isinstance(data[name], int) or isinstance(data[name], bool)):
                     raise ValueError(f"{name} must be an integer")
             cfg = Config(**data).validate()
-        except (ValueError, TypeError, json.JSONDecodeError) as exc:
+            if cfg.controller == "evolved":
+                from .policy import load_policy
+                weights, _ = load_policy(ROOT / "profiles" / "predictive-preferences.json")
+                cfg = Config(**{**asdict(cfg), **weights}).validate()
+        except (ValueError, TypeError, OSError, json.JSONDecodeError) as exc:
             return self.send({"error": str(exc)}, 400)
         if not CAPACITY.acquire(blocking=False):
             return self.send({"error": "Two simulations are already running; retry shortly"}, 429)
@@ -74,6 +78,8 @@ class Handler(BaseHTTPRequestHandler):
             result = simulate(cfg, record=True)
             write_json(ROOT / "artifacts" / "replays" / f"{result['run_id']}.json", result)
             self.send(result)
+        except ValueError as exc:
+            self.send({"error": str(exc)}, 400)
         finally:
             CAPACITY.release()
 

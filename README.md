@@ -21,11 +21,20 @@ Open [the local simulation lab](http://127.0.0.1:8765). Choose a scenario, 10–
 Run the full comparison, including all 24 catalog scenarios and holdout seeds:
 
 ```bash
-.venv/bin/python -m swarm_sim compare --out artifacts/full-campaign
+.venv/bin/python -m swarm_sim compare --out artifacts/predictive-campaign
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-The default matrix is 7,680 runs: fleet sizes 10/50/100/200, five cooperation fractions, four controllers, and four seeds split between discovery and holdout. Outputs include every run, a manifest, rankings and an interactive report. Failed safety gates prevent a deployment recommendation. See the [simulation guide](docs/simulation.md) for model coverage, ranking and repeatable commands.
+The current default matrix is 9,600 runs: fleet sizes 10/50/100/200, five cooperation fractions, five controllers, and four seeds split between discovery and holdout. The original four-controller campaign contained 7,680 runs and remains preserved separately. Outputs include every run, a manifest, rankings and an interactive report. Failed safety gates prevent a deployment recommendation. See the [simulation guide](docs/simulation.md) for model coverage, ranking and repeatable commands.
+
+The new `predictive` controller evaluates vehicle-feasible maneuver rollouts against reported traffic uncertainty, obstacles and volume boundaries. `evolved` uses the same checker with preferences learned through cross-entropy search. Both explicitly count failed maneuver libraries; neither has a proven invariant terminal backup. See the [policy development guide](docs/learning-policy.md) for training, independent evaluation and the path toward shielded reinforcement learning.
+
+```bash
+.venv/bin/python -m swarm_sim learn --out artifacts/policy-search/preferences.json
+.venv/bin/python -m swarm_sim run --controller evolved \
+  --policy profiles/predictive-preferences.json --drones 100 \
+  --seed 3001 --out artifacts/evolved-replay.json
+```
 
 ## Documents
 
@@ -39,6 +48,8 @@ The default matrix is 7,680 runs: fleet sizes 10/50/100/200, five cooperation fr
 | [Simulation profile](profiles/simulation-example.json) | Explicitly unvalidated example parameters |
 | [Simulation guide](docs/simulation.md) | Running, replaying and comparing the implemented research models |
 | [Initial comparison decision](docs/initial-comparison.md) | Observed results from the completed 7,680-run mixed-fleet campaign |
+| [Policy development](docs/learning-policy.md) | Predictive planning, evolutionary optimization and the proposed shielded MARL design |
+| [Predictive iteration decision](docs/second-iteration.md) | Independent catalog results, learning outcome, limitations and next safety work |
 
 Read the architecture first, then the safety case before implementing adapters or controllers. ASTM conformance tests and tactical safety validation are separate acceptance gates.
 
@@ -52,7 +63,7 @@ Read the architecture first, then the safety case before implementing adapters o
 - `safety-kernel`: robust reachability, control barriers, watchdog, and backup controller.
 - `audit-recorder` and `audit-verifier`: signed evidence, witnessed checkpoints, and replay.
 
-These are proposed production services. The `swarm_sim` package implements an exploratory deterministic harness, synthetic telemetry, heuristic/barrier controllers and negotiation emulation. It does not implement the full signed production protocol, exact QP/ORCA, DAIDALUS integration or MARL training.
+These are proposed production services. The `swarm_sim` package implements an exploratory deterministic harness, synthetic telemetry, heuristic/barrier controllers, negotiation emulation, a predictive maneuver library and evolutionary preference optimization. It does not implement the full signed production protocol, exact QP/ORCA, DAIDALUS integration or neural MARL training.
 
 ## License
 

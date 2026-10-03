@@ -30,6 +30,7 @@ def aggregate(runs):
                "participant_collision_pairs": sum(m["participant_collision_pairs"] for m in ms),
                "legacy_only_collision_pairs": sum(m["collision_pairs_ll"] for m in ms),
                "filter_infeasible_drone_steps": sum(m["filter_infeasible_drone_steps"] for m in ms),
+               "predictive_no_admissible_drone_steps": sum(m.get("predictive_no_admissible_drone_steps", 0) for m in ms),
                "kinematic_violation_drone_steps": sum(m["kinematic_violation_drone_steps"] for m in ms),
                "mean_command_p99_ms": sum(m["command_p99_ms"] for m in ms) / len(ms)}
         row["risk_key"] = [row["participant_collision_run_rate"], row["participant_obstacle_run_rate"],
@@ -50,9 +51,10 @@ def summarize(runs, manifest):
                        selected_holdout["participant_obstacle_run_rate"] == 0 and
                        selected_holdout["participant_volume_exit_run_rate"] == 0 and
                        selected_holdout["filter_infeasible_drone_steps"] == 0 and
+                       selected_holdout["predictive_no_admissible_drone_steps"] == 0 and
                        selected_holdout["kinematic_violation_drone_steps"] == 0 and
                        selected_holdout["participant_completion_fraction"] >= .7 and
-                       selected in ("barrier", "negotiated"))
+                       selected in ("barrier", "negotiated", "predictive", "evolved"))
     # Report out-of-bound injected faults separately; they never silently vanish.
     per_scenario = {name: aggregate([r for r in holdout if r["config"]["scenario"] == name])
                     for name in manifest["scenarios"]}
@@ -69,4 +71,3 @@ def summarize(runs, manifest):
             "statistics_note": "Descriptive finite-suite results; paired seeds and all strata are published. No universal safest or certification inference. Individual trajectories sharing a scenario are not independent trials.",
             "software": {"version": __version__, "python": platform.python_version()},
             "results_sha256": hashlib.sha256(json.dumps(runs, sort_keys=True, allow_nan=False).encode()).hexdigest()}
-

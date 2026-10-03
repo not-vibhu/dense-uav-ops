@@ -2,7 +2,7 @@ from dataclasses import asdict, dataclass
 import math
 
 
-CONTROLLERS = ("goal", "repulsion", "barrier", "negotiated")
+CONTROLLERS = ("goal", "repulsion", "barrier", "negotiated", "predictive", "evolved")
 
 
 @dataclass(frozen=True)
@@ -33,6 +33,11 @@ class Config:
     projection_iterations: int = 12
     goal_radius: float = 3.0
     replay_period: float = 0.4
+    predictive_horizon: float = 2.4
+    policy_progress_weight: float = 1.0
+    policy_effort_weight: float = 0.03
+    policy_turn_weight: float = 0.1
+    policy_vertical_weight: float = 0.1
 
     def validate(self):
         from .scenarios import SCENARIOS
@@ -58,4 +63,12 @@ class Config:
             raise ValueError("Invalid telemetry/replay period")
         if self.projection_iterations < 1 or self.position_error_bound < 0 or self.velocity_error_bound < 0:
             raise ValueError("Invalid filter/enclosure settings")
+        if not self.dt <= self.predictive_horizon <= 5:
+            raise ValueError("Predictive horizon must lie between dt and 5 s")
+        if any(getattr(self, name) <= 0 for name in POLICY_FIELDS):
+            raise ValueError("Policy weights must be positive")
         return self
+
+
+POLICY_FIELDS = ("policy_progress_weight", "policy_effort_weight",
+                 "policy_turn_weight", "policy_vertical_weight")

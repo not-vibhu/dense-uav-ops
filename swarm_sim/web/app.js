@@ -37,8 +37,10 @@ async function load() {
       ["repulsion", "Heuristic repulsion"],
       ["barrier", "Barrier filter"],
       ["negotiated", "Negotiation + barrier"],
+      ["predictive", "Predictive maneuver planner"],
+      ["evolved", "Predictive + learned preferences"],
     ]);
-    $("controller").value = "negotiated";
+    $("controller").value = "predictive";
     description();
     await loadCampaigns();
     draw();
@@ -95,7 +97,7 @@ $("config").addEventListener("submit", async (e) => {
         "Goal reach",
         (m.completion_fraction * 100).toFixed(0) + "%",
       ),
-      metric("Unresolved filter steps", m.filter_infeasible_drone_steps),
+      metric("Unresolved control steps", m.filter_infeasible_drone_steps + (m.predictive_no_admissible_drone_steps || 0)),
     );
     $("events").textContent = JSON.stringify(
       {
@@ -300,7 +302,7 @@ async function showCampaign() {
       (r.participant_obstacle_run_rate * 100).toFixed(1) + "%",
       (r.participant_volume_exit_run_rate * 100).toFixed(1) + "%",
       (r.participant_completion_fraction * 100).toFixed(1) + "%",
-      r.filter_infeasible_drone_steps.toLocaleString(),
+      (r.filter_infeasible_drone_steps + (r.predictive_no_admissible_drone_steps || 0)).toLocaleString(),
     ]) {
       const td = document.createElement("td");
       td.textContent = value;
