@@ -39,6 +39,7 @@ async function load() {
       ["negotiated", "Negotiation + barrier"],
       ["predictive", "Predictive maneuver planner"],
       ["evolved", "Predictive + learned preferences"],
+      ...catalog.controllers.filter(c => ["imitation","mappo"].includes(c)).map(c => [c, c === "mappo" ? "Recurrent MAPPO + checker" : "Imitation + checker"]),
     ]);
     $("controller").value = "predictive";
     description();
@@ -82,6 +83,7 @@ $("config").addEventListener("submit", async (e) => {
         fixed_wing_fraction: Number($("fixed").value) / 100,
         duration: Number($("duration").value),
         dt: Number($("dt").value),
+        admission: $("admission").value, admission_limit: Number($("capacity").value), routes: $("routes").value,
       }),
     });
     const data = await response.json();
@@ -89,13 +91,16 @@ $("config").addEventListener("submit", async (e) => {
     run = data;
     const m = data.metrics;
     $("status").textContent =
-      `Completed ${data.config.drones} aircraft in ${m.wall_seconds.toFixed(2)} s. ${data.domain === "modeled" ? "Modeled fault bounds." : "Injected fault exceeds modeled bounds."}`;
+      `Simulated ${data.config.drones} requested aircraft in ${m.wall_seconds.toFixed(2)} s. ${data.domain === "modeled" ? "Modeled fault bounds." : "Injected fault exceeds modeled bounds."}`;
     $("metrics").replaceChildren(
       metric("Participant collision pairs", m.participant_collision_pairs),
+      metric("Admitted / requested", `${m.participant_admitted_aircraft} / ${m.cooperative_aircraft}`),
+      metric("Queued / route rejected", `${m.queued_aircraft} / ${m.route_rejected_aircraft}`),
+      metric("Backup unavailable steps", m.backup_unavailable_drone_steps),
       metric("Separation pairs", m.separation_pairs),
       metric(
-        "Goal reach",
-        (m.completion_fraction * 100).toFixed(0) + "%",
+        "Participant goal reach / requested",
+        m.participant_completion_fraction === null ? "n/a" : (m.participant_completion_fraction * 100).toFixed(0) + "%",
       ),
       metric("Unresolved control steps", m.filter_infeasible_drone_steps + (m.predictive_no_admissible_drone_steps || 0)),
     );
@@ -127,7 +132,7 @@ function positionsAt(t) {
     {
       time: 0,
       positions: run.replay.initial_positions,
-      active: run.replay.initial_positions.map(() => 1),
+      active: run.replay.initial_active || run.replay.initial_positions.map(() => 1),
     },
     ...run.replay.frames,
   ];
@@ -280,6 +285,7 @@ async function loadCampaigns() {
     $("campaign"),
     names.map((x) => [x, x]),
   );
+  if (names.includes("iteration03-checked")) $("campaign").value = "iteration03-checked";
   if (names.length) await showCampaign();
 }
 async function showCampaign() {
@@ -301,8 +307,10 @@ async function showCampaign() {
       (r.participant_collision_run_rate * 100).toFixed(1) + "%",
       (r.participant_obstacle_run_rate * 100).toFixed(1) + "%",
       (r.participant_volume_exit_run_rate * 100).toFixed(1) + "%",
+      ((r.participant_admission_fraction ?? 1) * 100).toFixed(1) + "%",
       (r.participant_completion_fraction * 100).toFixed(1) + "%",
       (r.filter_infeasible_drone_steps + (r.predictive_no_admissible_drone_steps || 0)).toLocaleString(),
+      (r.backup_unavailable_drone_steps || 0).toLocaleString(),
     ]) {
       const td = document.createElement("td");
       td.textContent = value;

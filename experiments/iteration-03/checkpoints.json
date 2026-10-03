@@ -1,0 +1,146 @@
+{
+  "models/imitation.json": {
+    "sha256": "860164646f99b3a544974068cec71a3b43a105f95c6e94d8b6c43c2761e4c3ef",
+    "metadata": {
+      "stage": "imitation",
+      "training_seed": 42,
+      "training_seeds": [
+        4000,
+        4001,
+        4002,
+        4003,
+        4004,
+        4005,
+        4006,
+        4007
+      ],
+      "scenarios": [
+        "head_on",
+        "crossing",
+        "overtaking",
+        "urban"
+      ],
+      "episodes": 8,
+      "admissible_decisions": 3542,
+      "teacher": "finite predictive library; excludes failed-library labels",
+      "scope": "research training run; no safety certificate",
+      "initial_checkpoint_sha256": null,
+      "reward": "mission progress/speed +5 reach -.02dt -.001 effort*dt -20 collision/obstacle -5 exit -.2dt separation",
+      "ppo": null,
+      "source_sha256": "454b8cdae5ed609fa46bcc6e4908c4675f5adefc04e1d759d867fb8e436d953e",
+      "torch_version": "2.14.1"
+    }
+  },
+  "models/mappo.json": {
+    "sha256": "90ba571073afee443ceab1596b17fc875c8e6d408dccfa813e9dd0248ec3fe9c",
+    "metadata": {
+      "stage": "mappo",
+      "training_seed": 42,
+      "training_seeds": [
+        4000,
+        4001,
+        4002,
+        4003,
+        4004,
+        4005,
+        4006,
+        4007
+      ],
+      "scenarios": [
+        "head_on",
+        "crossing",
+        "overtaking",
+        "urban"
+      ],
+      "episodes": 8,
+      "admissible_decisions": 3527,
+      "teacher": "finite predictive library; excludes failed-library labels",
+      "scope": "research training run; no safety certificate",
+      "initial_checkpoint_sha256": "860164646f99b3a544974068cec71a3b43a105f95c6e94d8b6c43c2761e4c3ef",
+      "reward": "mission progress/speed +5 reach -.02dt -.001 effort*dt -20 collision/obstacle -5 exit -.2dt separation",
+      "ppo": {
+        "clip": 0.2,
+        "gamma": 0.99,
+        "gae_lambda": 0.95,
+        "entropy": 0.01,
+        "chunk_length": 8,
+        "centralized_critic": true,
+        "finite_duration_terminal": true
+      },
+      "source_sha256": "454b8cdae5ed609fa46bcc6e4908c4675f5adefc04e1d759d867fb8e436d953e",
+      "torch_version": "2.14.1"
+    }
+  },
+  "models/seed-43/imitation.json": {
+    "sha256": "7807ef0821eff5fb3a67aff75c9b094bdf38e63a2e1c204996b8c2621e294018",
+    "metadata": {
+      "stage": "imitation",
+      "training_seed": 43,
+      "training_seeds": [
+        4000,
+        4001,
+        4002,
+        4003,
+        4004,
+        4005,
+        4006,
+        4007
+      ],
+      "scenarios": [
+        "head_on",
+        "crossing",
+        "overtaking",
+        "urban"
+      ],
+      "episodes": 8,
+      "admissible_decisions": 3542,
+      "teacher": "finite predictive library; excludes failed-library labels",
+      "scope": "research training run; no safety certificate",
+      "initial_checkpoint_sha256": null,
+      "reward": "mission progress/speed +5 reach -.02dt -.001 effort*dt -20 collision/obstacle -5 exit -.2dt separation",
+      "ppo": null,
+      "source_sha256": "454b8cdae5ed609fa46bcc6e4908c4675f5adefc04e1d759d867fb8e436d953e",
+      "torch_version": "2.14.1"
+    }
+  },
+  "models/seed-43/mappo.json": {
+    "sha256": "c65fe996862343ee41be07fba3c3e7446f75fd73d08009846b68302a57af2da9",
+    "metadata": {
+      "stage": "mappo",
+      "training_seed": 43,
+      "training_seeds": [
+        4000,
+        4001,
+        4002,
+        4003,
+        4004,
+        4005,
+        4006,
+        4007
+      ],
+      "scenarios": [
+        "head_on",
+        "crossing",
+        "overtaking",
+        "urban"
+      ],
+      "episodes": 8,
+      "admissible_decisions": 3573,
+      "teacher": "finite predictive library; excludes failed-library labels",
+      "scope": "research training run; no safety certificate",
+      "initial_checkpoint_sha256": "7807ef0821eff5fb3a67aff75c9b094bdf38e63a2e1c204996b8c2621e294018",
+      "reward": "mission progress/speed +5 reach -.02dt -.001 effort*dt -20 collision/obstacle -5 exit -.2dt separation",
+      "ppo": {
+        "clip": 0.2,
+        "gamma": 0.99,
+        "gae_lambda": 0.95,
+        "entropy": 0.01,
+        "chunk_length": 8,
+        "centralized_critic": true,
+        "finite_duration_terminal": true
+      },
+      "source_sha256": "454b8cdae5ed609fa46bcc6e4908c4675f5adefc04e1d759d867fb8e436d953e",
+      "torch_version": "2.14.1"
+    }
+  }
+}

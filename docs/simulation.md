@@ -33,7 +33,7 @@ Predictive controllers explicitly count `predictive_no_admissible_drone_steps` w
 
 ## Scenario catalog and exclusions
 
-The default `all` catalog contains 24 cases:
+The default `all` catalog contains 27 cases:
 
 - Geometry and demand: head-on, crossing, overtaking, merge, opposing corridor, vertical crossing, urban building volumes, blocked escape and overload.
 - Traffic and communications: boundary handoff, sudden legacy turn, stopped legacy multirotors, packet loss, stale telemetry, network outage and sensor occlusion.
@@ -80,7 +80,7 @@ The web UI saves its own replay to `artifacts/replays/<run_id>.json`. Within the
   --out artifacts/predictive-campaign
 ```
 
-This now runs 9,600 configurations with five default controllers. Add `--controllers goal repulsion barrier negotiated` to select the original four baselines, but use a new output directory for the changed source revision. To include the learned sixth controller, explicitly add `evolved` and `--policy profiles/predictive-preferences.json`; training and evaluation seeds must be disjoint. Each discovery and holdout block compares every controller with the same initial conditions and observations. Completed runs are flushed to `runs.jsonl`, and restarting the identical command resumes the same manifest. A changed manifest or source hash requires a new output directory. Do not edit simulator code during a campaign. A failed worker makes the campaign fail explicitly rather than omitting its result.
+This now runs 10,800 configurations with five default controllers. Add `--controllers goal repulsion barrier negotiated` to select the original four baselines, but use a new output directory for the changed source revision. To include the learned sixth controller, explicitly add `evolved` and `--policy profiles/predictive-preferences.json`; training and evaluation seeds must be disjoint. Each discovery and holdout block compares every controller with the same initial conditions and observations. Completed runs are flushed to `runs.jsonl`, and restarting the identical command resumes the same manifest. A changed manifest or source hash requires a new output directory. Do not edit simulator code during a campaign. A failed worker makes the campaign fail explicitly rather than omitting its result.
 
 Smaller initial checks can select scenario names and counts. For stronger sampling, use additional disjoint seeds and rerun into a new output directory. Increase the fixed-wing fraction to 1 for a pure fixed-wing sensitivity check and to 0 for a multirotor-only check. Recheck the selected profile with smaller time steps and longer encounter durations; thresholds and rankings can be timestep- and horizon-sensitive.
 
@@ -109,3 +109,5 @@ Run the automated checks with:
 ```
 
 The tests cover continuous crossing detection, accelerated distance extrema, between-step boundary exits, inactive objects, vehicle limits, explicit filter infeasibility, aged/stale telemetry, seeded repeatability, unchanged legacy behavior, collision-category accounting, all catalog scenarios, initial mixed-fleet speed limits and failed-gate handling. Passing these tests validates those implemented behaviors; it does not discharge the formal production safety case.
+
+Version 0.3 adds compound `loss_wind`, `outage_turn` and `lag_datum` scenarios, pre-entry admission, visibility routes, finite backup checking, and optional recurrent learning. See [the new pipeline](third-iteration.md) for training and assurance scope. Default comparisons still use the five non-neural baselines; neural controllers require pinned checkpoints and disjoint evaluation seeds.

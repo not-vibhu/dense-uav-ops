@@ -4,11 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "federated-swarm-sim"
-version = "0.2.0"
+version = "0.3.0"
 description = "Reproducible mixed-equipage UAS simulation and safety comparison"
 requires-python = ">=3.11"
 dependencies = ["numpy>=2.0,<3"]
 license = {text = "MIT"}
+
+[project.optional-dependencies]
+learning = ["torch>=2.6,<3"]
 
 [project.scripts]
 swarm-sim = "swarm_sim.cli:main"

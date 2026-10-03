@@ -12,7 +12,7 @@
         <span class="mark">↗</span>
         <div>Federated swarm<small>Mixed fleet simulation lab</small></div>
       </div>
-      <span class="tag">Exploratory model · v0.2</span>
+      <span class="tag">Exploratory model · v0.3</span>
     </header>
     <main>
       <section class="intro">
@@ -89,6 +89,8 @@
                 </select></label
               >
             </div>
+            <label>Admission<select id="admission"><option value="off">All demand enters</option><option value="capacity">Capacity queue</option><option value="checked" selected>Queue + checked backup</option></select></label>
+            <div class="fields"><label>Active capacity<input id="capacity" type="number" min="1" max="500" value="20" required /></label><label>Routes<select id="routes"><option value="off">Direct</option><option value="visibility" selected>Obstacle routing</option></select></label></div>
             <button type="submit" id="run">Run simulation</button>
           </form>
           <p class="note" id="description"></p>
@@ -173,8 +175,10 @@
                 <th>Collision runs</th>
                 <th>Obstacle runs</th>
                 <th>Volume exits</th>
-                <th>Goal reach</th>
+                <th>Admitted</th>
+                <th>Goal reach / requested</th>
                 <th>Unresolved steps</th>
+                <th>Backup unavailable</th>
               </tr>
             </thead>
             <tbody id="comparison-rows"></tbody>

@@ -1,6 +1,7 @@
 from dataclasses import asdict
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
+import importlib.util
 from pathlib import Path
 import threading
 from urllib.parse import urlparse, parse_qs
@@ -32,7 +33,7 @@ class Handler(BaseHTTPRequestHandler):
             return self.send((Path(__file__).parent / "web" / filename).read_bytes(), content_type=content_type)
         if uri.path == "/api/catalog":
             return self.send({"scenarios": {k: asdict(v) for k, v in SCENARIOS.items()},
-                              "controllers": CONTROLLERS, "defaults": asdict(Config())})
+                              "controllers": [c for c in CONTROLLERS if c not in ("imitation","mappo") or (importlib.util.find_spec("torch") is not None and (ROOT / "models" / (c+".json")).exists())], "defaults": asdict(Config())})
         if uri.path == "/api/campaigns":
             return self.send(sorted(p.parent.name for p in (ROOT / "artifacts").glob("*/summary.json")))
         if uri.path == "/api/summary":
@@ -59,13 +60,18 @@ class Handler(BaseHTTPRequestHandler):
             if not 0 < length <= 10000:
                 raise ValueError("Invalid request size")
             data = json.loads(self.rfile.read(length))
-            allowed = {"scenario", "controller", "drones", "cooperative_fraction", "fixed_wing_fraction", "seed", "duration", "dt"}
+            allowed = {"scenario", "controller", "drones", "cooperative_fraction", "fixed_wing_fraction", "seed", "duration", "dt", "admission", "admission_limit", "routes", "require_invariant_backup"}
             if set(data) - allowed:
                 raise ValueError("Unsupported configuration fields")
-            for name in ("drones", "seed"):
+            for name in ("drones", "seed", "admission_limit"):
                 if name in data and (not isinstance(data[name], int) or isinstance(data[name], bool)):
                     raise ValueError(f"{name} must be an integer")
             cfg = Config(**data).validate()
+            if cfg.controller in ('imitation','mappo'):
+                from .learning import checkpoint_digest,load_model
+                checkpoint=ROOT / 'models' / (cfg.controller + '.json')
+                load_model(checkpoint,stage=cfg.controller)
+                cfg=Config(**{**asdict(cfg),'checkpoint':str(checkpoint),'checkpoint_sha256':checkpoint_digest(checkpoint)})
             if cfg.controller == "evolved":
                 from .policy import load_policy
                 weights, _ = load_policy(ROOT / "profiles" / "predictive-preferences.json")

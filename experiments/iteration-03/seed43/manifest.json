@@ -1,0 +1,75 @@
+{
+  "scenarios": [
+    "head_on",
+    "crossing",
+    "overtaking",
+    "merge",
+    "corridor",
+    "vertical",
+    "urban",
+    "blocked_escape",
+    "overload",
+    "boundary_handoff",
+    "sudden_turn",
+    "stopped_legacy",
+    "packet_loss",
+    "stale_telemetry",
+    "network_outage",
+    "sensor_occlusion",
+    "gnss_bias",
+    "datum_error",
+    "identity_ambiguity",
+    "wind_gust",
+    "actuator_lag",
+    "bound_violation",
+    "solver_overrun",
+    "partial_commit",
+    "loss_wind",
+    "outage_turn",
+    "lag_datum"
+  ],
+  "counts": [
+    10
+  ],
+  "fractions": [
+    0.5
+  ],
+  "controllers": [
+    "imitation",
+    "mappo"
+  ],
+  "discovery_seeds": [
+    5000
+  ],
+  "holdout_seeds": [
+    6000
+  ],
+  "fixed_wing_fraction": 0.4,
+  "duration_s": 36.0,
+  "dt_s": 0.2,
+  "expected_runs": 108,
+  "source_sha256": "454b8cdae5ed609fa46bcc6e4908c4675f5adefc04e1d759d867fb8e436d953e",
+  "admission": "checked",
+  "admission_limit": 40,
+  "routes": "visibility",
+  "require_invariant_backup": false,
+  "neural_checkpoints": {
+    "imitation": {
+      "checkpoint": "/Users/vibhutripathi/Documents/OpenUTM/repos/Federated swarm/models/seed-43/imitation.json",
+      "checkpoint_sha256": "7807ef0821eff5fb3a67aff75c9b094bdf38e63a2e1c204996b8c2621e294018"
+    },
+    "mappo": {
+      "checkpoint": "/Users/vibhutripathi/Documents/OpenUTM/repos/Federated swarm/models/seed-43/mappo.json",
+      "checkpoint_sha256": "c65fe996862343ee41be07fba3c3e7446f75fd73d08009846b68302a57af2da9"
+    }
+  },
+  "vehicle_model": "mixed-point-mass-v0",
+  "ranking_order": [
+    "participant collisions",
+    "participant obstacle collisions",
+    "participant volume exits",
+    "worst stratum collisions",
+    "separation exposure",
+    "mission completion"
+  ]
+}

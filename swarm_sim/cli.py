@@ -53,9 +53,20 @@ def campaign(args):
         weights, profile = load_policy(args.policy)
         if set(profile.get("training_seeds", [])) & set(args.discovery_seeds + args.holdout_seeds):
             raise ValueError("Learned policy training seeds must be disjoint from comparison seeds")
+    neural = {}
+    for controller in ('imitation', 'mappo'):
+        if controller in args.controllers:
+            from .learning import load_model, checkpoint_digest
+            path = getattr(args, controller + '_checkpoint')
+            _, metadata = load_model(path, stage=controller)
+            if set(metadata['training_seeds']) & set(args.discovery_seeds + args.holdout_seeds):
+                raise ValueError('Neural training and evaluation seeds must be disjoint')
+            neural[controller] = {'checkpoint':str(Path(path).resolve()),'checkpoint_sha256':checkpoint_digest(path)}
     jobs = [asdict(Config(scenario=sc, controller=c, drones=n, cooperative_fraction=f,
                           fixed_wing_fraction=args.fixed_wing, seed=seed, duration=args.duration,
-                          dt=args.dt, **(weights if c == "evolved" else {})).validate())
+                          dt=args.dt, admission=args.admission, admission_limit=args.admission_limit,
+                          routes=args.routes, require_invariant_backup=args.require_invariant_backup,
+                          **neural.get(c, {}), **(weights if c == "evolved" else {})).validate())
             for sc, n, f, c, seed in itertools.product(scenarios, args.counts, args.fractions,
                                                       args.controllers, args.discovery_seeds + args.holdout_seeds)]
     out = Path(args.out)
@@ -64,7 +75,10 @@ def campaign(args):
                 "controllers": args.controllers, "discovery_seeds": args.discovery_seeds,
                 "holdout_seeds": args.holdout_seeds, "fixed_wing_fraction": args.fixed_wing,
                 "duration_s": args.duration, "dt_s": args.dt, "expected_runs": len(jobs),
-                "source_sha256": source_hash(), "vehicle_model": "mixed-point-mass-v0",
+                "source_sha256": source_hash(), "admission":args.admission,
+                "admission_limit":args.admission_limit, "routes":args.routes,
+                "require_invariant_backup":args.require_invariant_backup,
+                "neural_checkpoints":neural, "vehicle_model": "mixed-point-mass-v0",
                 "ranking_order": ["participant collisions", "participant obstacle collisions",
                                   "participant volume exits", "worst stratum collisions",
                                   "separation exposure", "mission completion"]}
@@ -85,6 +99,9 @@ def campaign(args):
     ids = {r["run_id"] for r in results}
     if len(ids) != len(results):
         raise ValueError("Duplicate existing runs detected")
+    expected_ids={config_id(Config(**j)) for j in jobs}
+    if ids - expected_ids:
+        raise ValueError("Existing run records contain configurations outside the manifest")
     pending = [j for j in jobs if config_id(Config(**j)) not in ids]
     started = time.perf_counter()
     print(f"Campaign: {len(jobs)} runs, {len(pending)} remaining, {args.workers} workers", flush=True)
@@ -140,7 +157,7 @@ def main():
     compare.add_argument("--dt", type=float, default=.2)
     compare.add_argument("--workers", type=int, default=min(4, os.cpu_count() or 1))
     compare.add_argument("--out", default="artifacts/predictive-campaign")
-    compare.add_argument("--controllers", nargs="+", choices=CONTROLLERS, default=list(CONTROLLERS[:-1]))
+    compare.add_argument("--controllers", nargs="+", choices=CONTROLLERS, default=list(CONTROLLERS[:5]))
     compare.add_argument("--policy", help="Frozen JSON preference profile")
     train = sub.add_parser("learn", help="Cross-entropy optimization of predictive preferences")
     train.add_argument("--scenarios", nargs="+", default=["head_on", "crossing", "overtaking", "urban"])
@@ -155,6 +172,29 @@ def main():
     train.add_argument("--search-seed", type=int, default=42)
     train.add_argument("--workers", type=int, default=4)
     train.add_argument("--out", default="artifacts/policy-search/preferences.json")
+    for method in ('imitation', 'mappo'):
+        neural_train = sub.add_parser('train-' + method)
+        neural_train.set_defaults(method=method)
+        neural_train.add_argument('--scenarios', nargs='+', choices=SCENARIOS, default=['head_on','crossing','overtaking','urban'])
+        neural_train.add_argument('--train-seeds', nargs='+', type=int, default=list(range(4000,4008)))
+        neural_train.add_argument('--training-seed', type=int, default=42)
+        neural_train.add_argument('--episodes', type=int, default=8)
+        neural_train.add_argument('--epochs', type=int, default=8 if method=='imitation' else 3)
+        neural_train.add_argument('--drones', type=int, default=10)
+        neural_train.add_argument('--duration', type=float, default=24)
+        neural_train.add_argument('--cooperative', type=float, default=.5)
+        neural_train.add_argument('--fixed-wing', type=float, default=.4)
+        neural_train.add_argument('--initial', default='')
+        neural_train.add_argument('--out', default='models/' + method + '.json')
+    for command in (run,compare,sub.choices['train-imitation'],sub.choices['train-mappo']):
+        command.add_argument('--admission', choices=['off','capacity','checked'], default='off' if command in (run,compare) else 'checked')
+        command.add_argument('--admission-limit', type=int, default=20)
+        command.add_argument('--routes', choices=['off','visibility'], default='off' if command in (run,compare) else 'visibility')
+    for command in (run,compare):
+        command.add_argument('--require-invariant-backup', action='store_true')
+    run.add_argument('--checkpoint', default='')
+    compare.add_argument('--imitation-checkpoint', default='')
+    compare.add_argument('--mappo-checkpoint', default='')
     server = sub.add_parser("serve")
     server.add_argument("--port", type=int, default=8765)
     args = parser.parse_args()
@@ -172,7 +212,9 @@ def main():
             parser.error("--controller evolved requires --policy")
         result = simulate(Config(scenario=args.scenario, controller=args.controller, drones=args.drones,
                                  cooperative_fraction=args.cooperative, fixed_wing_fraction=args.fixed_wing,
-                                 seed=args.seed, duration=args.duration, dt=args.dt, **weights), record=True)
+                                 seed=args.seed, duration=args.duration, dt=args.dt, admission=args.admission, admission_limit=args.admission_limit,
+                                 routes=args.routes, require_invariant_backup=args.require_invariant_backup,
+                                 checkpoint=args.checkpoint, **weights), record=True)
         write_json(args.out, result)
         print(json.dumps(result["metrics"], indent=2))
     elif args.command == "compare":
@@ -182,6 +224,11 @@ def main():
     elif args.command == "learn":
         from .policy import learn
         learn(args)
+    elif args.command.startswith('train-'):
+        if not 1<=args.episodes<=10000 or not 1<=args.epochs<=100 or not args.train_seeds:
+            parser.error('Invalid training episode/epoch/seed count')
+        from .learning import train as neural_train
+        neural_train(args)
     else:
         from .server import serve
         serve(args.port)

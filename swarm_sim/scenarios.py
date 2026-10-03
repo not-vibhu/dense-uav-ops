@@ -35,6 +35,9 @@ SCENARIOS = {
     "bound_violation": Scenario("crossing", "Unexpected intruder acceleration exceeds the model", "intruder", "out_of_bounds"),
     "solver_overrun": Scenario("crossing", "Simulated missing safety-control updates", "overrun", "out_of_bounds"),
     "partial_commit": Scenario("crossing", "Some equipped agents miss negotiation certificates", "partial"),
+    "loss_wind": Scenario("crossing", "Compound packet loss and bounded gust", "loss+wind"),
+    "outage_turn": Scenario("crossing", "Compound feed outage and legacy turn", "outage+turn"),
+    "lag_datum": Scenario("vertical", "Compound lag and wrong vertical datum", "lag+datum", "out_of_bounds"),
 }
 
 

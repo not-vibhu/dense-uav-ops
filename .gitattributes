@@ -1,0 +1,13 @@
+*.py text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+*.js text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.gz binary
+*.png binary
+models/*.json linguist-generated=true
+models/**/*.json linguist-generated=true
+experiments/**/summary.json linguist-generated=true
+experiments/**/report.html linguist-generated=true

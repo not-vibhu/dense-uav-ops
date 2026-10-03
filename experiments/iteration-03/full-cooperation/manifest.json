@@ -1,0 +1,54 @@
+{
+  "scenarios": [
+    "crossing",
+    "urban",
+    "overload",
+    "outage_turn"
+  ],
+  "counts": [
+    10,
+    50
+  ],
+  "fractions": [
+    1.0
+  ],
+  "controllers": [
+    "predictive",
+    "imitation",
+    "mappo"
+  ],
+  "discovery_seeds": [
+    5000
+  ],
+  "holdout_seeds": [
+    6000
+  ],
+  "fixed_wing_fraction": 0.4,
+  "duration_s": 36.0,
+  "dt_s": 0.2,
+  "expected_runs": 48,
+  "source_sha256": "454b8cdae5ed609fa46bcc6e4908c4675f5adefc04e1d759d867fb8e436d953e",
+  "admission": "checked",
+  "admission_limit": 40,
+  "routes": "visibility",
+  "require_invariant_backup": false,
+  "neural_checkpoints": {
+    "imitation": {
+      "checkpoint": "/Users/vibhutripathi/Documents/OpenUTM/repos/Federated swarm/models/imitation.json",
+      "checkpoint_sha256": "860164646f99b3a544974068cec71a3b43a105f95c6e94d8b6c43c2761e4c3ef"
+    },
+    "mappo": {
+      "checkpoint": "/Users/vibhutripathi/Documents/OpenUTM/repos/Federated swarm/models/mappo.json",
+      "checkpoint_sha256": "90ba571073afee443ceab1596b17fc875c8e6d408dccfa813e9dd0248ec3fe9c"
+    }
+  },
+  "vehicle_model": "mixed-point-mass-v0",
+  "ranking_order": [
+    "participant collisions",
+    "participant obstacle collisions",
+    "participant volume exits",
+    "worst stratum collisions",
+    "separation exposure",
+    "mission completion"
+  ]
+}

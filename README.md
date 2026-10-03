@@ -18,16 +18,16 @@ python3 -m venv .venv
 
 Open [the local simulation lab](http://127.0.0.1:8765). Choose a scenario, 10–500 aircraft, cooperative/fixed-wing proportions and controller, then run and replay the encounter. The simulator uses 3D constant-acceleration motion and a continuous swept collision checker; the display interpolates recorded frames.
 
-Run the full comparison, including all 24 catalog scenarios and holdout seeds:
+Run the full comparison, including all 27 catalog scenarios and holdout seeds:
 
 ```bash
 .venv/bin/python -m swarm_sim compare --out artifacts/predictive-campaign
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-The current default matrix is 9,600 runs: fleet sizes 10/50/100/200, five cooperation fractions, five controllers, and four seeds split between discovery and holdout. The original four-controller campaign contained 7,680 runs and remains preserved separately. Outputs include every run, a manifest, rankings and an interactive report. Failed safety gates prevent a deployment recommendation. See the [simulation guide](docs/simulation.md) for model coverage, ranking and repeatable commands.
+The current default matrix is 10,800 runs: fleet sizes 10/50/100/200, five cooperation fractions, five controllers, and four seeds split between discovery and holdout. The original four-controller campaign contained 7,680 runs and remains preserved separately. Outputs include every run, a manifest, rankings and an interactive report. Failed safety gates prevent a deployment recommendation. See the [simulation guide](docs/simulation.md) for model coverage, ranking and repeatable commands.
 
-The new `predictive` controller evaluates vehicle-feasible maneuver rollouts against reported traffic uncertainty, obstacles and volume boundaries. `evolved` uses the same checker with preferences learned through cross-entropy search. Both explicitly count failed maneuver libraries; neither has a proven invariant terminal backup. See the [policy development guide](docs/learning-policy.md) for training, independent evaluation and the path toward shielded reinforcement learning.
+The new `predictive` controller evaluates vehicle-feasible maneuver rollouts against reported traffic uncertainty, obstacles and volume boundaries. `evolved` uses the same checker with preferences learned through cross-entropy search. Both explicitly count failed maneuver libraries; neither has a proven joint invariant traffic backup. See the [policy development guide](docs/learning-policy.md) for training, independent evaluation and the path toward shielded reinforcement learning.
 
 ```bash
 .venv/bin/python -m swarm_sim learn --out artifacts/policy-search/preferences.json
@@ -35,6 +35,22 @@ The new `predictive` controller evaluates vehicle-feasible maneuver rollouts aga
   --policy profiles/predictive-preferences.json --drones 100 \
   --seed 3001 --out artifacts/evolved-replay.json
 ```
+
+## Next development sequence: learning with admission
+
+The recurrent actor selects among checked maneuver primitives. The critic uses global simulator state only during training. Queue and route rejection are reported against requested demand; a zero-collision outcome with withheld traffic cannot pass the empirical gate.
+
+```bash
+.venv/bin/python -m pip install -e '.[learning]'
+.venv/bin/python -m swarm_sim train-imitation --epochs 12 --out models/imitation.json
+.venv/bin/python -m swarm_sim train-mappo --initial models/imitation.json --out models/mappo.json
+.venv/bin/python -m swarm_sim run --controller mappo --checkpoint models/mappo.json \
+  --admission checked --admission-limit 40 --routes visibility --drones 50 --seed 6000
+```
+
+The [948-run development decision](experiments/iteration-03/README.md) found no empirical gate pass or consistent learning gain. Checked admission reduced observed density-test collisions while withholding/delaying demand; goal reach and timing remain inadequate.
+
+See [the implementation and assurance scope](docs/third-iteration.md) before interpreting a backup certificate or comparing the learned policies. The default finite horizon does not establish a robust terminal hover for every multirotor, and fixed-wing backups remain finite-horizon turns.
 
 ## Documents
 
@@ -49,6 +65,7 @@ The new `predictive` controller evaluates vehicle-feasible maneuver rollouts aga
 | [Simulation guide](docs/simulation.md) | Running, replaying and comparing the implemented research models |
 | [Initial comparison decision](docs/initial-comparison.md) | Observed results from the completed 7,680-run mixed-fleet campaign |
 | [Policy development](docs/learning-policy.md) | Predictive planning, evolutionary optimization and the proposed shielded MARL design |
+| [Admission and recurrent learning](docs/third-iteration.md) | Implemented pipeline, mathematical bounds, training and evaluation scope |
 | [Predictive iteration decision](docs/second-iteration.md) | Independent catalog results, learning outcome, limitations and next safety work |
 
 Read the architecture first, then the safety case before implementing adapters or controllers. ASTM conformance tests and tactical safety validation are separate acceptance gates.
@@ -63,7 +80,7 @@ Read the architecture first, then the safety case before implementing adapters o
 - `safety-kernel`: robust reachability, control barriers, watchdog, and backup controller.
 - `audit-recorder` and `audit-verifier`: signed evidence, witnessed checkpoints, and replay.
 
-These are proposed production services. The `swarm_sim` package implements an exploratory deterministic harness, synthetic telemetry, heuristic/barrier controllers, negotiation emulation, a predictive maneuver library and evolutionary preference optimization. It does not implement the full signed production protocol, exact QP/ORCA, DAIDALUS integration or neural MARL training.
+These are proposed production services. The `swarm_sim` package implements an exploratory deterministic harness, synthetic telemetry, heuristic/barrier controllers, negotiation emulation, a predictive maneuver library and evolutionary preference optimization. Version 0.3 also implements pre-entry admission, static obstacle routing, independently checked finite backups, a limited static multirotor hover bound, recurrent imitation and masked MAPPO training. It does not implement the full signed production protocol, exact QP/ORCA, DAIDALUS integration or a flight-validated invariant mixed-fleet safety controller.
 
 ## License
 

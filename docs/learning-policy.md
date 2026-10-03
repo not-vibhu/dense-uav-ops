@@ -1,5 +1,7 @@
 # Improving safety before training complex policies
 
+This document records the version 0.2 implementation and subsequent design proposal. Version 0.3 now implements recurrent imitation, masked MAPPO and independently checked finite backups; see [the current implementation and assurance limits](third-iteration.md). Statements below about unimplemented neural training or backup controllers refer to version 0.2.
+
 The original experiments exposed three problems: encounters with insufficient maneuver room, a finite-projection barrier solver that often returned unresolved constraints, and maneuvers that left the operating volume. Learning a higher reward in those conditions does not establish a safe controller. The next policy must account for trajectories, vehicle type, available escape space and source uncertainty before optimizing flight efficiency.
 
 Version 0.2 adds a predictive maneuver-library controller and an evolutionary optimizer of its preferences. It is a working research iteration, not a certified safety filter. The previous 7,680-run results and computation source remain preserved under `artifacts/full-campaign`; a new source revision always uses a new campaign directory.

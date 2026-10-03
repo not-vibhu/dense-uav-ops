@@ -32,6 +32,11 @@ def aggregate(runs):
                "filter_infeasible_drone_steps": sum(m["filter_infeasible_drone_steps"] for m in ms),
                "predictive_no_admissible_drone_steps": sum(m.get("predictive_no_admissible_drone_steps", 0) for m in ms),
                "kinematic_violation_drone_steps": sum(m["kinematic_violation_drone_steps"] for m in ms),
+               "participant_admission_fraction": sum(m.get("participant_admission_fraction",1.) for m in ms) / len(ms),
+               "queued_aircraft":sum(m.get("queued_aircraft",0) for m in ms),
+               "route_rejected_aircraft":sum(m.get("route_rejected_aircraft",0) for m in ms),
+               "backup_unavailable_drone_steps":sum(m.get("backup_unavailable_drone_steps",0) for m in ms),
+               "command_deadline_exceeded_runs":sum(r["metrics"]["command_max_ms"] > r["config"]["dt"] * 1000 for r in group),
                "mean_command_p99_ms": sum(m["command_p99_ms"] for m in ms) / len(ms)}
         row["risk_key"] = [row["participant_collision_run_rate"], row["participant_obstacle_run_rate"],
                            row["participant_volume_exit_run_rate"], row["worst_stratum_collision_rate"],
@@ -54,7 +59,10 @@ def summarize(runs, manifest):
                        selected_holdout["predictive_no_admissible_drone_steps"] == 0 and
                        selected_holdout["kinematic_violation_drone_steps"] == 0 and
                        selected_holdout["participant_completion_fraction"] >= .7 and
-                       selected in ("barrier", "negotiated", "predictive", "evolved"))
+                       selected_holdout["participant_admission_fraction"] >= .7 and
+                       selected_holdout["backup_unavailable_drone_steps"] == 0 and
+                       selected_holdout["command_deadline_exceeded_runs"] == 0 and
+                       selected in ("barrier", "negotiated", "predictive", "evolved", "imitation", "mappo"))
     # Report out-of-bound injected faults separately; they never silently vanish.
     per_scenario = {name: aggregate([r for r in holdout if r["config"]["scenario"] == name])
                     for name in manifest["scenarios"]}

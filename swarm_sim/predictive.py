@@ -60,7 +60,7 @@ def traffic_enclosure(error, error_v, age, horizon, cfg):
             .5 * disturbance * (age + horizon) ** 2)
 
 
-def predictive_control(cfg, world, p, v, active, snapshot, desired):
+def predictive_control(cfg, world, p, v, active, snapshot, desired, policy=None, debt=None):
     pred, obs_v, error, error_v, age = snapshot
     ids = np.flatnonzero(active & world["cooperative"])
     output = desired.copy()
@@ -132,7 +132,8 @@ def predictive_control(cfg, world, p, v, active, snapshot, desired):
             sep = np.where(mask, clear - cfg.separation, np.inf)
             physical = np.where(mask, clear - radius[:, :, None] -
                                 world["radius"][None, None, left:right], np.inf)
-            min_clearance = np.minimum(min_clearance, np.min(sep, axis=-1))
+            min_clearance = np.minimum(min_clearance, np.minimum(np.min(sep, axis=-1),
+                                                               np.min(physical, axis=-1)))
             collision_loss += np.sum(np.minimum(physical, 0.) ** 2, axis=-1) * cfg.dt
             separation_loss += np.sum(np.minimum(sep, 0.) ** 2, axis=-1) * cfg.dt
         bound = volume_clearance(q, vel, a, radius, cfg) - own_error
@@ -148,7 +149,8 @@ def predictive_control(cfg, world, p, v, active, snapshot, desired):
         effort += np.sum(a * a, axis=-1) * cfg.dt
         vel += a * cfg.dt
         q = end
-        done |= np.linalg.norm(q - goals[:, None], axis=-1) < cfg.goal_radius
+        final_leg = np.linalg.norm(goals - world.get("mission_goals", world["goals"])[ids], axis=-1) < 1e-9
+        done |= (np.linalg.norm(q - goals[:, None], axis=-1) < cfg.goal_radius) & final_leg[:, None]
         vel[done] = 0.
     remaining = np.linalg.norm(q - goals[:, None], axis=-1)
     turn = np.sum((first - desired[ids, None, :]) ** 2, axis=-1)
@@ -158,6 +160,18 @@ def predictive_control(cfg, world, p, v, active, snapshot, desired):
     feasible = min_clearance >= 0.
     chosen = choose_candidate(feasible, collision_loss, environment_loss,
                               separation_loss, cost)
+    if policy is not None:
+        from .observations import observe, central_context
+        observation = observe(cfg, world, ids, p, v, active, snapshot, debt)
+        proposed = np.asarray(policy.choose(ids, observation, feasible, chosen.copy(),
+                                           central_context(cfg, world, p, v, active)
+                                           if getattr(policy, 'mode', 'inference') != 'inference' else None), dtype=int)
+        if proposed.shape != chosen.shape:
+            raise ValueError("Policy returned an invalid action shape")
+        valid_range = (proposed >= 0) & (proposed < k)
+        valid = valid_range & feasible[np.arange(m), np.clip(proposed, 0, k-1)]
+        stats["proposal_rejections"] = int(np.sum(~valid & np.any(feasible, axis=1)))
+        chosen = np.where(valid, proposed, chosen)
     output[ids] = first[np.arange(m), chosen]
     stats["unresolved"][ids] = ~np.any(feasible, axis=1)
     stats["feasible_candidates"][ids] = np.sum(feasible, axis=1)

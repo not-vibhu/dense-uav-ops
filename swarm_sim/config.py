@@ -2,7 +2,7 @@ from dataclasses import asdict, dataclass
 import math
 
 
-CONTROLLERS = ("goal", "repulsion", "barrier", "negotiated", "predictive", "evolved")
+CONTROLLERS = ("goal", "repulsion", "barrier", "negotiated", "predictive", "evolved", "imitation", "mappo")
 
 
 @dataclass(frozen=True)
@@ -38,6 +38,13 @@ class Config:
     policy_effort_weight: float = 0.03
     policy_turn_weight: float = 0.1
     policy_vertical_weight: float = 0.1
+    admission: str = "off"
+    admission_limit: int = 20
+    admission_period: float = 1.0
+    routes: str = "off"
+    require_invariant_backup: bool = False
+    checkpoint: str = ""
+    checkpoint_sha256: str = ""
 
     def validate(self):
         from .scenarios import SCENARIOS
@@ -67,6 +74,17 @@ class Config:
             raise ValueError("Predictive horizon must lie between dt and 5 s")
         if any(getattr(self, name) <= 0 for name in POLICY_FIELDS):
             raise ValueError("Policy weights must be positive")
+        if self.admission not in ("off", "capacity", "checked") or self.routes not in ("off", "visibility"):
+            raise ValueError("Unknown admission or route mode")
+        if (not isinstance(self.admission_limit,int) or isinstance(self.admission_limit,bool) or
+                not 1 <= self.admission_limit <= 500 or self.admission_period < self.dt):
+            raise ValueError("Invalid admission capacity/period")
+        if not isinstance(self.require_invariant_backup,bool):
+            raise ValueError("require_invariant_backup must be boolean")
+        if self.advertised_acceleration_bound < self.acceleration_limit:
+            raise ValueError("Advertised acceleration must cover nominal aircraft authority")
+        if self.fixed_wing_turn_rate_deg <= 0 or not 0 < self.fixed_wing_climb_limit <= self.max_speed:
+            raise ValueError("Invalid fixed-wing turn/climb bound")
         return self
 
 
