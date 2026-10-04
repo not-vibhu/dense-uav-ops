@@ -1,0 +1,10 @@
+{
+  "bounded_states_checked": 624,
+  "violations": 0,
+  "participants": [
+    2,
+    3,
+    4
+  ],
+  "scope": "Finite exploration of partial certificates, competing brokers, expiry and local veto. Not a continuous-flight or unbounded protocol proof."
+}

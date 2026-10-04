@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dense-uav-ops"
-version = "0.3.0"
+version = "0.4.1"
 description = "Reproducible mixed-equipage UAS simulation and safety comparison"
 requires-python = ">=3.11"
-dependencies = ["numpy>=2.0,<3"]
+dependencies = ["numpy>=2.0,<3", "cryptography>=43,<48"]
 license = {text = "MIT"}
 
 [project.urls]
@@ -19,9 +19,10 @@ learning = ["torch>=2.6,<3"]
 [project.scripts]
 swarm-sim = "swarm_sim.cli:main"
 airspace-capacity = "airspace_capacity.__main__:main"
+dense-ops = "dense_ops.__main__:main"
 
 [tool.setuptools]
-packages = ["swarm_sim", "airspace_capacity"]
+packages = ["swarm_sim", "airspace_capacity", "dense_ops"]
 
 [tool.setuptools.package-data]
 swarm_sim = ["web/*.html", "web/*.js", "web/*.css"]

@@ -1,0 +1,1605 @@
+{
+  "rows": [
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "head_on",
+        "mode": "local",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 4,
+        "obstacle_pairs": 0,
+        "volume_exits": 2,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 1,
+        "total_completed": 7,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 4,
+        "manned_involved": 4
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "head_on",
+        "mode": "local",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 2,
+        "obstacle_pairs": 0,
+        "volume_exits": 3,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 1,
+        "total_completed": 7,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 2,
+        "manned_involved": 2
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "head_on",
+        "mode": "local",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 4,
+        "obstacle_pairs": 0,
+        "volume_exits": 1,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 4,
+        "manned_involved": 4
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "head_on",
+        "mode": "local",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 2,
+        "obstacle_pairs": 0,
+        "volume_exits": 1,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 2,
+        "manned_involved": 2
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "head_on",
+        "mode": "federated",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 4,
+        "obstacle_pairs": 0,
+        "volume_exits": 2,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 1,
+        "total_completed": 7,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 4,
+        "manned_involved": 4
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "head_on",
+        "mode": "federated",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 2,
+        "obstacle_pairs": 0,
+        "volume_exits": 3,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 1,
+        "total_completed": 7,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 2,
+        "manned_involved": 2
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "head_on",
+        "mode": "federated",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 4,
+        "obstacle_pairs": 0,
+        "volume_exits": 1,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 4,
+        "manned_involved": 4
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "head_on",
+        "mode": "federated",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 2,
+        "obstacle_pairs": 0,
+        "volume_exits": 1,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 2,
+        "manned_involved": 2
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "crossing",
+        "mode": "local",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 3,
+        "obstacle_pairs": 0,
+        "volume_exits": 3,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 1,
+        "total_completed": 7,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 3,
+        "manned_involved": 3
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "crossing",
+        "mode": "local",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 3,
+        "obstacle_pairs": 0,
+        "volume_exits": 0,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 2,
+        "total_completed": 8,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 1,
+        "wholly_exogenous": 2,
+        "manned_involved": 3
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "crossing",
+        "mode": "local",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 3,
+        "obstacle_pairs": 0,
+        "volume_exits": 0,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 3,
+        "manned_involved": 3
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "crossing",
+        "mode": "local",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 2,
+        "obstacle_pairs": 0,
+        "volume_exits": 1,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 2,
+        "manned_involved": 2
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "crossing",
+        "mode": "federated",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 3,
+        "obstacle_pairs": 0,
+        "volume_exits": 3,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 1,
+        "total_completed": 7,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 3,
+        "manned_involved": 3
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "crossing",
+        "mode": "federated",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 3,
+        "obstacle_pairs": 0,
+        "volume_exits": 0,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 2,
+        "total_completed": 8,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 1,
+        "wholly_exogenous": 2,
+        "manned_involved": 3
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "crossing",
+        "mode": "federated",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 3,
+        "obstacle_pairs": 0,
+        "volume_exits": 0,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 3,
+        "manned_involved": 3
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "crossing",
+        "mode": "federated",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 2,
+        "obstacle_pairs": 0,
+        "volume_exits": 1,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 2,
+        "manned_involved": 2
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "corridor",
+        "mode": "local",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 4,
+        "obstacle_pairs": 0,
+        "volume_exits": 2,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 4,
+        "manned_involved": 4
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "corridor",
+        "mode": "local",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 4,
+        "obstacle_pairs": 0,
+        "volume_exits": 4,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 4,
+        "manned_involved": 4
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "corridor",
+        "mode": "local",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 4,
+        "obstacle_pairs": 0,
+        "volume_exits": 2,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 4,
+        "manned_involved": 4
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "corridor",
+        "mode": "local",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 4,
+        "obstacle_pairs": 0,
+        "volume_exits": 1,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 4,
+        "manned_involved": 4
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "corridor",
+        "mode": "federated",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 4,
+        "obstacle_pairs": 0,
+        "volume_exits": 2,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 4,
+        "manned_involved": 4
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "corridor",
+        "mode": "federated",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 4,
+        "obstacle_pairs": 0,
+        "volume_exits": 4,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 4,
+        "manned_involved": 4
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "corridor",
+        "mode": "federated",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 4,
+        "obstacle_pairs": 0,
+        "volume_exits": 2,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 4,
+        "manned_involved": 4
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "corridor",
+        "mode": "federated",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 4,
+        "obstacle_pairs": 0,
+        "volume_exits": 1,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 4,
+        "manned_involved": 4
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "wind_gust",
+        "mode": "local",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 3,
+        "obstacle_pairs": 0,
+        "volume_exits": 3,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 1,
+        "total_completed": 7,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 3,
+        "manned_involved": 3
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "wind_gust",
+        "mode": "local",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 3,
+        "obstacle_pairs": 0,
+        "volume_exits": 1,
+        "kinematic_violation_steps": 2,
+        "cooperative_completed": 2,
+        "total_completed": 8,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 1,
+        "wholly_exogenous": 2,
+        "manned_involved": 3
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "wind_gust",
+        "mode": "local",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 3,
+        "obstacle_pairs": 0,
+        "volume_exits": 0,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 3,
+        "manned_involved": 3
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "wind_gust",
+        "mode": "local",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 2,
+        "obstacle_pairs": 0,
+        "volume_exits": 2,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 2,
+        "manned_involved": 2
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "wind_gust",
+        "mode": "federated",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 3,
+        "obstacle_pairs": 0,
+        "volume_exits": 3,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 1,
+        "total_completed": 7,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 3,
+        "manned_involved": 3
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "wind_gust",
+        "mode": "federated",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "reference",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 3,
+        "obstacle_pairs": 0,
+        "volume_exits": 1,
+        "kinematic_violation_steps": 2,
+        "cooperative_completed": 2,
+        "total_completed": 8,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 1,
+        "wholly_exogenous": 2,
+        "manned_involved": 3
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "wind_gust",
+        "mode": "federated",
+        "seed": 8200,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 3,
+        "obstacle_pairs": 0,
+        "volume_exits": 0,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 3,
+        "manned_involved": 3
+      }
+    },
+    {
+      "experiment": {
+        "drones": 10,
+        "scenario": "wind_gust",
+        "mode": "federated",
+        "seed": 8201,
+        "duration": 36.0,
+        "dt": 0.2,
+        "area": 220.0,
+        "cooperative_fraction": 0.5,
+        "fixed_wing_fraction": 0.4,
+        "manned": 1,
+        "horizon": 4.0,
+        "disturbance": 0.4,
+        "deadline_ms": 200.0,
+        "sensor_range": 600.0,
+        "warmup": 1.0,
+        "entry_limit": 200,
+        "guard": "continuation",
+        "fault": "none",
+        "links": {
+          "latency": 0.1,
+          "jitter": 0.05,
+          "loss": 0.03,
+          "partition": false,
+          "asymmetric": false,
+          "clock_skew": 0.0
+        }
+      },
+      "verified": {
+        "collision_pairs": 0,
+        "protected_breach_pairs": 2,
+        "obstacle_pairs": 0,
+        "volume_exits": 2,
+        "kinematic_violation_steps": 0,
+        "cooperative_completed": 0,
+        "total_completed": 6,
+        "manned_completed": 1
+      },
+      "collision_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 0,
+        "manned_involved": 0
+      },
+      "breach_categories": {
+        "controlled": 0,
+        "wholly_exogenous": 2,
+        "manned_involved": 2
+      }
+    }
+  ],
+  "scope": "Record/plant consistency with archived continuous geometry; not surveillance-decision replay."
+}

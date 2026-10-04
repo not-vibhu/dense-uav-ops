@@ -1,0 +1,113 @@
+{
+  "source_sha256": "dec3c25a34ef13fabda0559078a9b8b99c1d01883b7906b433350704b4e31b56",
+  "evaluations": 8,
+  "cells": [
+    {
+      "scenario": "corridor",
+      "drones": 10,
+      "mode": "federated",
+      "guard": "continuation",
+      "fault": "compound",
+      "runs": 2,
+      "passing_runs": 0,
+      "failure_upper_95_simultaneous": 1.0,
+      "collisions": 1,
+      "worst_completion": 0.0,
+      "peak_occupancy": 9,
+      "worst_command_ms": 82.16499999980442,
+      "blockers": [
+        "all_uas_completion_requirement",
+        "collision_pairs",
+        "command_deadline_misses",
+        "completion_requirement",
+        "no_safe_continuation_steps",
+        "protected_breach_pairs",
+        "stale_traffic_aircraft_steps",
+        "unknown_traffic_aircraft_steps",
+        "volume_exits"
+      ]
+    },
+    {
+      "scenario": "corridor",
+      "drones": 10,
+      "mode": "local",
+      "guard": "continuation",
+      "fault": "compound",
+      "runs": 2,
+      "passing_runs": 0,
+      "failure_upper_95_simultaneous": 1.0,
+      "collisions": 1,
+      "worst_completion": 0.0,
+      "peak_occupancy": 9,
+      "worst_command_ms": 82.71291600249242,
+      "blockers": [
+        "all_uas_completion_requirement",
+        "collision_pairs",
+        "command_deadline_misses",
+        "completion_requirement",
+        "no_safe_continuation_steps",
+        "protected_breach_pairs",
+        "stale_traffic_aircraft_steps",
+        "unknown_traffic_aircraft_steps",
+        "volume_exits"
+      ]
+    },
+    {
+      "scenario": "crossing",
+      "drones": 10,
+      "mode": "federated",
+      "guard": "continuation",
+      "fault": "compound",
+      "runs": 2,
+      "passing_runs": 0,
+      "failure_upper_95_simultaneous": 1.0,
+      "collisions": 0,
+      "worst_completion": 0.0,
+      "peak_occupancy": 10,
+      "worst_command_ms": 100.52845800237264,
+      "blockers": [
+        "all_uas_completion_requirement",
+        "command_deadline_misses",
+        "completion_requirement",
+        "no_safe_continuation_steps",
+        "protected_breach_pairs",
+        "stale_traffic_aircraft_steps",
+        "unavailable_deadline_recoveries",
+        "unknown_traffic_aircraft_steps",
+        "volume_exits"
+      ]
+    },
+    {
+      "scenario": "crossing",
+      "drones": 10,
+      "mode": "local",
+      "guard": "continuation",
+      "fault": "compound",
+      "runs": 2,
+      "passing_runs": 0,
+      "failure_upper_95_simultaneous": 1.0,
+      "collisions": 0,
+      "worst_completion": 0.0,
+      "peak_occupancy": 10,
+      "worst_command_ms": 195.3740829922026,
+      "blockers": [
+        "all_uas_completion_requirement",
+        "command_deadline_misses",
+        "completion_requirement",
+        "no_safe_continuation_steps",
+        "protected_breach_pairs",
+        "stale_traffic_aircraft_steps",
+        "unavailable_deadline_recoveries",
+        "unknown_traffic_aircraft_steps",
+        "volume_exits"
+      ]
+    }
+  ],
+  "operational_capacity": null,
+  "statistically_qualified_architecture": null,
+  "probability_unit": "independent fixed-duration research runs; not per-flight or per-hour",
+  "timing_scope": "host fleet measurements, 2 concurrent workers; not onboard WCET",
+  "decision": "No deployment ranking: compare feasibility, service and safety within matched strata.",
+  "raw_sha256": "ec22fb10ea94a85dea529c04c0515c43b68745ef9ed33a19b468bbbe42f311c0",
+  "anchors_sha256": "ac39ccdda79a3a208bdf47baebfc95d7091e3fd87fad3889b29d6a11a67ddb93"
+}

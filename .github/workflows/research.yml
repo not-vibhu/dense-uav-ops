@@ -1,0 +1,21 @@
+name: Research checks
+on:
+  push:
+  pull_request:
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'torch>=2.6,<3' --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install -e '.[learning]'
+      - run: python scripts/build_daidalus.py
+      - run: python -m unittest discover -s tests -v
+      - run: python experiments/capacity-01/validate.py
+      - run: python -m dense_ops modelcheck --out artifacts/protocol.json
+      - run: python -m scripts.validate_distributed_evidence experiments/distributed-04
+      - run: python -m scripts.validate_readiness_evidence experiments/readiness-04

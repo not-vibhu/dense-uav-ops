@@ -1,0 +1,149 @@
+{
+  "source_sha256": "dec3c25a34ef13fabda0559078a9b8b99c1d01883b7906b433350704b4e31b56",
+  "evaluations": 12,
+  "cells": [
+    {
+      "scenario": "head_on",
+      "drones": 10,
+      "mode": "federated",
+      "guard": "continuation",
+      "fault": "none",
+      "runs": 2,
+      "passing_runs": 0,
+      "failure_upper_95_simultaneous": 1.0,
+      "collisions": 0,
+      "worst_completion": 0.0,
+      "peak_occupancy": 10,
+      "worst_command_ms": 91.20508300838992,
+      "blockers": [
+        "all_uas_completion_requirement",
+        "completion_requirement",
+        "no_safe_continuation_steps",
+        "protected_breach_pairs",
+        "stale_traffic_aircraft_steps",
+        "unknown_traffic_aircraft_steps",
+        "volume_exits"
+      ]
+    },
+    {
+      "scenario": "head_on",
+      "drones": 10,
+      "mode": "local",
+      "guard": "continuation",
+      "fault": "none",
+      "runs": 2,
+      "passing_runs": 0,
+      "failure_upper_95_simultaneous": 1.0,
+      "collisions": 0,
+      "worst_completion": 0.0,
+      "peak_occupancy": 10,
+      "worst_command_ms": 126.44941700273193,
+      "blockers": [
+        "all_uas_completion_requirement",
+        "completion_requirement",
+        "no_safe_continuation_steps",
+        "protected_breach_pairs",
+        "stale_traffic_aircraft_steps",
+        "unknown_traffic_aircraft_steps",
+        "volume_exits"
+      ]
+    },
+    {
+      "scenario": "network_outage",
+      "drones": 10,
+      "mode": "federated",
+      "guard": "continuation",
+      "fault": "none",
+      "runs": 2,
+      "passing_runs": 0,
+      "failure_upper_95_simultaneous": 1.0,
+      "collisions": 0,
+      "worst_completion": 0.0,
+      "peak_occupancy": 9,
+      "worst_command_ms": 96.18508300627582,
+      "blockers": [
+        "all_uas_completion_requirement",
+        "completion_requirement",
+        "no_safe_continuation_steps",
+        "protected_breach_pairs",
+        "stale_traffic_aircraft_steps",
+        "unknown_traffic_aircraft_steps",
+        "volume_exits"
+      ]
+    },
+    {
+      "scenario": "network_outage",
+      "drones": 10,
+      "mode": "local",
+      "guard": "continuation",
+      "fault": "none",
+      "runs": 2,
+      "passing_runs": 0,
+      "failure_upper_95_simultaneous": 1.0,
+      "collisions": 0,
+      "worst_completion": 0.0,
+      "peak_occupancy": 9,
+      "worst_command_ms": 88.95383401250001,
+      "blockers": [
+        "all_uas_completion_requirement",
+        "completion_requirement",
+        "no_safe_continuation_steps",
+        "protected_breach_pairs",
+        "stale_traffic_aircraft_steps",
+        "unknown_traffic_aircraft_steps",
+        "volume_exits"
+      ]
+    },
+    {
+      "scenario": "stale_telemetry",
+      "drones": 10,
+      "mode": "federated",
+      "guard": "continuation",
+      "fault": "none",
+      "runs": 2,
+      "passing_runs": 0,
+      "failure_upper_95_simultaneous": 1.0,
+      "collisions": 0,
+      "worst_completion": 0.6,
+      "peak_occupancy": 11,
+      "worst_command_ms": 170.818958999007,
+      "blockers": [
+        "all_uas_completion_requirement",
+        "completion_requirement",
+        "no_safe_continuation_steps",
+        "protected_breach_pairs",
+        "stale_traffic_aircraft_steps",
+        "unknown_traffic_aircraft_steps"
+      ]
+    },
+    {
+      "scenario": "stale_telemetry",
+      "drones": 10,
+      "mode": "local",
+      "guard": "continuation",
+      "fault": "none",
+      "runs": 2,
+      "passing_runs": 0,
+      "failure_upper_95_simultaneous": 1.0,
+      "collisions": 0,
+      "worst_completion": 0.6,
+      "peak_occupancy": 11,
+      "worst_command_ms": 79.13525000913069,
+      "blockers": [
+        "all_uas_completion_requirement",
+        "completion_requirement",
+        "no_safe_continuation_steps",
+        "protected_breach_pairs",
+        "stale_traffic_aircraft_steps",
+        "unknown_traffic_aircraft_steps"
+      ]
+    }
+  ],
+  "operational_capacity": null,
+  "statistically_qualified_architecture": null,
+  "probability_unit": "independent fixed-duration research runs; not per-flight or per-hour",
+  "timing_scope": "host fleet measurements, 2 concurrent workers; not onboard WCET",
+  "decision": "No deployment ranking: compare feasibility, service and safety within matched strata.",
+  "raw_sha256": "3b0f2a54c6a4e026b9e30d50b464d0056c2319e727d48b25444cf1876e447b43",
+  "anchors_sha256": "f8a1fe62e397c2cba4eba4c5306f9e3449d87129dc85ce30dbfd455e732ba017"
+}

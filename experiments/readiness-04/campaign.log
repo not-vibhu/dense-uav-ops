@@ -1,0 +1,26 @@
+1/12 stale_telemetry n=10 local/continuation collisions=0 completion=0.60
+2/12 stale_telemetry n=10 local/continuation collisions=0 completion=0.80
+3/12 stale_telemetry n=10 federated/continuation collisions=0 completion=0.60
+4/12 stale_telemetry n=10 federated/continuation collisions=0 completion=0.80
+5/12 network_outage n=10 local/continuation collisions=0 completion=0.00
+6/12 network_outage n=10 local/continuation collisions=0 completion=0.00
+7/12 network_outage n=10 federated/continuation collisions=0 completion=0.00
+8/12 network_outage n=10 federated/continuation collisions=0 completion=0.00
+9/12 head_on n=10 local/continuation collisions=0 completion=0.00
+10/12 head_on n=10 local/continuation collisions=0 completion=0.00
+11/12 head_on n=10 federated/continuation collisions=0 completion=0.00
+12/12 head_on n=10 federated/continuation collisions=0 completion=0.00
+12 complete evaluations, signatures, causal chains and outcomes verified
+1/12 stale_telemetry n=10 local/continuation collisions=0 completion=0.00
+2/12 stale_telemetry n=10 local/continuation collisions=0 completion=0.00
+3/12 stale_telemetry n=10 federated/continuation collisions=0 completion=0.00
+4/12 stale_telemetry n=10 federated/continuation collisions=0 completion=0.00
+5/12 network_outage n=10 local/continuation collisions=0 completion=0.00
+6/12 network_outage n=10 local/continuation collisions=0 completion=0.00
+7/12 network_outage n=10 federated/continuation collisions=0 completion=0.00
+8/12 network_outage n=10 federated/continuation collisions=0 completion=0.00
+9/12 head_on n=10 local/continuation collisions=0 completion=0.00
+10/12 head_on n=10 local/continuation collisions=0 completion=0.00
+11/12 head_on n=10 federated/continuation collisions=0 completion=0.00
+12/12 head_on n=10 federated/continuation collisions=0 completion=0.00
+12 complete evaluations, signatures, causal chains and outcomes verified

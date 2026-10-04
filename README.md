@@ -6,9 +6,28 @@ Previously named Federated swarm. Python modules, command names and versioned sc
 
 An open-source architecture for real-time tactical deconfliction of dense, low-altitude UAS traffic using Network and Direct Remote ID observations. Cooperative aircraft negotiate efficient maneuvers; broadcast-only aircraft are modeled as independently moving obstacles. Every participating aircraft retains local authority to reject an unsafe maneuver.
 
-**Status:** architecture and runnable research simulator, dated 3 October 2026. The simulator compares mixed multirotor/fixed-wing traffic and records measured simulation outcomes. Aircraft dynamics, telemetry, controller thresholds and timing remain unvalidated operational assumptions; there is no certified flight implementation.
+**Status:** version 0.4.1 research implementation, dated 4 October 2026. The simulator compares mixed multirotor/fixed-wing traffic and records measured simulation outcomes. Aircraft dynamics, telemetry, controller thresholds and timing remain unvalidated operational assumptions; there is no certified flight implementation.
 
 The core design is a federated USS discovery layer, regional telemetry fusion, a bounded maneuver-negotiation protocol, and an onboard deterministic safety controller. Safety depends on observed traffic, bounded uncertainty, sufficient maneuver authority, and continued controller feasibility. Adoption by every aircraft is unnecessary; collision freedom for two aircraft that neither participate nor respond cannot be guaranteed by this system. Remote ID alone cannot guarantee detection or truthful position reports.
+
+## NASA foundations and distributed research
+
+Version 0.4 adds an actual pinned C++ DAIDALUS adapter, separate receiver stores for each aircraft, asynchronous signed broker intents, checked recovery continuations, bounded certificate-protocol exploration, tamper-evident audit records, and offline federated graph-policy training. ICAROUS informs the module boundaries; its complete cFS flight stack is not embedded. Read the [NASA study and implementation guide](docs/nasa-and-distributed-development.md) for equations, commands, implemented boundaries and acceptance gates.
+
+```bash
+.venv/bin/python -m pip install -e '.[learning]'
+.venv/bin/python scripts/build_daidalus.py
+.venv/bin/python -m dense_ops nasa-check --out artifacts/nasa-reference.json
+.venv/bin/python -m dense_ops run --profile profiles/distributed-04/mixed-mission.json --out artifacts/distributed-mission.json
+.venv/bin/python -m dense_ops train-federated --out artifacts/graph.json --rounds 3
+.venv/bin/python -m scripts.run_distributed_study --checkpoint artifacts/graph.json --out artifacts/distributed-study
+```
+
+The existing interactive labs and capacity metric remain the frozen v0.3 implementation. The new distributed engine currently uses the `dense-ops` CLI. Its finite batch-fleet experiments do not establish operational capacity or a safest controller.
+
+The [196-run distributed development assessment](experiments/distributed-04/README.md) retains the complete declared grid, signed outcomes, reconstructed flight counts, offline training data and a source archive. An [offline replay](experiments/distributed-04/replay.html) provides playback and shows failed requirements.
+
+Version 0.4.1 adds a configurable surveillance-readiness admission gate after that baseline exposed entry before usable telemetry arrived. The [24-run paired followup](experiments/readiness-04/README.md) records withheld demand and failures explicitly. Historical models require their retained matching source; use `python -m scripts.validate_distributed_evidence experiments/distributed-04` to verify the frozen baseline.
 
 ## Run the simulation lab
 
@@ -78,6 +97,7 @@ The [179-run capacity assessment](experiments/capacity-01/README.md) reached 122
 
 | Document | Contents |
 |---|---|
+| [NASA and distributed development](docs/nasa-and-distributed-development.md) | DAIDALUS/ICAROUS study, native adapter, recovery bounds, federated graph training, signed audit and next acceptance sequence |
 | [Architecture](docs/architecture.md) | Standards, topology, algorithms, deterministic bounds, and audit design |
 | [Negotiation protocol](docs/protocol.md) | Messages, deadlines, partial delivery, ownership, and degraded operation |
 | [Safety case](docs/safety-case.md) | Equations, assumptions, detection range example, and proof obligations |
@@ -103,7 +123,7 @@ Read the architecture first, then the safety case before implementing adapters o
 - `safety-kernel`: robust reachability, control barriers, watchdog, and backup controller.
 - `audit-recorder` and `audit-verifier`: signed evidence, witnessed checkpoints, and replay.
 
-These are proposed production services. The `swarm_sim` package implements an exploratory deterministic harness, synthetic telemetry, heuristic/barrier controllers, negotiation emulation, a predictive maneuver library and evolutionary preference optimization. Version 0.3 also implements pre-entry admission, static obstacle routing, independently checked finite backups, a limited static multirotor hover bound, recurrent imitation and masked MAPPO training. It does not implement the full signed production protocol, exact QP/ORCA, DAIDALUS integration or a flight-validated invariant mixed-fleet safety controller.
+These are proposed production services. The frozen `swarm_sim` package implements an exploratory deterministic harness, synthetic telemetry, heuristic/barrier controllers, negotiation emulation, a predictive maneuver library and evolutionary preference optimization. Version 0.3 also implements pre-entry admission, static obstacle routing, independently checked finite backups, a limited static multirotor hover bound, recurrent imitation and masked MAPPO training. The separate `dense_ops` v0.4 layer adds the NASA adapter and distributed research described above. Neither implements a flight-validated invariant mixed-fleet safety controller or the full signed production protocol.
 
 ## License
 

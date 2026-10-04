@@ -1,0 +1,54 @@
+{
+  "evaluations": 196,
+  "source_sha256": "dec3c25a34ef13fabda0559078a9b8b99c1d01883b7906b433350704b4e31b56",
+  "studies": {
+    "catalog": {
+      "runs": 108,
+      "passing": 0,
+      "collision_runs": 4,
+      "controlled_collision_runs": 2,
+      "controlled_breach_runs": 8,
+      "max_cooperative_completion": 1.0,
+      "peak_occupancy": 11
+    },
+    "guard-comparison": {
+      "runs": 32,
+      "passing": 0,
+      "collision_runs": 0,
+      "controlled_collision_runs": 0,
+      "controlled_breach_runs": 4,
+      "max_cooperative_completion": 0.4,
+      "peak_occupancy": 10
+    },
+    "graph-comparison": {
+      "runs": 32,
+      "passing": 0,
+      "collision_runs": 4,
+      "controlled_collision_runs": 0,
+      "controlled_breach_runs": 4,
+      "max_cooperative_completion": 0.4,
+      "peak_occupancy": 10
+    },
+    "density": {
+      "runs": 16,
+      "passing": 0,
+      "collision_runs": 6,
+      "controlled_collision_runs": 0,
+      "controlled_breach_runs": 0,
+      "max_cooperative_completion": 0.0,
+      "peak_occupancy": 274
+    },
+    "partition-clock": {
+      "runs": 8,
+      "passing": 0,
+      "collision_runs": 2,
+      "controlled_collision_runs": 0,
+      "controlled_breach_runs": 2,
+      "max_cooperative_completion": 0.0,
+      "peak_occupancy": 10
+    }
+  },
+  "operational_capacity": null,
+  "statistically_qualified_architecture": null,
+  "decision": "Resolve recoverability, service, observation and timing blockers; no safest architecture or capacity established."
+}

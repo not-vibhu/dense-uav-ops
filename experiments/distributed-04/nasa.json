@@ -1,0 +1,132 @@
+{
+  "manifest": {
+    "daidalus": "1c7b58e5525d5cca91cbbf4a8b7337a488243769",
+    "icarous_study": "4a3bcf443e516c713c775bd6d32b8184d57c4ea2",
+    "license": "NASA Open Source Agreement; separate from original MIT code",
+    "configuration": "Configurations/DO_365B_no_SUM.conf",
+    "binary": "/Users/vibhutripathi/Documents/OpenUTM/repos/dense-uav-ops/artifacts/nasa/daidalus-bridge",
+    "configuration_path": "/Users/vibhutripathi/Documents/OpenUTM/repos/dense-uav-ops/artifacts/upstream/daidalus/Configurations/DO_365B_no_SUM.conf",
+    "binary_sha256": "0672fc5e9bbd656510d08f00bea76ce834555ac8c286cd026ca5a7631bf5bf19",
+    "configuration_sha256": "c6937a8e2feb60bfde86123d4ae6fdc8b80c68d003fd21422f8ae00ae24127d2",
+    "bridge_sha256": "7bb9da186c8f998ede67083984dd355c8a16841aa79bac6152d3f1cc5aeb1688"
+  },
+  "cases": [
+    {
+      "name": "head-on",
+      "result": {
+        "alerts": [
+          {
+            "id": "1",
+            "level": 3
+          }
+        ],
+        "direction_bands_deg": [
+          {
+            "low": 0,
+            "high": 20.999999999999996,
+            "region": "NEAR"
+          },
+          {
+            "low": 20.999999999999996,
+            "high": 49,
+            "region": "RECOVERY"
+          },
+          {
+            "low": 49,
+            "high": 131,
+            "region": "NEAR"
+          },
+          {
+            "low": 131,
+            "high": 159,
+            "region": "RECOVERY"
+          },
+          {
+            "low": 159,
+            "high": 360,
+            "region": "NEAR"
+          }
+        ],
+        "right_resolution_deg": 131,
+        "left_resolution_deg": 49,
+        "scope": "snapshot advisory; constant-velocity traffic; no hysteresis history",
+        "upstream_sha256_pin": "1c7b58e5525d5cca91cbbf4a8b7337a488243769",
+        "configuration_sha256": "c6937a8e2feb60bfde86123d4ae6fdc8b80c68d003fd21422f8ae00ae24127d2",
+        "sensor_uncertainty_mapping": "disabled: hard bounds are not standard deviations"
+      }
+    },
+    {
+      "name": "separated-diverging",
+      "result": {
+        "alerts": [
+          {
+            "id": "1",
+            "level": 0
+          }
+        ],
+        "direction_bands_deg": [
+          {
+            "low": 0,
+            "high": 360,
+            "region": "NONE"
+          }
+        ],
+        "right_resolution_deg": null,
+        "left_resolution_deg": null,
+        "scope": "snapshot advisory; constant-velocity traffic; no hysteresis history",
+        "upstream_sha256_pin": "1c7b58e5525d5cca91cbbf4a8b7337a488243769",
+        "configuration_sha256": "c6937a8e2feb60bfde86123d4ae6fdc8b80c68d003fd21422f8ae00ae24127d2",
+        "sensor_uncertainty_mapping": "disabled: hard bounds are not standard deviations"
+      }
+    },
+    {
+      "name": "vertical-separated",
+      "result": {
+        "alerts": [
+          {
+            "id": "1",
+            "level": 0
+          }
+        ],
+        "direction_bands_deg": [
+          {
+            "low": 0,
+            "high": 360,
+            "region": "NONE"
+          }
+        ],
+        "right_resolution_deg": null,
+        "left_resolution_deg": null,
+        "scope": "snapshot advisory; constant-velocity traffic; no hysteresis history",
+        "upstream_sha256_pin": "1c7b58e5525d5cca91cbbf4a8b7337a488243769",
+        "configuration_sha256": "c6937a8e2feb60bfde86123d4ae6fdc8b80c68d003fd21422f8ae00ae24127d2",
+        "sensor_uncertainty_mapping": "disabled: hard bounds are not standard deviations"
+      }
+    },
+    {
+      "name": "close",
+      "result": {
+        "alerts": [
+          {
+            "id": "1",
+            "level": 3
+          }
+        ],
+        "direction_bands_deg": [
+          {
+            "low": 0,
+            "high": 360,
+            "region": "NEAR"
+          }
+        ],
+        "right_resolution_deg": null,
+        "left_resolution_deg": null,
+        "scope": "snapshot advisory; constant-velocity traffic; no hysteresis history",
+        "upstream_sha256_pin": "1c7b58e5525d5cca91cbbf4a8b7337a488243769",
+        "configuration_sha256": "c6937a8e2feb60bfde86123d4ae6fdc8b80c68d003fd21422f8ae00ae24127d2",
+        "sensor_uncertainty_mapping": "disabled: hard bounds are not standard deviations"
+      }
+    }
+  ],
+  "scope": "Actual DAIDALUS DO-365B reference snapshots; thresholds not dense-UAS operational minima."
+}
