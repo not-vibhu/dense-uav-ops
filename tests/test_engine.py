@@ -7,7 +7,7 @@ from unittest import mock
 import numpy as np
 
 from dense_uav_ops import engine
-from dense_uav_ops.campaign import deterministic, finish, publish, run_campaign, validate
+from dense_uav_ops.campaign import _first_mismatch, deterministic, finish, publish, run_campaign, validate
 from dense_uav_ops.engine import category, simulate
 from helpers import small
 
@@ -115,6 +115,14 @@ class CampaignTests(unittest.TestCase):
             spec.write_text(json.dumps({**self.spec, 'seeds': [3]}))
             with self.assertRaises(ValueError):
                 run_campaign(spec, out)
+
+    def test_summary_comparison_tolerates_only_floating_point_noise(self):
+        saved = {'events': 3, 'interval': [0.2924017738212874, 3.4301540339602994], 'name': 'a'}
+        self.assertIsNone(_first_mismatch(saved, {**saved, 'interval': [0.2924017738212892, 3.430154033960279]}))
+        self.assertEqual(_first_mismatch(saved, {**saved, 'events': 4}), 'summary.events')
+        self.assertEqual(_first_mismatch(saved, {**saved, 'interval': [0.2924, 3.4301540339602994]}), 'summary.interval[0]')
+        self.assertEqual(_first_mismatch(saved, {**saved, 'events': 3.}), 'summary.events')
+        self.assertEqual(_first_mismatch(saved, {k: v for k, v in saved.items() if k != 'name'}), 'summary')
 
 
 if __name__ == '__main__':

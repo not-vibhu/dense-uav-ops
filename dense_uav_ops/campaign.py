@@ -11,6 +11,7 @@ import gzip
 import hashlib
 import itertools
 import json
+import math
 from pathlib import Path
 import platform
 import random
@@ -268,6 +269,27 @@ def publish(out):
     (out / 'checksums.json').write_text(json.dumps(checksums, indent=1) + '\n')
 
 
+def _first_mismatch(saved, rebuilt, path='summary', rel_tol=1e-9):
+    """Path of the first difference, or None. Counts, strings and digests must match exactly; floats to rel_tol.
+
+    Interval endpoints come from lgamma/exp, whose last bits differ between C math libraries, so a
+    summary rebuilt on another platform can differ by about 1e-13 (relative) without any change in outcomes.
+    """
+    if isinstance(saved, float) and isinstance(rebuilt, float):
+        return None if math.isclose(saved, rebuilt, rel_tol=rel_tol, abs_tol=1e-12) else path
+    if type(saved) is not type(rebuilt):
+        return path
+    if isinstance(saved, dict):
+        if saved.keys() != rebuilt.keys():
+            return path
+        return next((m for k in saved if (m := _first_mismatch(saved[k], rebuilt[k], f'{path}.{k}', rel_tol))), None)
+    if isinstance(saved, list):
+        if len(saved) != len(rebuilt):
+            return path
+        return next((m for i, (a, b) in enumerate(zip(saved, rebuilt)) if (m := _first_mismatch(a, b, f'{path}[{i}]', rel_tol))), None)
+    return None if saved == rebuilt else path
+
+
 def validate(out, rerun=0, seed=0):
     """Check completeness, configuration hashes, summary and checksums; optionally re-simulate runs."""
     out = Path(out)
@@ -282,8 +304,9 @@ def validate(out, rerun=0, seed=0):
             raise ValueError(f'run {run["run_id"]} does not hash its configuration')
     rebuilt = summarize(manifest, runs)
     saved = json.loads((out / 'summary.json').read_text())
-    if rebuilt != saved:
-        raise ValueError('summary differs from the one rebuilt from raw runs')
+    mismatch = _first_mismatch(saved, rebuilt)
+    if mismatch:
+        raise ValueError(f'summary differs from the one rebuilt from raw runs at {mismatch}')
     message = f"{len(runs)} declared runs present once; configurations, summary{' and checksums' if (out / 'checksums.json').exists() else ''} verified"
     if rerun:
         if source_digest(CORE) != manifest['core_sha256']:
@@ -291,7 +314,8 @@ def validate(out, rerun=0, seed=0):
         chosen = random.Random(seed).sample(runs, min(rerun, len(runs)))
         for run in chosen:
             again = _run(run['experiment'])
-            if deterministic(again) != deterministic(run):
-                raise ValueError(f'run {run["run_id"]} did not reproduce exactly')
-        message += f'; {len(chosen)} runs re-simulated identically'
+            mismatch = _first_mismatch(deterministic(run), deterministic(again), 'run')
+            if mismatch:
+                raise ValueError(f'run {run["run_id"]} did not reproduce: {mismatch}')
+        message += f'; {len(chosen)} runs re-simulated (counts exact, floats within 1e-9)'
     return message

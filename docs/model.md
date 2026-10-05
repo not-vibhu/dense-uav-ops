@@ -26,7 +26,7 @@ There is one engine. The v0.1–v0.4 simulators (`swarm_sim`, `airspace_capacity
 | Oracle | True states | — (it only scores outcomes) |
 | Training critics | A global truth summary | — (never used at execution) |
 
-Host compute time is measured but never changes a simulated outcome, so results are identical across machines and loads. Control-loop timing faults are modelled explicitly instead, as a seeded `environment.command_drop_probability`.
+Host compute time is measured but never changes a simulated outcome, so results do not depend on machine speed or load. On one platform re-simulation is bit-identical. Across platforms the C math library and NumPy's vectorised summation can differ in the last bits: re-simulating frontier-02 runs on Linux x86_64 that were produced on macOS arm64 gave identical event counts and per-operation delays, with aggregate floats differing by at most about 1e-14 (relative). `validate` therefore compares counts exactly and floats to a relative 1e-9. A last-bit difference could in principle flip a near-tied planner decision and make trajectories diverge; this was not observed in the sampled runs but is not excluded. Control-loop timing faults are modelled explicitly instead, as a seeded `environment.command_drop_probability`.
 
 ## Components
 

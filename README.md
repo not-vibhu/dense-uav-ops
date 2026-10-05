@@ -32,7 +32,7 @@ Optional: `pip install -e '.[learning]'` for learned rankers, and `python script
   - learned rankers, which may only choose among maneuvers the planner already accepts.
 - **Outcomes**: exact loss-of-separation and contact events, attributed to the system or to the airspace at large, plus throughput, completion, delay and fallback.
 
-Outcomes are deterministic for a given configuration and independent of host speed. Details and idealizations: [docs/model.md](docs/model.md).
+Outcomes are deterministic for a given configuration and platform, and independent of host speed; across platforms they agree to floating-point rounding (see the model notes). Details and idealizations: [docs/model.md](docs/model.md).
 
 ## Documents
 

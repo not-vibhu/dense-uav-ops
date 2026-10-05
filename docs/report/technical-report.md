@@ -253,4 +253,4 @@ python scripts/measure_deviation.py                 # section 4.3 deviation meas
 python scripts/make_figures.py                      # all figures and tables
 ```
 
-Each frontier manifest records the simulation-core digest, Python and NumPy versions, and every run's configuration. Re-simulation reproduces outcomes exactly on the same platform. DAIDALUS results additionally depend on the pinned DAIDALUS revision and the compiler.
+Each frontier manifest records the simulation-core digest, Python and NumPy versions, and every run's configuration. Re-simulation reproduces outcomes bit-for-bit on the same platform. Three frontier-02 runs produced on macOS arm64 and re-simulated on Linux x86_64 had identical event counts and per-operation delays; aggregate floats and the exact-interval endpoints differed by at most about 2e-13 (relative), from math-library and summation-order differences. Validation compares counts exactly and floats to a relative 1e-9. DAIDALUS results additionally depend on the pinned DAIDALUS revision and the compiler.
