@@ -1,0 +1,25 @@
+{
+  "name": "delivery-corridor",
+  "airspace": {
+    "side_m": 800.0,
+    "floor_m": 40.0,
+    "ceiling_m": 100.0
+  },
+  "demand": {
+    "uas_per_hour": 2880.0,
+    "pattern": "head-on",
+    "lane_half_width_m": 30.0
+  },
+  "fleet": {
+    "fixed_wing_fraction": 0.7
+  },
+  "fixed_wing": {
+    "cruise_mps": 15.0,
+    "max_speed_mps": 20.0,
+    "min_speed_mps": 10.0
+  },
+  "environment": {
+    "wind_mps2": 0.6,
+    "actuator_time_constant_s": 0.3
+  }
+}

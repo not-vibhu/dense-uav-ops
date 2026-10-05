@@ -1,0 +1,333 @@
+{
+ "none 1.0 0.2": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [
+   "contact bound"
+  ],
+  "2880": [
+   "contact bound"
+  ],
+  "5760": [
+   "contact bound"
+  ]
+ },
+ "none 1.0 1.0": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [
+   "contact bound"
+  ],
+  "2880": [
+   "contact bound"
+  ],
+  "5760": [
+   "contact bound"
+  ]
+ },
+ "none 0.5 0.2": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [
+   "contact bound"
+  ],
+  "2880": [
+   "contact bound"
+  ],
+  "5760": [
+   "contact bound"
+  ]
+ },
+ "none 0.5 1.0": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [
+   "contact bound"
+  ],
+  "2880": [
+   "contact bound"
+  ],
+  "5760": [
+   "contact bound"
+  ]
+ },
+ "daidalus 1.0 0.2": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [],
+  "2880": [],
+  "5760": []
+ },
+ "daidalus 1.0 1.0": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [],
+  "2880": [],
+  "5760": []
+ },
+ "daidalus 0.5 0.2": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [
+   "contact bound"
+  ],
+  "2880": [],
+  "5760": []
+ },
+ "daidalus 0.5 1.0": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [
+   "contact bound"
+  ],
+  "2880": [],
+  "5760": []
+ },
+ "predictive-A0 1.0 0.2": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [],
+  "2880": [],
+  "5760": []
+ },
+ "predictive-A0 1.0 1.0": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [],
+  "2880": [],
+  "5760": []
+ },
+ "predictive-A0 0.5 0.2": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [
+   "contact bound"
+  ],
+  "2880": [],
+  "5760": []
+ },
+ "predictive-A0 0.5 1.0": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [
+   "contact bound"
+  ],
+  "2880": [],
+  "5760": []
+ },
+ "predictive-A1 1.0 0.2": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [],
+  "2880": [],
+  "5760": []
+ },
+ "predictive-A1 1.0 1.0": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [],
+  "2880": [],
+  "5760": []
+ },
+ "predictive-A1 0.5 0.2": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [
+   "contact bound"
+  ],
+  "2880": [],
+  "5760": []
+ },
+ "predictive-A1 0.5 1.0": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [
+   "contact bound"
+  ],
+  "2880": [],
+  "5760": []
+ },
+ "predictive-A2 1.0 0.2": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [],
+  "2880": [],
+  "5760": []
+ },
+ "predictive-A2 1.0 1.0": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [],
+  "2880": [],
+  "5760": [
+   "delay"
+  ]
+ },
+ "predictive-A2 0.5 0.2": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [
+   "contact bound"
+  ],
+  "2880": [],
+  "5760": []
+ },
+ "predictive-A2 0.5 1.0": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [
+   "contact bound"
+  ],
+  "2880": [
+   "contact bound"
+  ],
+  "5760": [
+   "delay"
+  ]
+ },
+ "predictive-A4 1.0 0.2": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [],
+  "2880": [],
+  "5760": [
+   "completion",
+   "delay"
+  ]
+ },
+ "predictive-A4 1.0 1.0": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [],
+  "2880": [
+   "completion",
+   "delay"
+  ],
+  "5760": [
+   "completion",
+   "delay"
+  ]
+ },
+ "predictive-A4 0.5 0.2": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [
+   "contact bound"
+  ],
+  "2880": [],
+  "5760": [
+   "delay"
+  ]
+ },
+ "predictive-A4 0.5 1.0": {
+  "360": [
+   "contact bound"
+  ],
+  "720": [
+   "contact bound"
+  ],
+  "1440": [
+   "contact bound"
+  ],
+  "2880": [
+   "completion",
+   "delay"
+  ],
+  "5760": [
+   "completion",
+   "delay"
+  ]
+ }
+}

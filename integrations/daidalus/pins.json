@@ -1,6 +1,5 @@
 {
   "daidalus": "1c7b58e5525d5cca91cbbf4a8b7337a488243769",
-  "icarous_study": "4a3bcf443e516c713c775bd6d32b8184d57c4ea2",
-  "license": "NASA Open Source Agreement; separate from original MIT code",
-  "configuration": "Configurations/DO_365B_no_SUM.conf"
+  "license": "NASA Open Source Agreement 1.3 (upstream); not redistributed here",
+  "configuration": "integrations/daidalus/small-uas-research.conf"
 }

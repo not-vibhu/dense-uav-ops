@@ -1,0 +1,383 @@
+{
+ "iteration_01": {
+  "holdout_participating_runs": 3072,
+  "collision_run_rate_by_fleet_size": {
+   "goal": {
+    "10": {
+     "runs": 192,
+     "collision_run_rate": 0.03125
+    },
+    "50": {
+     "runs": 192,
+     "collision_run_rate": 0.8958333333333334
+    },
+    "100": {
+     "runs": 192,
+     "collision_run_rate": 1.0
+    },
+    "200": {
+     "runs": 192,
+     "collision_run_rate": 1.0
+    }
+   },
+   "repulsion": {
+    "10": {
+     "runs": 192,
+     "collision_run_rate": 0.03125
+    },
+    "50": {
+     "runs": 192,
+     "collision_run_rate": 0.7083333333333334
+    },
+    "100": {
+     "runs": 192,
+     "collision_run_rate": 0.8020833333333334
+    },
+    "200": {
+     "runs": 192,
+     "collision_run_rate": 0.9635416666666666
+    }
+   },
+   "barrier": {
+    "10": {
+     "runs": 192,
+     "collision_run_rate": 0.0
+    },
+    "50": {
+     "runs": 192,
+     "collision_run_rate": 0.234375
+    },
+    "100": {
+     "runs": 192,
+     "collision_run_rate": 0.4427083333333333
+    },
+    "200": {
+     "runs": 192,
+     "collision_run_rate": 0.8958333333333334
+    }
+   },
+   "negotiated": {
+    "10": {
+     "runs": 192,
+     "collision_run_rate": 0.0
+    },
+    "50": {
+     "runs": 192,
+     "collision_run_rate": 0.22916666666666666
+    },
+    "100": {
+     "runs": 192,
+     "collision_run_rate": 0.4427083333333333
+    },
+    "200": {
+     "runs": 192,
+     "collision_run_rate": 0.890625
+    }
+   }
+  },
+  "collision_vs_volume_exit": {
+   "goal": {
+    "runs": 768,
+    "collision_run_rate": 0.7317708333333334,
+    "runs_with_exit": 46,
+    "collision_rate_with_exit": 1.0,
+    "runs_without_exit": 722,
+    "collision_rate_without_exit": 0.7146814404432132,
+    "by_size_without_exit": {
+     "10": 0.03125,
+     "50": 0.8876404494382022,
+     "100": 1.0,
+     "200": 1.0
+    }
+   },
+   "repulsion": {
+    "runs": 768,
+    "collision_run_rate": 0.6263020833333334,
+    "runs_with_exit": 442,
+    "collision_rate_with_exit": 0.8959276018099548,
+    "runs_without_exit": 326,
+    "collision_rate_without_exit": 0.2607361963190184,
+    "by_size_without_exit": {
+     "10": 0.03225806451612903,
+     "50": 0.5929203539823009,
+     "100": 0.11764705882352941,
+     "200": 1.0
+    }
+   },
+   "barrier": {
+    "runs": 768,
+    "collision_run_rate": 0.3932291666666667,
+    "runs_with_exit": 633,
+    "collision_rate_with_exit": 0.47709320695102686,
+    "runs_without_exit": 135,
+    "collision_rate_without_exit": 0.0,
+    "by_size_without_exit": {
+     "10": 0.0,
+     "50": null,
+     "100": null,
+     "200": null
+    }
+   },
+   "negotiated": {
+    "runs": 768,
+    "collision_run_rate": 0.390625,
+    "runs_with_exit": 633,
+    "collision_rate_with_exit": 0.47393364928909953,
+    "runs_without_exit": 135,
+    "collision_rate_without_exit": 0.0,
+    "by_size_without_exit": {
+     "10": 0.0,
+     "50": null,
+     "100": null,
+     "200": null
+    }
+   }
+  }
+ },
+ "iteration_03": {
+  "note": "Denominator approximates cooperative aircraft-steps; 2.4 s horizon, assumed traffic acceleration 4 m/s^2.",
+  "predictive_by_fleet_size": {
+   "off": {
+    "10": {
+     "runs": 54,
+     "failed_library_fraction": 0.15074360098472336,
+     "collision_run_rate": 0.0,
+     "goal_reach": 0.8555555555555551
+    },
+    "50": {
+     "runs": 54,
+     "failed_library_fraction": 0.46412549597747155,
+     "collision_run_rate": 0.018518518518518517,
+     "goal_reach": 0.4577777777777778
+    }
+   },
+   "checked": {
+    "10": {
+     "runs": 54,
+     "failed_library_fraction": 0.11056938882117369,
+     "collision_run_rate": 0.0,
+     "goal_reach": 0.8962962962962963
+    },
+    "50": {
+     "runs": 54,
+     "failed_library_fraction": 0.26487431724445437,
+     "collision_run_rate": 0.018518518518518517,
+     "goal_reach": 0.37925925925925924
+    }
+   },
+   "scale-off": {
+    "100": {
+     "runs": 4,
+     "failed_library_fraction": 0.5207674897538899,
+     "collision_run_rate": 0.5,
+     "goal_reach": 0.36
+    },
+    "200": {
+     "runs": 4,
+     "failed_library_fraction": 0.8961075546661742,
+     "collision_run_rate": 1.0,
+     "goal_reach": 0.12
+    }
+   },
+   "scale-checked": {
+    "100": {
+     "runs": 4,
+     "failed_library_fraction": 0.1898956745985231,
+     "collision_run_rate": 0.0,
+     "goal_reach": 0.38999999999999996
+    },
+    "200": {
+     "runs": 4,
+     "failed_library_fraction": 0.21609416115496752,
+     "collision_run_rate": 0.0,
+     "goal_reach": 0.1175
+    }
+   }
+  }
+ },
+ "capacity_01": {
+  "by_campaign": {
+   "baseline": {
+    "runs": 108,
+    "runs_with_collision": 32,
+    "runs_with_protected_breach": 108,
+    "breach_pairs": 526,
+    "uas_manned_breach_pairs": 516,
+    "runs_with_host_deadline_miss": 0,
+    "peak_total_occupancy": 11
+   },
+   "sensitivity": {
+    "runs": 54,
+    "runs_with_collision": 18,
+    "runs_with_protected_breach": 54,
+    "breach_pairs": 348,
+    "uas_manned_breach_pairs": 306,
+    "runs_with_host_deadline_miss": 0,
+    "peak_total_occupancy": 10
+   },
+   "density": {
+    "runs": 8,
+    "runs_with_collision": 8,
+    "runs_with_protected_breach": 8,
+    "breach_pairs": 784,
+    "uas_manned_breach_pairs": 281,
+    "runs_with_host_deadline_miss": 3,
+    "peak_total_occupancy": 122
+   },
+   "layered": {
+    "runs": 9,
+    "runs_with_collision": 0,
+    "runs_with_protected_breach": 0,
+    "breach_pairs": 0,
+    "uas_manned_breach_pairs": 0,
+    "runs_with_host_deadline_miss": 0,
+    "peak_total_occupancy": 11
+   }
+  },
+  "default_uas_altitude_band_m": [
+   24.5,
+   103.5
+  ],
+  "manned_protection_altitudes_m": [
+   20.0,
+   140.0
+  ],
+  "controlled_fraction_expected": 0.475
+ },
+ "distributed_04": {
+  "catalog": {
+   "runs": 108,
+   "passing_runs": 0,
+   "blocker_counts": {
+    "no_safe_continuation_steps": 108,
+    "completion_requirement": 107,
+    "all_uas_completion_requirement": 107,
+    "protected_breach_pairs": 106,
+    "stale_traffic_aircraft_steps": 106,
+    "unknown_traffic_aircraft_steps": 102,
+    "volume_exits": 68,
+    "outside_declared_assurance_domain": 24,
+    "command_deadline_misses": 12,
+    "obstacle_pairs": 8,
+    "kinematic_violation_steps": 8,
+    "unavailable_deadline_recoveries": 5,
+    "collision_pairs": 4
+   },
+   "duration_area_pairs": [
+    [
+     36.0,
+     220.0
+    ]
+   ],
+   "minimum_traversal_time_s": [
+    11.1
+   ],
+   "mean_cooperative_completion": 0.037037037037037035
+  },
+  "guard-comparison": {
+   "runs": 32,
+   "passing_runs": 0,
+   "blocker_counts": {
+    "protected_breach_pairs": 32,
+    "unknown_traffic_aircraft_steps": 32,
+    "completion_requirement": 32,
+    "all_uas_completion_requirement": 32,
+    "no_safe_continuation_steps": 30,
+    "stale_traffic_aircraft_steps": 30,
+    "volume_exits": 26,
+    "unavailable_deadline_recoveries": 2,
+    "command_deadline_misses": 2,
+    "kinematic_violation_steps": 2
+   },
+   "duration_area_pairs": [
+    [
+     36.0,
+     220.0
+    ]
+   ],
+   "minimum_traversal_time_s": [
+    11.1
+   ],
+   "mean_cooperative_completion": 0.1
+  },
+  "graph-comparison": {
+   "runs": 32,
+   "passing_runs": 0,
+   "blocker_counts": {
+    "protected_breach_pairs": 32,
+    "no_safe_continuation_steps": 32,
+    "unknown_traffic_aircraft_steps": 32,
+    "stale_traffic_aircraft_steps": 32,
+    "completion_requirement": 32,
+    "all_uas_completion_requirement": 32,
+    "volume_exits": 12,
+    "command_deadline_misses": 8,
+    "unavailable_deadline_recoveries": 6,
+    "collision_pairs": 4,
+    "obstacle_pairs": 4
+   },
+   "duration_area_pairs": [
+    [
+     36.0,
+     220.0
+    ]
+   ],
+   "minimum_traversal_time_s": [
+    11.1
+   ],
+   "mean_cooperative_completion": 0.05
+  },
+  "density": {
+   "runs": 16,
+   "passing_runs": 0,
+   "blocker_counts": {
+    "protected_breach_pairs": 16,
+    "no_safe_continuation_steps": 16,
+    "unavailable_deadline_recoveries": 16,
+    "command_deadline_misses": 16,
+    "unknown_traffic_aircraft_steps": 16,
+    "completion_requirement": 16,
+    "all_uas_completion_requirement": 16,
+    "manned_completion_requirement": 16,
+    "stale_traffic_aircraft_steps": 14,
+    "collision_pairs": 6
+   },
+   "duration_area_pairs": [
+    [
+     8.0,
+     320.0
+    ]
+   ],
+   "minimum_traversal_time_s": [
+    18.5
+   ],
+   "mean_cooperative_completion": 0.0
+  },
+  "partition-clock": {
+   "runs": 8,
+   "passing_runs": 0,
+   "blocker_counts": {
+    "protected_breach_pairs": 8,
+    "volume_exits": 8,
+    "no_safe_continuation_steps": 8,
+    "command_deadline_misses": 8,
+    "unknown_traffic_aircraft_steps": 8,
+    "stale_traffic_aircraft_steps": 8,
+    "completion_requirement": 8,
+    "all_uas_completion_requirement": 8,
+    "unavailable_deadline_recoveries": 2,
+    "collision_pairs": 2
+   },
+   "duration_area_pairs": [
+    [
+     36.0,
+     220.0
+    ]
+   ],
+   "minimum_traversal_time_s": [
+    11.1
+   ],
+   "mean_cooperative_completion": 0.0
+  }
+ }
+}

@@ -1,0 +1,69 @@
+{
+  "name": "frontier-01",
+  "description": "Pilot sweep of the safety\u2013capacity frontier: assumed traffic acceleration \u00d7 offered demand \u00d7 surveillance latency \u00d7 equipage, against no-avoidance and DAIDALUS baselines.",
+  "base_profile": "profiles/frontier-base.json",
+  "arms": [
+    {
+      "name": "none",
+      "set": {
+        "controller.kind": "none"
+      }
+    },
+    {
+      "name": "predictive-A0",
+      "set": {
+        "controller.kind": "predictive",
+        "assumptions.traffic_acceleration_mps2": 0.0
+      }
+    },
+    {
+      "name": "predictive-A1",
+      "set": {
+        "controller.kind": "predictive",
+        "assumptions.traffic_acceleration_mps2": 1.0
+      }
+    },
+    {
+      "name": "predictive-A2",
+      "set": {
+        "controller.kind": "predictive",
+        "assumptions.traffic_acceleration_mps2": 2.0
+      }
+    },
+    {
+      "name": "predictive-A4",
+      "set": {
+        "controller.kind": "predictive",
+        "assumptions.traffic_acceleration_mps2": 4.0
+      }
+    },
+    {
+      "name": "daidalus",
+      "set": {
+        "controller.kind": "daidalus"
+      }
+    }
+  ],
+  "grid": {
+    "demand.uas_per_hour": [
+      360,
+      720,
+      1440,
+      2880,
+      5760
+    ],
+    "surveillance.latency_s": [
+      0.2,
+      1.0
+    ],
+    "fleet.cooperative_fraction": [
+      1.0,
+      0.5
+    ]
+  },
+  "seeds": [
+    11,
+    12,
+    13
+  ]
+}

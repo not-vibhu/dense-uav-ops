@@ -1,0 +1,6350 @@
+{
+ "schema": "dense-uav-ops-summary-v1",
+ "name": "frontier-02",
+ "runs": 144,
+ "outcomes_sha256": "d4db35da9275c28d7f2bf3c0b3a2ce55cae21aceb6085c271e470f59f6bc4fad",
+ "core_sha256": "bf06c50408cbe430be8fb932c7dc93bd1e119c355788e86345d1b7aa8492feef",
+ "cells": [
+  {
+   "cell": {
+    "arm": "none",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.30138888888888,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1365.0,
+   "controlled_throughput_per_hour": 1245.0,
+   "controlled_operations": 250,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": -0.25409200000000004,
+   "p95_delay_completed_s": 0.14654999999999999,
+   "mean_delay_lower_bound_s": -0.25409200000000004,
+   "mean_entry_wait_s": 0.01007751937984483,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 3.3166666666666718,
+   "controlled_completed_in_window": 249,
+   "attributable_uas_los": {
+    "per_hour": 12.964824120602994,
+    "interval_if_independent": [
+     9.382707501095659,
+     17.463533008155824
+    ],
+    "events": 43,
+    "hours": 3.3166666666666718
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 1.206030150753767,
+    "interval_if_independent": [
+     0.3286026252139674,
+     3.0879161835387987
+    ],
+    "events": 4,
+    "hours": 3.3166666666666718
+   },
+   "attributable_uas_los_per_1000_completed": 172.69076305220884,
+   "attributable_uas_contacts_per_1000_completed": 16.06425702811245,
+   "attributable_los": {
+    "per_hour": 12.964824120602994,
+    "interval_if_independent": [
+     9.382707501095659,
+     17.463533008155824
+    ],
+    "events": 43,
+    "hours": 3.3166666666666718
+   },
+   "attributable_contacts": {
+    "per_hour": 1.206030150753767,
+    "interval_if_independent": [
+     0.3286026252139674,
+     3.0879161835387987
+    ],
+    "events": 4,
+    "hours": 3.3166666666666718
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 11.747742278212039,
+    "interval_if_independent": [
+     8.501899336956997,
+     15.8241317536147
+    ],
+    "events": 43,
+    "hours": 3.660277777777777
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 1.0928132351825153,
+    "interval_if_independent": [
+     0.29775482621649674,
+     2.7980359134441315
+    ],
+    "events": 4,
+    "hours": 3.660277777777777
+   },
+   "los_by_category": {
+    "cc": 34,
+    "cu": 9,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 4,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    11.782858745967168,
+    10.655473038424264,
+    16.420860574730085
+   ],
+   "runs_with_attributable_uas_contact": [
+    3,
+    3,
+    [
+     0.2924017738212874,
+     1.0
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 227.4000000000011,
+   "entry_denials": 13,
+   "minimum_separation_m": 1.8048939835320559,
+   "mean_control_ms_per_controlled_step": 0.020364533184628185
+  },
+  {
+   "cell": {
+    "arm": "none",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.300555555555544,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1365.0,
+   "controlled_throughput_per_hour": 1245.0,
+   "controlled_operations": 250,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": -0.25409200000000004,
+   "p95_delay_completed_s": 0.14654999999999999,
+   "mean_delay_lower_bound_s": -0.25409200000000004,
+   "mean_entry_wait_s": 0.01007751937984483,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 3.3166666666666718,
+   "controlled_completed_in_window": 249,
+   "attributable_uas_los": {
+    "per_hour": 13.567839195979879,
+    "interval_if_independent": [
+     9.896475011528073,
+     18.15483633074132
+    ],
+    "events": 45,
+    "hours": 3.3166666666666718
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 1.5075376884422087,
+    "interval_if_independent": [
+     0.4894933839553035,
+     3.518090074167633
+    ],
+    "events": 5,
+    "hours": 3.3166666666666718
+   },
+   "attributable_uas_los_per_1000_completed": 180.72289156626505,
+   "attributable_uas_contacts_per_1000_completed": 20.080321285140563,
+   "attributable_los": {
+    "per_hour": 13.567839195979879,
+    "interval_if_independent": [
+     9.896475011528073,
+     18.15483633074132
+    ],
+    "events": 45,
+    "hours": 3.3166666666666718
+   },
+   "attributable_contacts": {
+    "per_hour": 1.5075376884422087,
+    "interval_if_independent": [
+     0.4894933839553035,
+     3.518090074167633
+    ],
+    "events": 5,
+    "hours": 3.3166666666666718
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 12.294708721653869,
+    "interval_if_independent": [
+     8.967844907383308,
+     16.451287589102616
+    ],
+    "events": 45,
+    "hours": 3.66011111111111
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 1.3660787468504298,
+    "interval_if_independent": [
+     0.4435620506683414,
+     3.187972092951156
+    ],
+    "events": 5,
+    "hours": 3.66011111111111
+   },
+   "los_by_category": {
+    "cc": 34,
+    "cu": 11,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 4,
+    "cu": 1,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    13.466124281105335,
+    10.655473038424264,
+    16.420860574730085
+   ],
+   "runs_with_attributable_uas_contact": [
+    3,
+    3,
+    [
+     0.2924017738212874,
+     1.0
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 227.4000000000011,
+   "entry_denials": 13,
+   "minimum_separation_m": 0.734442603527722,
+   "mean_control_ms_per_controlled_step": 0.02041896513728989
+  },
+  {
+   "cell": {
+    "arm": "none",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.303333333333324,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1365.0,
+   "controlled_throughput_per_hour": 1010.0,
+   "controlled_operations": 200,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": -0.25283,
+   "p95_delay_completed_s": 0.15214999999999995,
+   "mean_delay_lower_bound_s": -0.25283,
+   "mean_entry_wait_s": 0.012435897435897255,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 2.6728333333333345,
+   "controlled_completed_in_window": 202,
+   "attributable_uas_los": {
+    "per_hour": 14.591257716530517,
+    "interval_if_independent": [
+     10.375810621476669,
+     19.94672963740082
+    ],
+    "events": 39,
+    "hours": 2.6728333333333345
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 1.1224044397331168,
+    "interval_if_independent": [
+     0.2314667791590457,
+     3.280142072610458
+    ],
+    "events": 3,
+    "hours": 2.6728333333333345
+   },
+   "attributable_uas_los_per_1000_completed": 193.06930693069307,
+   "attributable_uas_contacts_per_1000_completed": 14.851485148514852,
+   "attributable_los": {
+    "per_hour": 14.591257716530517,
+    "interval_if_independent": [
+     10.375810621476669,
+     19.94672963740082
+    ],
+    "events": 39,
+    "hours": 2.6728333333333345
+   },
+   "attributable_contacts": {
+    "per_hour": 1.1224044397331168,
+    "interval_if_independent": [
+     0.2314667791590457,
+     3.280142072610458
+    ],
+    "events": 3,
+    "hours": 2.6728333333333345
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 10.926971407758147,
+    "interval_if_independent": [
+     7.806388574518895,
+     14.879433699868159
+    ],
+    "events": 40,
+    "hours": 3.6606666666666676
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.819522855581861,
+    "interval_if_independent": [
+     0.16900531494143217,
+     2.3949935539270593
+    ],
+    "events": 3,
+    "hours": 3.6606666666666676
+   },
+   "los_by_category": {
+    "cc": 21,
+    "cu": 18,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 2,
+    "cu": 1,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    13.432835820895448,
+    13.072758484088215,
+    17.05655907610311
+   ],
+   "runs_with_attributable_uas_contact": [
+    3,
+    3,
+    [
+     0.2924017738212874,
+     1.0
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 214.40000000000094,
+   "entry_denials": 13,
+   "minimum_separation_m": 1.8048939835320559,
+   "mean_control_ms_per_controlled_step": 0.029021479387706776
+  },
+  {
+   "cell": {
+    "arm": "none",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.314166666666665,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1365.0,
+   "controlled_throughput_per_hour": 1010.0,
+   "controlled_operations": 200,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": -0.25283,
+   "p95_delay_completed_s": 0.15214999999999995,
+   "mean_delay_lower_bound_s": -0.25283,
+   "mean_entry_wait_s": 0.012435897435897255,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 2.6728333333333345,
+   "controlled_completed_in_window": 202,
+   "attributable_uas_los": {
+    "per_hour": 16.087796969508005,
+    "interval_if_independent": [
+     11.642818436852517,
+     21.670156940967843
+    ],
+    "events": 43,
+    "hours": 2.6728333333333345
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 1.870674066221861,
+    "interval_if_independent": [
+     0.6074027773717372,
+     4.365529243370704
+    ],
+    "events": 5,
+    "hours": 2.6728333333333345
+   },
+   "attributable_uas_los_per_1000_completed": 212.87128712871288,
+   "attributable_uas_contacts_per_1000_completed": 24.752475247524753,
+   "attributable_los": {
+    "per_hour": 16.087796969508005,
+    "interval_if_independent": [
+     11.642818436852517,
+     21.670156940967843
+    ],
+    "events": 43,
+    "hours": 2.6728333333333345
+   },
+   "attributable_contacts": {
+    "per_hour": 1.870674066221861,
+    "interval_if_independent": [
+     0.6074027773717372,
+     4.365529243370704
+    ],
+    "events": 5,
+    "hours": 2.6728333333333345
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 12.558583974154798,
+    "interval_if_independent": [
+     9.194461867126032,
+     16.75139110267625
+    ],
+    "events": 46,
+    "hours": 3.6628333333333334
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 1.6380761705419302,
+    "interval_if_independent": [
+     0.6011450844494314,
+     3.5654021993498697
+    ],
+    "events": 6,
+    "hours": 3.6628333333333334
+   },
+   "los_by_category": {
+    "cc": 21,
+    "cu": 22,
+    "uu": 3,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 2,
+    "cu": 3,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    15.671641791044689,
+    14.26119107355078,
+    18.122594018359553
+   ],
+   "runs_with_attributable_uas_contact": [
+    2,
+    3,
+    [
+     0.0942993240502466,
+     0.9915962413403874
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 214.40000000000094,
+   "entry_denials": 13,
+   "minimum_separation_m": 1.8048939835320559,
+   "mean_control_ms_per_controlled_step": 0.030856625967075686
+  },
+  {
+   "cell": {
+    "arm": "none",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 39.26222222222225,
+   "peak_uas_occupancy": 53,
+   "uas_throughput_per_hour": 2870.0,
+   "controlled_throughput_per_hour": 2630.0,
+   "controlled_operations": 536,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": -0.1383694029850746,
+   "p95_delay_completed_s": 0.24025,
+   "mean_delay_lower_bound_s": -0.1383694029850746,
+   "mean_entry_wait_s": 0.11187680848016035,
+   "backlog_growth_max": 19,
+   "controlled_flight_hours": 7.172833333333342,
+   "controlled_completed_in_window": 526,
+   "attributable_uas_los": {
+    "per_hour": 27.185909798545406,
+    "interval_if_independent": [
+     23.503919503757206,
+     31.28108793334932
+    ],
+    "events": 195,
+    "hours": 7.172833333333342
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 4.1824476613146775,
+    "interval_if_independent": [
+     2.8218798737952158,
+     5.970704100398397
+    ],
+    "events": 30,
+    "hours": 7.172833333333342
+   },
+   "attributable_uas_los_per_1000_completed": 370.72243346007605,
+   "attributable_uas_contacts_per_1000_completed": 57.034220532319395,
+   "attributable_los": {
+    "per_hour": 27.185909798545406,
+    "interval_if_independent": [
+     23.503919503757206,
+     31.28108793334932
+    ],
+    "events": 195,
+    "hours": 7.172833333333342
+   },
+   "attributable_contacts": {
+    "per_hour": 4.1824476613146775,
+    "interval_if_independent": [
+     2.8218798737952158,
+     5.970704100398397
+    ],
+    "events": 30,
+    "hours": 7.172833333333342
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 24.960380348652897,
+    "interval_if_independent": [
+     21.58812847188616,
+     28.710037284829124
+    ],
+    "events": 196,
+    "hours": 7.852444444444455
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 3.820466379895852,
+    "interval_if_independent": [
+     2.577652623284852,
+     5.4539533132395945
+    ],
+    "events": 30,
+    "hours": 7.852444444444455
+   },
+   "los_by_category": {
+    "cc": 153,
+    "cu": 42,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 25,
+    "cu": 5,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 1,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 1,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    26.91924227318035,
+    27.121400554864703,
+    27.521023003683318
+   ],
+   "runs_with_attributable_uas_contact": [
+    3,
+    3,
+    [
+     0.2924017738212874,
+     1.0
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 502.20000000000005,
+   "entry_denials": 311,
+   "minimum_separation_m": 0.38941637887253017,
+   "mean_control_ms_per_controlled_step": 0.01402183560279484
+  },
+  {
+   "cell": {
+    "arm": "none",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 39.25111111111115,
+   "peak_uas_occupancy": 53,
+   "uas_throughput_per_hour": 2870.0,
+   "controlled_throughput_per_hour": 2630.0,
+   "controlled_operations": 536,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": -0.14060820895522388,
+   "p95_delay_completed_s": 0.23675,
+   "mean_delay_lower_bound_s": -0.14060820895522388,
+   "mean_entry_wait_s": 0.10964970225305408,
+   "backlog_growth_max": 19,
+   "controlled_flight_hours": 7.172833333333342,
+   "controlled_completed_in_window": 526,
+   "attributable_uas_los": {
+    "per_hour": 27.46473964263305,
+    "interval_if_independent": [
+     23.76322333984461,
+     31.57939510528848
+    ],
+    "events": 197,
+    "hours": 7.172833333333342
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 4.043032739270855,
+    "interval_if_independent": [
+     2.707682478455449,
+     5.806469424716388
+    ],
+    "events": 29,
+    "hours": 7.172833333333342
+   },
+   "attributable_uas_los_per_1000_completed": 374.52471482889734,
+   "attributable_uas_contacts_per_1000_completed": 55.133079847908746,
+   "attributable_los": {
+    "per_hour": 27.46473964263305,
+    "interval_if_independent": [
+     23.76322333984461,
+     31.57939510528848
+    ],
+    "events": 197,
+    "hours": 7.172833333333342
+   },
+   "attributable_contacts": {
+    "per_hour": 4.043032739270855,
+    "interval_if_independent": [
+     2.707682478455449,
+     5.806469424716388
+    ],
+    "events": 29,
+    "hours": 7.172833333333342
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 25.34960086055593,
+    "interval_if_independent": [
+     21.949734483313325,
+     29.126913163778706
+    ],
+    "events": 199,
+    "hours": 7.850222222222232
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 3.6941629394780002,
+    "interval_if_independent": [
+     2.474038898232615,
+     5.305434197861048
+    ],
+    "events": 29,
+    "hours": 7.850222222222232
+   },
+   "los_by_category": {
+    "cc": 153,
+    "cu": 44,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 25,
+    "cu": 4,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 1,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 1,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    28.142844194688546,
+    26.69090213335891,
+    27.521023003683325
+   ],
+   "runs_with_attributable_uas_contact": [
+    3,
+    3,
+    [
+     0.2924017738212874,
+     1.0
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 501.40000000000003,
+   "entry_denials": 305,
+   "minimum_separation_m": 0.38941637887253017,
+   "mean_control_ms_per_controlled_step": 0.014191070542630878
+  },
+  {
+   "cell": {
+    "arm": "none",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 39.266111111111144,
+   "peak_uas_occupancy": 53,
+   "uas_throughput_per_hour": 2875.0,
+   "controlled_throughput_per_hour": 2075.0,
+   "controlled_operations": 425,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": -0.14524470588235294,
+   "p95_delay_completed_s": 0.22819999999999982,
+   "mean_delay_lower_bound_s": -0.14524470588235294,
+   "mean_entry_wait_s": 0.11269871469643149,
+   "backlog_growth_max": 19,
+   "controlled_flight_hours": 5.672777777777774,
+   "controlled_completed_in_window": 415,
+   "attributable_uas_los": {
+    "per_hour": 31.37792576633045,
+    "interval_if_independent": [
+     26.937502060284544,
+     36.341360817144285
+    ],
+    "events": 178,
+    "hours": 5.672777777777774
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 5.4646949368328315,
+    "interval_if_independent": [
+     3.712995080056345,
+     7.756698257354605
+    ],
+    "events": 31,
+    "hours": 5.672777777777774
+   },
+   "attributable_uas_los_per_1000_completed": 428.9156626506024,
+   "attributable_uas_contacts_per_1000_completed": 74.6987951807229,
+   "attributable_los": {
+    "per_hour": 31.37792576633045,
+    "interval_if_independent": [
+     26.937502060284544,
+     36.341360817144285
+    ],
+    "events": 178,
+    "hours": 5.672777777777774
+   },
+   "attributable_contacts": {
+    "per_hour": 5.4646949368328315,
+    "interval_if_independent": [
+     3.712995080056345,
+     7.756698257354605
+    ],
+    "events": 31,
+    "hours": 5.672777777777774
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 25.21258082315826,
+    "interval_if_independent": [
+     21.822873981368726,
+     28.97961121911556
+    ],
+    "events": 198,
+    "hours": 7.853222222222211
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 4.456769337426965,
+    "interval_if_independent": [
+     3.1043031398673,
+     6.198287275170108
+    ],
+    "events": 35,
+    "hours": 7.853222222222211
+   },
+   "los_by_category": {
+    "cc": 91,
+    "cu": 87,
+    "uu": 19,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 13,
+    "cu": 18,
+    "uu": 4,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    31.003444827203026,
+    31.18745332337565,
+    31.98627408927977
+   ],
+   "runs_with_attributable_uas_contact": [
+    3,
+    3,
+    [
+     0.2924017738212874,
+     1.0
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 479.8000000000007,
+   "entry_denials": 253,
+   "minimum_separation_m": 0.817245031863612,
+   "mean_control_ms_per_controlled_step": 0.020068042513354336
+  },
+  {
+   "cell": {
+    "arm": "none",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 39.275833333333374,
+   "peak_uas_occupancy": 53,
+   "uas_throughput_per_hour": 2865.0,
+   "controlled_throughput_per_hour": 2075.0,
+   "controlled_operations": 425,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": -0.14289176470588233,
+   "p95_delay_completed_s": 0.22819999999999982,
+   "mean_delay_lower_bound_s": -0.14289176470588233,
+   "mean_entry_wait_s": 0.1151352951124639,
+   "backlog_growth_max": 19,
+   "controlled_flight_hours": 5.6718888888888825,
+   "controlled_completed_in_window": 415,
+   "attributable_uas_los": {
+    "per_hour": 30.677610829235835,
+    "interval_if_independent": [
+     26.288611153709667,
+     35.589848317842744
+    ],
+    "events": 174,
+    "hours": 5.6718888888888825
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 4.936627029991974,
+    "interval_if_independent": [
+     3.2803528102085977,
+     7.134800546347757
+    ],
+    "events": 28,
+    "hours": 5.6718888888888825
+   },
+   "attributable_uas_los_per_1000_completed": 419.27710843373495,
+   "attributable_uas_contacts_per_1000_completed": 67.46987951807229,
+   "attributable_los": {
+    "per_hour": 30.677610829235835,
+    "interval_if_independent": [
+     26.288611153709667,
+     35.589848317842744
+    ],
+    "events": 174,
+    "hours": 5.6718888888888825
+   },
+   "attributable_contacts": {
+    "per_hour": 4.936627029991974,
+    "interval_if_independent": [
+     3.2803528102085977,
+     7.134800546347757
+    ],
+    "events": 28,
+    "hours": 5.6718888888888825
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 25.33364452271334,
+    "interval_if_independent": [
+     21.93591819559749,
+     29.108579192001013
+    ],
+    "events": 199,
+    "hours": 7.855166666666651
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 4.073751883049381,
+    "interval_if_independent": [
+     2.7864432723198873,
+     5.750922163258227
+    ],
+    "events": 32,
+    "hours": 7.855166666666651
+   },
+   "los_by_category": {
+    "cc": 89,
+    "cu": 85,
+    "uu": 24,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 13,
+    "cu": 15,
+    "uu": 4,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    31.512254765742263,
+    29.036594473487664,
+    31.44056629791938
+   ],
+   "runs_with_attributable_uas_contact": [
+    3,
+    3,
+    [
+     0.2924017738212874,
+     1.0
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 479.80000000000064,
+   "entry_denials": 258,
+   "minimum_separation_m": 0.6957017027800917,
+   "mean_control_ms_per_controlled_step": 0.020190868508310058
+  },
+  {
+   "cell": {
+    "arm": "predictive-A0",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.38333333333331,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1365.0,
+   "controlled_throughput_per_hour": 1245.0,
+   "controlled_operations": 250,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": -0.011692000000000004,
+   "p95_delay_completed_s": 1.0104999999999995,
+   "mean_delay_lower_bound_s": -0.011692000000000004,
+   "mean_entry_wait_s": 0.01007751937984483,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 3.3330555555555605,
+   "controlled_completed_in_window": 249,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.1067560659063376
+    ],
+    "events": 0,
+    "hours": 3.3330555555555605
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.1067560659063376
+    ],
+    "events": 0,
+    "hours": 3.3330555555555605
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.1067560659063376
+    ],
+    "events": 0,
+    "hours": 3.3330555555555605
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.1067560659063376
+    ],
+    "events": 0,
+    "hours": 3.3330555555555605
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0033217010282691
+    ],
+    "events": 0,
+    "hours": 3.676666666666666
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0033217010282691
+    ],
+    "events": 0,
+    "hours": 3.676666666666666
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.0001166763896991416,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 227.4000000000011,
+   "entry_denials": 13,
+   "minimum_separation_m": 11.464905803897405,
+   "mean_control_ms_per_controlled_step": 0.43582978280180057
+  },
+  {
+   "cell": {
+    "arm": "predictive-A0",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.375277777777754,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1365.0,
+   "controlled_throughput_per_hour": 1245.0,
+   "controlled_operations": 250,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": -0.026892000000000024,
+   "p95_delay_completed_s": 1.0104999999999995,
+   "mean_delay_lower_bound_s": -0.026892000000000024,
+   "mean_entry_wait_s": 0.01007751937984483,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 3.3316111111111155,
+   "controlled_completed_in_window": 249,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.1072359081200411
+    ],
+    "events": 0,
+    "hours": 3.3316111111111155
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.1072359081200411
+    ],
+    "events": 0,
+    "hours": 3.3316111111111155
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.1072359081200411
+    ],
+    "events": 0,
+    "hours": 3.3316111111111155
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.1072359081200411
+    ],
+    "events": 0,
+    "hours": 3.3316111111111155
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0037615481859814
+    ],
+    "events": 0,
+    "hours": 3.675055555555554
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0037615481859814
+    ],
+    "events": 0,
+    "hours": 3.675055555555554
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.00033350564458303457,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 227.4000000000011,
+   "entry_denials": 13,
+   "minimum_separation_m": 10.907289222387945,
+   "mean_control_ms_per_controlled_step": 0.43711940851667813
+  },
+  {
+   "cell": {
+    "arm": "predictive-A0",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.383333333333315,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1365.0,
+   "controlled_throughput_per_hour": 1010.0,
+   "controlled_operations": 200,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.014169999999999999,
+   "p95_delay_completed_s": 0.997049999999999,
+   "mean_delay_lower_bound_s": 0.014169999999999999,
+   "mean_entry_wait_s": 0.012435897435897255,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 2.6888333333333345,
+   "controlled_completed_in_window": 202,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3719256632172316
+    ],
+    "events": 0,
+    "hours": 2.6888333333333345
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3719256632172316
+    ],
+    "events": 0,
+    "hours": 2.6888333333333345
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3719256632172316
+    ],
+    "events": 0,
+    "hours": 2.6888333333333345
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3719256632172316
+    ],
+    "events": 0,
+    "hours": 2.6888333333333345
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.27198549410698086,
+    "interval_if_independent": [
+     0.006886076514312768,
+     1.5154061806724104
+    ],
+    "events": 1,
+    "hours": 3.6766666666666676
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0033217010282685
+    ],
+    "events": 0,
+    "hours": 3.6766666666666676
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.0,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 214.40000000000094,
+   "entry_denials": 13,
+   "minimum_separation_m": 7.083021962922982,
+   "mean_control_ms_per_controlled_step": 0.5009231129868323
+  },
+  {
+   "cell": {
+    "arm": "predictive-A0",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.41305555555553,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1360.0,
+   "controlled_throughput_per_hour": 1005.0,
+   "controlled_operations": 200,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.10416999999999998,
+   "p95_delay_completed_s": 1.0616499999999978,
+   "mean_delay_lower_bound_s": 0.10416999999999998,
+   "mean_entry_wait_s": 0.012435897435897255,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 2.6926111111111144,
+   "controlled_completed_in_window": 201,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3700008288949337
+    ],
+    "events": 0,
+    "hours": 2.6926111111111144
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3700008288949337
+    ],
+    "events": 0,
+    "hours": 2.6926111111111144
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3700008288949337
+    ],
+    "events": 0,
+    "hours": 2.6926111111111144
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3700008288949337
+    ],
+    "events": 0,
+    "hours": 2.6926111111111144
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.8146393712190924,
+    "interval_if_independent": [
+     0.16799822306215167,
+     2.380721940280323
+    ],
+    "events": 3,
+    "hours": 3.682611111111113
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.27154645707303077,
+    "interval_if_independent": [
+     0.006874961058989227,
+     1.512960022883825
+    ],
+    "events": 1,
+    "hours": 3.682611111111113
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 3,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.0009284667918377453,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 214.40000000000094,
+   "entry_denials": 13,
+   "minimum_separation_m": 3.2275773992618784,
+   "mean_control_ms_per_controlled_step": 0.5147419519810235
+  },
+  {
+   "cell": {
+    "arm": "predictive-A0",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 39.521388888888964,
+   "peak_uas_occupancy": 53,
+   "uas_throughput_per_hour": 2880.0,
+   "controlled_throughput_per_hour": 2640.0,
+   "controlled_operations": 536,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.24260074626865671,
+   "p95_delay_completed_s": 1.94875,
+   "mean_delay_lower_bound_s": 0.24260074626865671,
+   "mean_entry_wait_s": 0.11143012667034995,
+   "backlog_growth_max": 20,
+   "controlled_flight_hours": 7.2246666666666695,
+   "controlled_completed_in_window": 528,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.5105951076101227
+    ],
+    "events": 0,
+    "hours": 7.2246666666666695
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.5105951076101227
+    ],
+    "events": 0,
+    "hours": 7.2246666666666695
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.5105951076101227
+    ],
+    "events": 0,
+    "hours": 7.2246666666666695
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.5105951076101227
+    ],
+    "events": 0,
+    "hours": 7.2246666666666695
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.4666940557788736
+    ],
+    "events": 0,
+    "hours": 7.904277777777782
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.4666940557788736
+    ],
+    "events": 0,
+    "hours": 7.904277777777782
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.0005382793516040725,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 500.4000000000001,
+   "entry_denials": 310,
+   "minimum_separation_m": 11.0941153402495,
+   "mean_control_ms_per_controlled_step": 0.40414359881666284
+  },
+  {
+   "cell": {
+    "arm": "predictive-A0",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 39.51305555555562,
+   "peak_uas_occupancy": 53,
+   "uas_throughput_per_hour": 2880.0,
+   "controlled_throughput_per_hour": 2640.0,
+   "controlled_operations": 536,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.22469029850746272,
+   "p95_delay_completed_s": 1.9865,
+   "mean_delay_lower_bound_s": 0.22469029850746272,
+   "mean_entry_wait_s": 0.11068050013301385,
+   "backlog_growth_max": 20,
+   "controlled_flight_hours": 7.225222222222222,
+   "controlled_completed_in_window": 528,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.5105558473714829
+    ],
+    "events": 0,
+    "hours": 7.225222222222222
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.5105558473714829
+    ],
+    "events": 0,
+    "hours": 7.225222222222222
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.5105558473714829
+    ],
+    "events": 0,
+    "hours": 7.225222222222222
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.5105558473714829
+    ],
+    "events": 0,
+    "hours": 7.225222222222222
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.12654045428023084,
+    "interval_if_independent": [
+     0.0032037269237117057,
+     0.7050382857768538
+    ],
+    "events": 1,
+    "hours": 7.9026111111111135
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.46679248190858724
+    ],
+    "events": 0,
+    "hours": 7.9026111111111135
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.0007612222615221369,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 498.8000000000001,
+   "entry_denials": 308,
+   "minimum_separation_m": 4.9048821946465395,
+   "mean_control_ms_per_controlled_step": 0.4181348148947062
+  },
+  {
+   "cell": {
+    "arm": "predictive-A0",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 39.55444444444448,
+   "peak_uas_occupancy": 53,
+   "uas_throughput_per_hour": 2895.0,
+   "controlled_throughput_per_hour": 2095.0,
+   "controlled_operations": 425,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.32487294117647064,
+   "p95_delay_completed_s": 2.982399999999983,
+   "mean_delay_lower_bound_s": 0.32487294117647064,
+   "mean_entry_wait_s": 0.10688440723828829,
+   "backlog_growth_max": 19,
+   "controlled_flight_hours": 5.730444444444445,
+   "controlled_completed_in_window": 419,
+   "attributable_uas_los": {
+    "per_hour": 0.34901306860045755,
+    "interval_if_independent": [
+     0.04226710177406618,
+     1.260755206296111
+    ],
+    "events": 2,
+    "hours": 5.730444444444445
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6437335689887426
+    ],
+    "events": 0,
+    "hours": 5.730444444444445
+   },
+   "attributable_uas_los_per_1000_completed": 4.77326968973747,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.34901306860045755,
+    "interval_if_independent": [
+     0.04226710177406618,
+     1.260755206296111
+    ],
+    "events": 2,
+    "hours": 5.730444444444445
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6437335689887426
+    ],
+    "events": 0,
+    "hours": 5.730444444444445
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 2.7809769937357816,
+    "interval_if_independent": [
+     1.7428234760817471,
+     4.210432589175642
+    ],
+    "events": 22,
+    "hours": 7.910888888888882
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.505632180679233,
+    "interval_if_independent": [
+     0.13776775137836667,
+     1.2946192038910271
+    ],
+    "events": 4,
+    "hours": 7.910888888888882
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 2,
+    "uu": 19,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 4,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    1.0915044569765335
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.0010276495908791252,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 1,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 478.2000000000007,
+   "entry_denials": 241,
+   "minimum_separation_m": 1.8726896554365642,
+   "mean_control_ms_per_controlled_step": 0.4637251867955246
+  },
+  {
+   "cell": {
+    "arm": "predictive-A0",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 39.60083333333339,
+   "peak_uas_occupancy": 53,
+   "uas_throughput_per_hour": 2885.0,
+   "controlled_throughput_per_hour": 2095.0,
+   "controlled_operations": 425,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.3380494117647059,
+   "p95_delay_completed_s": 2.6227999999999976,
+   "mean_delay_lower_bound_s": 0.3380494117647059,
+   "mean_entry_wait_s": 0.11402418400135256,
+   "backlog_growth_max": 19,
+   "controlled_flight_hours": 5.736888888888885,
+   "controlled_completed_in_window": 419,
+   "attributable_uas_los": {
+    "per_hour": 0.17431050511310828,
+    "interval_if_independent": [
+     0.0044131598980982675,
+     0.9711959737846706
+    ],
+    "events": 1,
+    "hours": 5.736888888888885
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6430104409479671
+    ],
+    "events": 0,
+    "hours": 5.736888888888885
+   },
+   "attributable_uas_los_per_1000_completed": 2.386634844868735,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.17431050511310828,
+    "interval_if_independent": [
+     0.0044131598980982675,
+     0.9711959737846706
+    ],
+    "events": 1,
+    "hours": 5.736888888888885
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6430104409479671
+    ],
+    "events": 0,
+    "hours": 5.736888888888885
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 3.282759201195266,
+    "interval_if_independent": [
+     2.1444072997954606,
+     4.810002830301352
+    ],
+    "events": 26,
+    "hours": 7.920166666666654
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.5050398771069641,
+    "interval_if_independent": [
+     0.13760636858984387,
+     1.2931026715014895
+    ],
+    "events": 4,
+    "hours": 7.920166666666654
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 1,
+    "uu": 24,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 4,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.545355389929105
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.0008328168577626279,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 477.2000000000007,
+   "entry_denials": 256,
+   "minimum_separation_m": 2.031945352096591,
+   "mean_control_ms_per_controlled_step": 0.47122082260186393
+  },
+  {
+   "cell": {
+    "arm": "predictive-A1",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.537499999999948,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1360.0,
+   "controlled_throughput_per_hour": 1240.0,
+   "controlled_operations": 250,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.392308,
+   "p95_delay_completed_s": 1.8386999999999998,
+   "mean_delay_lower_bound_s": 0.392308,
+   "mean_entry_wait_s": 0.01007751937984483,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 3.363888888888896,
+   "controlled_completed_in_window": 248,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0966115635681368
+    ],
+    "events": 0,
+    "hours": 3.363888888888896
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0966115635681368
+    ],
+    "events": 0,
+    "hours": 3.363888888888896
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0966115635681368
+    ],
+    "events": 0,
+    "hours": 3.363888888888896
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0966115635681368
+    ],
+    "events": 0,
+    "hours": 3.363888888888896
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9949776005701776
+    ],
+    "events": 0,
+    "hours": 3.7075000000000014
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9949776005701776
+    ],
+    "events": 0,
+    "hours": 3.7075000000000014
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.001106523534269199,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 227.4000000000011,
+   "entry_denials": 13,
+   "minimum_separation_m": 12.380631369535505,
+   "mean_control_ms_per_controlled_step": 0.5127503082533283
+  },
+  {
+   "cell": {
+    "arm": "predictive-A1",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.49194444444439,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1365.0,
+   "controlled_throughput_per_hour": 1245.0,
+   "controlled_operations": 250,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.386708,
+   "p95_delay_completed_s": 1.8386999999999998,
+   "mean_delay_lower_bound_s": 0.386708,
+   "mean_entry_wait_s": 0.01007751937984483,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 3.354944444444449,
+   "controlled_completed_in_window": 249,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.099535183130218
+    ],
+    "events": 0,
+    "hours": 3.354944444444449
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.099535183130218
+    ],
+    "events": 0,
+    "hours": 3.354944444444449
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.099535183130218
+    ],
+    "events": 0,
+    "hours": 3.354944444444449
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.099535183130218
+    ],
+    "events": 0,
+    "hours": 3.354944444444449
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9974287628855035
+    ],
+    "events": 0,
+    "hours": 3.6983888888888874
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9974287628855035
+    ],
+    "events": 0,
+    "hours": 3.6983888888888874
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.001026677043832486,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 227.4000000000011,
+   "entry_denials": 13,
+   "minimum_separation_m": 12.380631369535505,
+   "mean_control_ms_per_controlled_step": 0.4987102055890462
+  },
+  {
+   "cell": {
+    "arm": "predictive-A1",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.538611111111084,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1365.0,
+   "controlled_throughput_per_hour": 1010.0,
+   "controlled_operations": 200,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.38917,
+   "p95_delay_completed_s": 2.658099999999996,
+   "mean_delay_lower_bound_s": 0.38917,
+   "mean_entry_wait_s": 0.012435897435897255,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 2.7198888888888897,
+   "controlled_completed_in_window": 202,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.356261084481613
+    ],
+    "events": 0,
+    "hours": 2.7198888888888897
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.356261084481613
+    ],
+    "events": 0,
+    "hours": 2.7198888888888897
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.356261084481613
+    ],
+    "events": 0,
+    "hours": 2.7198888888888897
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.356261084481613
+    ],
+    "events": 0,
+    "hours": 2.7198888888888897
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.2697073675062557,
+    "interval_if_independent": [
+     0.006828399342471705,
+     1.502713271653758
+    ],
+    "events": 1,
+    "hours": 3.7077222222222224
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.994917966616983
+    ],
+    "events": 0,
+    "hours": 3.7077222222222224
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.0008987295232648392,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 214.40000000000094,
+   "entry_denials": 13,
+   "minimum_separation_m": 7.083021962922982,
+   "mean_control_ms_per_controlled_step": 0.5549690445023595
+  },
+  {
+   "cell": {
+    "arm": "predictive-A1",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.543611111111094,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1360.0,
+   "controlled_throughput_per_hour": 1005.0,
+   "controlled_operations": 200,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.58917,
+   "p95_delay_completed_s": 3.218699999999998,
+   "mean_delay_lower_bound_s": 0.58917,
+   "mean_entry_wait_s": 0.012435897435897255,
+   "backlog_growth_max": 7,
+   "controlled_flight_hours": 2.718722222222225,
+   "controlled_completed_in_window": 201,
+   "attributable_uas_los": {
+    "per_hour": 0.36781985001123857,
+    "interval_if_independent": [
+     0.009312392335394867,
+     2.0493610363712538
+    ],
+    "events": 1,
+    "hours": 2.718722222222225
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.356843087521727
+    ],
+    "events": 0,
+    "hours": 2.718722222222225
+   },
+   "attributable_uas_los_per_1000_completed": 4.975124378109452,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.36781985001123857,
+    "interval_if_independent": [
+     0.009312392335394867,
+     2.0493610363712538
+    ],
+    "events": 1,
+    "hours": 2.718722222222225
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.356843087521727
+    ],
+    "events": 0,
+    "hours": 2.718722222222225
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 1.0785385802237963,
+    "interval_if_independent": [
+     0.2938654631765039,
+     2.7614871273015034
+    ],
+    "events": 4,
+    "hours": 3.708722222222224
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.2696346450559491,
+    "interval_if_independent": [
+     0.006826558169438695,
+     1.502308088094134
+    ],
+    "events": 1,
+    "hours": 3.708722222222224
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 1,
+    "uu": 3,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    1.1045655375552228,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.0013895416555980138,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 214.40000000000094,
+   "entry_denials": 13,
+   "minimum_separation_m": 3.2275773992618784,
+   "mean_control_ms_per_controlled_step": 0.5596675167323489
+  },
+  {
+   "cell": {
+    "arm": "predictive-A1",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 40.044444444444366,
+   "peak_uas_occupancy": 53,
+   "uas_throughput_per_hour": 2870.0,
+   "controlled_throughput_per_hour": 2630.0,
+   "controlled_operations": 536,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.9470783582089553,
+   "p95_delay_completed_s": 4.598750000000001,
+   "mean_delay_lower_bound_s": 0.9470783582089553,
+   "mean_entry_wait_s": 0.1253404547035829,
+   "backlog_growth_max": 20,
+   "controlled_flight_hours": 7.329277777777779,
+   "controlled_completed_in_window": 526,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.503307360692283
+    ],
+    "events": 0,
+    "hours": 7.329277777777779
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.503307360692283
+    ],
+    "events": 0,
+    "hours": 7.329277777777779
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.503307360692283
+    ],
+    "events": 0,
+    "hours": 7.329277777777779
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.503307360692283
+    ],
+    "events": 0,
+    "hours": 7.329277777777779
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.46059815603531357
+    ],
+    "events": 0,
+    "hours": 8.008888888888892
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.46059815603531357
+    ],
+    "events": 0,
+    "hours": 8.008888888888892
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.0025317031388570953,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 501.0000000000002,
+   "entry_denials": 347,
+   "minimum_separation_m": 11.0941153402495,
+   "mean_control_ms_per_controlled_step": 0.5037194737166784
+  },
+  {
+   "cell": {
+    "arm": "predictive-A1",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 39.98638888888888,
+   "peak_uas_occupancy": 54,
+   "uas_throughput_per_hour": 2875.0,
+   "controlled_throughput_per_hour": 2635.0,
+   "controlled_operations": 536,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.8750634328358209,
+   "p95_delay_completed_s": 4.2005,
+   "mean_delay_lower_bound_s": 0.8750634328358209,
+   "mean_entry_wait_s": 0.12677258681727924,
+   "backlog_growth_max": 20,
+   "controlled_flight_hours": 7.319888888888883,
+   "controlled_completed_in_window": 527,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.503952930175404
+    ],
+    "events": 0,
+    "hours": 7.319888888888883
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.503952930175404
+    ],
+    "events": 0,
+    "hours": 7.319888888888883
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.503952930175404
+    ],
+    "events": 0,
+    "hours": 7.319888888888883
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.503952930175404
+    ],
+    "events": 0,
+    "hours": 7.319888888888883
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.12504254920076976,
+    "interval_if_independent": [
+     0.003165803250531218,
+     0.6966924928406208
+    ],
+    "events": 1,
+    "hours": 7.997277777777773
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.46126689063675047
+    ],
+    "events": 0,
+    "hours": 7.997277777777773
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.0020871597929537486,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 500.20000000000005,
+   "entry_denials": 351,
+   "minimum_separation_m": 4.9048821946465395,
+   "mean_control_ms_per_controlled_step": 0.5021702685517128
+  },
+  {
+   "cell": {
+    "arm": "predictive-A1",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 40.094166666666645,
+   "peak_uas_occupancy": 53,
+   "uas_throughput_per_hour": 2885.0,
+   "controlled_throughput_per_hour": 2085.0,
+   "controlled_operations": 425,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 1.1959317647058822,
+   "p95_delay_completed_s": 5.663999999999997,
+   "mean_delay_lower_bound_s": 1.1959317647058822,
+   "mean_entry_wait_s": 0.134640622357517,
+   "backlog_growth_max": 19,
+   "controlled_flight_hours": 5.838388888888888,
+   "controlled_completed_in_window": 417,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6318317474764807
+    ],
+    "events": 0,
+    "hours": 5.838388888888888
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6318317474764807
+    ],
+    "events": 0,
+    "hours": 5.838388888888888
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6318317474764807
+    ],
+    "events": 0,
+    "hours": 5.838388888888888
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6318317474764807
+    ],
+    "events": 0,
+    "hours": 5.838388888888888
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 2.4941284060441067,
+    "interval_if_independent": [
+     1.5234784260475251,
+     3.851979037184292
+    ],
+    "events": 20,
+    "hours": 8.018833333333326
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.49882568120882137,
+    "interval_if_independent": [
+     0.13591320935626477,
+     1.2771918619172
+    ],
+    "events": 4,
+    "hours": 8.018833333333326
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 19,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 4,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.003673007203280966,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 1,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 478.6000000000006,
+   "entry_denials": 299,
+   "minimum_separation_m": 1.8726896554365642,
+   "mean_control_ms_per_controlled_step": 0.5372201190469567
+  },
+  {
+   "cell": {
+    "arm": "predictive-A1",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 40.06138888888894,
+   "peak_uas_occupancy": 55,
+   "uas_throughput_per_hour": 2885.0,
+   "controlled_throughput_per_hour": 2095.0,
+   "controlled_operations": 425,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 1.1281670588235295,
+   "p95_delay_completed_s": 6.299599999999993,
+   "mean_delay_lower_bound_s": 1.1281670588235295,
+   "mean_entry_wait_s": 0.16587519025875164,
+   "backlog_growth_max": 19,
+   "controlled_flight_hours": 5.828999999999995,
+   "controlled_completed_in_window": 419,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6328494517265291
+    ],
+    "events": 0,
+    "hours": 5.828999999999995
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6328494517265291
+    ],
+    "events": 0,
+    "hours": 5.828999999999995
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6328494517265291
+    ],
+    "events": 0,
+    "hours": 5.828999999999995
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6328494517265291
+    ],
+    "events": 0,
+    "hours": 5.828999999999995
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 3.1202113423149243,
+    "interval_if_independent": [
+     2.0192362642120583,
+     4.606047458799674
+    ],
+    "events": 25,
+    "hours": 8.012277777777765
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.4992338147703879,
+    "interval_if_independent": [
+     0.13602441201540633,
+     1.278236845932748
+    ],
+    "events": 4,
+    "hours": 8.012277777777765
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 24,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 4,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.003612207163416633,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 479.40000000000055,
+   "entry_denials": 365,
+   "minimum_separation_m": 2.031945352096591,
+   "mean_control_ms_per_controlled_step": 0.5171058107532183
+  },
+  {
+   "cell": {
+    "arm": "predictive-A2",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.84499999999996,
+   "peak_uas_occupancy": 30,
+   "uas_throughput_per_hour": 1370.0,
+   "controlled_throughput_per_hour": 1250.0,
+   "controlled_operations": 250,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 1.0227080000000002,
+   "p95_delay_completed_s": 7.349749999999999,
+   "mean_delay_lower_bound_s": 1.0227080000000002,
+   "mean_entry_wait_s": 0.019379844961240147,
+   "backlog_growth_max": 5,
+   "controlled_flight_hours": 3.4253888888888966,
+   "controlled_completed_in_window": 250,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0769228177506314
+    ],
+    "events": 0,
+    "hours": 3.4253888888888966
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0769228177506314
+    ],
+    "events": 0,
+    "hours": 3.4253888888888966
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0769228177506314
+    ],
+    "events": 0,
+    "hours": 3.4253888888888966
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0769228177506314
+    ],
+    "events": 0,
+    "hours": 3.4253888888888966
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9787422271461749
+    ],
+    "events": 0,
+    "hours": 3.769000000000002
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9787422271461749
+    ],
+    "events": 0,
+    "hours": 3.769000000000002
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.004395283584994404,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 228.00000000000114,
+   "entry_denials": 25,
+   "minimum_separation_m": 12.47295548938697,
+   "mean_control_ms_per_controlled_step": 0.5442284102996373
+  },
+  {
+   "cell": {
+    "arm": "predictive-A2",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.724722222222173,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1370.0,
+   "controlled_throughput_per_hour": 1250.0,
+   "controlled_operations": 250,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.921108,
+   "p95_delay_completed_s": 4.911099999999993,
+   "mean_delay_lower_bound_s": 0.921108,
+   "mean_entry_wait_s": 0.01007751937984483,
+   "backlog_growth_max": 5,
+   "controlled_flight_hours": 3.401500000000006,
+   "controlled_completed_in_window": 250,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.084486095579576
+    ],
+    "events": 0,
+    "hours": 3.401500000000006
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.084486095579576
+    ],
+    "events": 0,
+    "hours": 3.401500000000006
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.084486095579576
+    ],
+    "events": 0,
+    "hours": 3.401500000000006
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.084486095579576
+    ],
+    "events": 0,
+    "hours": 3.401500000000006
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9850291529921942
+    ],
+    "events": 0,
+    "hours": 3.744944444444445
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9850291529921942
+    ],
+    "events": 0,
+    "hours": 3.744944444444445
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.003805510640730397,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 227.4000000000011,
+   "entry_denials": 13,
+   "minimum_separation_m": 12.881157074787065,
+   "mean_control_ms_per_controlled_step": 0.5705058981929769
+  },
+  {
+   "cell": {
+    "arm": "predictive-A2",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.811666666666618,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1370.0,
+   "controlled_throughput_per_hour": 1015.0,
+   "controlled_operations": 200,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 1.4011699999999998,
+   "p95_delay_completed_s": 8.143849999999992,
+   "mean_delay_lower_bound_s": 1.4011699999999998,
+   "mean_entry_wait_s": 0.012435897435897255,
+   "backlog_growth_max": 5,
+   "controlled_flight_hours": 2.774500000000004,
+   "controlled_completed_in_window": 203,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3295654907601115
+    ],
+    "events": 0,
+    "hours": 2.774500000000004
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3295654907601115
+    ],
+    "events": 0,
+    "hours": 2.774500000000004
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3295654907601115
+    ],
+    "events": 0,
+    "hours": 2.774500000000004
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3295654907601115
+    ],
+    "events": 0,
+    "hours": 2.774500000000004
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.26579250465136856,
+    "interval_if_independent": [
+     0.006729283596426844,
+     1.480901051901894
+    ],
+    "events": 1,
+    "hours": 3.762333333333337
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.980476509465916
+    ],
+    "events": 0,
+    "hours": 3.762333333333337
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.004184938227107988,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 214.40000000000094,
+   "entry_denials": 13,
+   "minimum_separation_m": 7.083021962922982,
+   "mean_control_ms_per_controlled_step": 0.6541069337444184
+  },
+  {
+   "cell": {
+    "arm": "predictive-A2",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.75944444444441,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1365.0,
+   "controlled_throughput_per_hour": 1010.0,
+   "controlled_operations": 200,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 1.3061699999999998,
+   "p95_delay_completed_s": 6.743399999999975,
+   "mean_delay_lower_bound_s": 1.3061699999999998,
+   "mean_entry_wait_s": 0.012435897435897255,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 2.7618888888888913,
+   "controlled_completed_in_window": 202,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3356364439403543
+    ],
+    "events": 0,
+    "hours": 2.7618888888888913
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3356364439403543
+    ],
+    "events": 0,
+    "hours": 2.7618888888888913
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3356364439403543
+    ],
+    "events": 0,
+    "hours": 2.7618888888888913
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3356364439403543
+    ],
+    "events": 0,
+    "hours": 2.7618888888888913
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.7995972399087864,
+    "interval_if_independent": [
+     0.1648961739586112,
+     2.336762449364198
+    ],
+    "events": 3,
+    "hours": 3.75188888888889
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.2665324133029288,
+    "interval_if_independent": [
+     0.006748016461592961,
+     1.4850235590502578
+    ],
+    "events": 1,
+    "hours": 3.75188888888889
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 3,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.0050287645331295,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 214.40000000000094,
+   "entry_denials": 13,
+   "minimum_separation_m": 3.2275773992618784,
+   "mean_control_ms_per_controlled_step": 0.6820225604922454
+  },
+  {
+   "cell": {
+    "arm": "predictive-A2",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 41.20500000000001,
+   "peak_uas_occupancy": 56,
+   "uas_throughput_per_hour": 2865.0,
+   "controlled_throughput_per_hour": 2625.0,
+   "controlled_operations": 536,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 2.6276753731343283,
+   "p95_delay_completed_s": 9.854,
+   "mean_delay_lower_bound_s": 2.6276753731343283,
+   "mean_entry_wait_s": 0.11556084883459156,
+   "backlog_growth_max": 20,
+   "controlled_flight_hours": 7.561388888888874,
+   "controlled_completed_in_window": 525,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.48785739079424684
+    ],
+    "events": 0,
+    "hours": 7.561388888888874
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.48785739079424684
+    ],
+    "events": 0,
+    "hours": 7.561388888888874
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.48785739079424684
+    ],
+    "events": 0,
+    "hours": 7.561388888888874
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.48785739079424684
+    ],
+    "events": 0,
+    "hours": 7.561388888888874
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.44762522195291116
+    ],
+    "events": 0,
+    "hours": 8.240999999999987
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.44762522195291116
+    ],
+    "events": 0,
+    "hours": 8.240999999999987
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.01273281657543808,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 502.20000000000005,
+   "entry_denials": 334,
+   "minimum_separation_m": 11.0941153402495,
+   "mean_control_ms_per_controlled_step": 0.6150780013173426
+  },
+  {
+   "cell": {
+    "arm": "predictive-A2",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 41.234166666666596,
+   "peak_uas_occupancy": 55,
+   "uas_throughput_per_hour": 2860.0,
+   "controlled_throughput_per_hour": 2620.0,
+   "controlled_operations": 536,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 2.8448395522388057,
+   "p95_delay_completed_s": 10.88325,
+   "mean_delay_lower_bound_s": 2.8448395522388057,
+   "mean_entry_wait_s": 0.14600937237808737,
+   "backlog_growth_max": 20,
+   "controlled_flight_hours": 7.569444444444443,
+   "controlled_completed_in_window": 524,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.48733820311229975
+    ],
+    "events": 0,
+    "hours": 7.569444444444443
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.48733820311229975
+    ],
+    "events": 0,
+    "hours": 7.569444444444443
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.48733820311229975
+    ],
+    "events": 0,
+    "hours": 7.569444444444443
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.48733820311229975
+    ],
+    "events": 0,
+    "hours": 7.569444444444443
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.121258664942099,
+    "interval_if_independent": [
+     0.003070003595435414,
+     0.67561003911872
+    ],
+    "events": 1,
+    "hours": 8.246833333333333
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.44730859773819465
+    ],
+    "events": 0,
+    "hours": 8.246833333333333
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.013834862385321101,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 1,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 500.8000000000003,
+   "entry_denials": 403,
+   "minimum_separation_m": 4.9048821946465395,
+   "mean_control_ms_per_controlled_step": 0.6368939838925233
+  },
+  {
+   "cell": {
+    "arm": "predictive-A2",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 41.21888888888882,
+   "peak_uas_occupancy": 55,
+   "uas_throughput_per_hour": 2865.0,
+   "controlled_throughput_per_hour": 2065.0,
+   "controlled_operations": 425,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 3.2599317647058825,
+   "p95_delay_completed_s": 12.658599999999998,
+   "mean_delay_lower_bound_s": 3.2599317647058825,
+   "mean_entry_wait_s": 0.12391341112802286,
+   "backlog_growth_max": 20,
+   "controlled_flight_hours": 6.063333333333319,
+   "controlled_completed_in_window": 413,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6083913338285778
+    ],
+    "events": 0,
+    "hours": 6.063333333333319
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6083913338285778
+    ],
+    "events": 0,
+    "hours": 6.063333333333319
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6083913338285778
+    ],
+    "events": 0,
+    "hours": 6.063333333333319
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6083913338285778
+    ],
+    "events": 0,
+    "hours": 6.063333333333319
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 2.4260721891258115,
+    "interval_if_independent": [
+     1.4819079207029822,
+     3.746871729844357
+    ],
+    "events": 20,
+    "hours": 8.243777777777757
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.4852144378251623,
+    "interval_if_independent": [
+     0.13220460364230216,
+     1.2423416728931385
+    ],
+    "events": 4,
+    "hours": 8.243777777777757
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 19,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 4,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.01573208722741433,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 1,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 478.8000000000005,
+   "entry_denials": 278,
+   "minimum_separation_m": 1.8726896554365642,
+   "mean_control_ms_per_controlled_step": 0.6889614696660825
+  },
+  {
+   "cell": {
+    "arm": "predictive-A2",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 41.38638888888895,
+   "peak_uas_occupancy": 55,
+   "uas_throughput_per_hour": 2870.0,
+   "controlled_throughput_per_hour": 2080.0,
+   "controlled_operations": 425,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 3.6171082352941175,
+   "p95_delay_completed_s": 16.690999999999935,
+   "mean_delay_lower_bound_s": 3.6171082352941175,
+   "mean_entry_wait_s": 0.12713301200744098,
+   "backlog_growth_max": 18,
+   "controlled_flight_hours": 6.093999999999987,
+   "controlled_completed_in_window": 416,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6053297430446247
+    ],
+    "events": 0,
+    "hours": 6.093999999999987
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6053297430446247
+    ],
+    "events": 0,
+    "hours": 6.093999999999987
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6053297430446247
+    ],
+    "events": 0,
+    "hours": 6.093999999999987
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6053297430446247
+    ],
+    "events": 0,
+    "hours": 6.093999999999987
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 3.0203166634226304,
+    "interval_if_independent": [
+     1.954589695088479,
+     4.458583206741
+    ],
+    "events": 25,
+    "hours": 8.277277777777757
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.4832506661476209,
+    "interval_if_independent": [
+     0.13166954195403704,
+     1.2373136374496918
+    ],
+    "events": 4,
+    "hours": 8.277277777777757
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 24,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 4,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.017667651241658464,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 1,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 480.40000000000043,
+   "entry_denials": 285,
+   "minimum_separation_m": 2.031945352096591,
+   "mean_control_ms_per_controlled_step": 0.6722735146502555
+  },
+  {
+   "cell": {
+    "arm": "predictive-A4",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 20.225833333333288,
+   "peak_uas_occupancy": 30,
+   "uas_throughput_per_hour": 1355.0,
+   "controlled_throughput_per_hour": 1235.0,
+   "controlled_operations": 250,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 4.487508,
+   "p95_delay_completed_s": 20.495949999999993,
+   "mean_delay_lower_bound_s": 4.487508,
+   "mean_entry_wait_s": 0.003100775193798273,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 3.7015555555555437,
+   "controlled_completed_in_window": 247,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9965754663812667
+    ],
+    "events": 0,
+    "hours": 3.7015555555555437
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9965754663812667
+    ],
+    "events": 0,
+    "hours": 3.7015555555555437
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9965754663812667
+    ],
+    "events": 0,
+    "hours": 3.7015555555555437
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9965754663812667
+    ],
+    "events": 0,
+    "hours": 3.7015555555555437
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9119227359681804
+    ],
+    "events": 0,
+    "hours": 4.045166666666649
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9119227359681804
+    ],
+    "events": 0,
+    "hours": 4.045166666666649
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.042054391547097315,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 1,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 227.2000000000011,
+   "entry_denials": 4,
+   "minimum_separation_m": 12.47295548938697,
+   "mean_control_ms_per_controlled_step": 0.6844272662166836
+  },
+  {
+   "cell": {
+    "arm": "predictive-A4",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 19.84277777777777,
+   "peak_uas_occupancy": 30,
+   "uas_throughput_per_hour": 1355.0,
+   "controlled_throughput_per_hour": 1235.0,
+   "controlled_operations": 250,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 3.891508,
+   "p95_delay_completed_s": 14.518299999999998,
+   "mean_delay_lower_bound_s": 3.891508,
+   "mean_entry_wait_s": 0.01085271317829451,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 3.6251111111110976,
+   "controlled_completed_in_window": 247,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0175907278558676
+    ],
+    "events": 0,
+    "hours": 3.6251111111110976
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0175907278558676
+    ],
+    "events": 0,
+    "hours": 3.6251111111110976
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0175907278558676
+    ],
+    "events": 0,
+    "hours": 3.6251111111110976
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0175907278558676
+    ],
+    "events": 0,
+    "hours": 3.6251111111110976
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9295269783863587
+    ],
+    "events": 0,
+    "hours": 3.9685555555555365
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.9295269783863587
+    ],
+    "events": 0,
+    "hours": 3.9685555555555365
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.03986084717709802,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 1,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 227.20000000000113,
+   "entry_denials": 14,
+   "minimum_separation_m": 16.734112155148267,
+   "mean_control_ms_per_controlled_step": 0.6709404977358252
+  },
+  {
+   "cell": {
+    "arm": "predictive-A4",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 20.104999999999958,
+   "peak_uas_occupancy": 30,
+   "uas_throughput_per_hour": 1355.0,
+   "controlled_throughput_per_hour": 1000.0,
+   "controlled_operations": 200,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 5.83817,
+   "p95_delay_completed_s": 24.49999999999996,
+   "mean_delay_lower_bound_s": 5.83817,
+   "mean_entry_wait_s": 0.016404151404151215,
+   "backlog_growth_max": 5,
+   "controlled_flight_hours": 3.03316666666668,
+   "controlled_completed_in_window": 200,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.2161809288798018
+    ],
+    "events": 0,
+    "hours": 3.03316666666668
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.2161809288798018
+    ],
+    "events": 0,
+    "hours": 3.03316666666668
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.2161809288798018
+    ],
+    "events": 0,
+    "hours": 3.03316666666668
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.2161809288798018
+    ],
+    "events": 0,
+    "hours": 3.03316666666668
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.2486943546381489,
+    "interval_if_independent": [
+     0.0062963959175055635,
+     1.3856362573834566
+    ],
+    "events": 1,
+    "hours": 4.021000000000013
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.917403495178792
+    ],
+    "events": 0,
+    "hours": 4.021000000000013
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.04652270271260325,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 1,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 215.600000000001,
+   "entry_denials": 17,
+   "minimum_separation_m": 7.083021962922982,
+   "mean_control_ms_per_controlled_step": 0.7316750280028378
+  },
+  {
+   "cell": {
+    "arm": "predictive-A4",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 19.95555555555551,
+   "peak_uas_occupancy": 29,
+   "uas_throughput_per_hour": 1340.0,
+   "controlled_throughput_per_hour": 985.0,
+   "controlled_operations": 200,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 5.469169999999999,
+   "p95_delay_completed_s": 20.885999999999992,
+   "mean_delay_lower_bound_s": 5.469169999999999,
+   "mean_entry_wait_s": 0.0145522995522994,
+   "backlog_growth_max": 5,
+   "controlled_flight_hours": 3.001111111111125,
+   "controlled_completed_in_window": 197,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.2291712360986768
+    ],
+    "events": 0,
+    "hours": 3.001111111111125
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.2291712360986768
+    ],
+    "events": 0,
+    "hours": 3.001111111111125
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.2291712360986768
+    ],
+    "events": 0,
+    "hours": 3.001111111111125
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.2291712360986768
+    ],
+    "events": 0,
+    "hours": 3.001111111111125
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.7516703786191513,
+    "interval_if_independent": [
+     0.15501250295268398,
+     2.1966998225969
+    ],
+    "events": 3,
+    "hours": 3.991111111111124
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.25055679287305044,
+    "interval_if_independent": [
+     0.0063435487711194,
+     1.3960130990659776
+    ],
+    "events": 1,
+    "hours": 3.991111111111124
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 3,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.047815623843021106,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 2,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 215.00000000000097,
+   "entry_denials": 15,
+   "minimum_separation_m": 3.2275773992618784,
+   "mean_control_ms_per_controlled_step": 0.7307166972737535
+  },
+  {
+   "cell": {
+    "arm": "predictive-A4",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 48.94555555555559,
+   "peak_uas_occupancy": 69,
+   "uas_throughput_per_hour": 2665.0,
+   "controlled_throughput_per_hour": 2425.0,
+   "controlled_operations": 536,
+   "controlled_completion_fraction": 0.996268656716418,
+   "mean_delay_completed_s": 15.325704119850187,
+   "p95_delay_completed_s": 48.86319999999993,
+   "mean_delay_lower_bound_s": 15.836630597014924,
+   "mean_entry_wait_s": 0.17076448318906368,
+   "backlog_growth_max": 31,
+   "controlled_flight_hours": 9.1095,
+   "controlled_completed_in_window": 485,
+   "attributable_uas_los": {
+    "per_hour": 0.3293265272517701,
+    "interval_if_independent": [
+     0.06791504724689641,
+     0.9624318645087352
+    ],
+    "events": 3,
+    "hours": 9.1095
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.40494862002458254
+    ],
+    "events": 0,
+    "hours": 9.1095
+   },
+   "attributable_uas_los_per_1000_completed": 6.185567010309279,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.3293265272517701,
+    "interval_if_independent": [
+     0.06791504724689641,
+     0.9624318645087352
+    ],
+    "events": 3,
+    "hours": 9.1095
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.40494862002458254
+    ],
+    "events": 0,
+    "hours": 9.1095
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.30646296338335105,
+    "interval_if_independent": [
+     0.06320003071508506,
+     0.8956148285814272
+    ],
+    "events": 3,
+    "hours": 9.789111111111113
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.3768349763572383
+    ],
+    "events": 0,
+    "hours": 9.789111111111113
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 3,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    1.019117896842621,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.12540632184959535,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 26,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 504.39999999999964,
+   "entry_denials": 470,
+   "minimum_separation_m": 8.422406175387291,
+   "mean_control_ms_per_controlled_step": 0.7103385518307674
+  },
+  {
+   "cell": {
+    "arm": "predictive-A4",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 49.29333333333329,
+   "peak_uas_occupancy": 66,
+   "uas_throughput_per_hour": 2685.0,
+   "controlled_throughput_per_hour": 2445.0,
+   "controlled_operations": 536,
+   "controlled_completion_fraction": 0.9981343283582089,
+   "mean_delay_completed_s": 15.064175700934578,
+   "p95_delay_completed_s": 44.422299999999915,
+   "mean_delay_lower_bound_s": 15.160511194029851,
+   "mean_entry_wait_s": 0.14048965559580076,
+   "backlog_growth_max": 28,
+   "controlled_flight_hours": 9.181277777777785,
+   "controlled_completed_in_window": 489,
+   "attributable_uas_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.4017827957501121
+    ],
+    "events": 0,
+    "hours": 9.181277777777785
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.4017827957501121
+    ],
+    "events": 0,
+    "hours": 9.181277777777785
+   },
+   "attributable_uas_los_per_1000_completed": 0.0,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.4017827957501121
+    ],
+    "events": 0,
+    "hours": 9.181277777777785
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.4017827957501121
+    ],
+    "events": 0,
+    "hours": 9.181277777777785
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.10143359480659986,
+    "interval_if_independent": [
+     0.002568076276469766,
+     0.5651518181233661
+    ],
+    "events": 1,
+    "hours": 9.858666666666675
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.37417630383898415
+    ],
+    "events": 0,
+    "hours": 9.858666666666675
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.12509757174927238,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 19,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 499.40000000000015,
+   "entry_denials": 390,
+   "minimum_separation_m": 4.9048821946465395,
+   "mean_control_ms_per_controlled_step": 0.702083131565228
+  },
+  {
+   "cell": {
+    "arm": "predictive-A4",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 48.415555555555564,
+   "peak_uas_occupancy": 65,
+   "uas_throughput_per_hour": 2710.0,
+   "controlled_throughput_per_hour": 1910.0,
+   "controlled_operations": 425,
+   "controlled_completion_fraction": 0.9976470588235294,
+   "mean_delay_completed_s": 16.38111556603774,
+   "p95_delay_completed_s": 43.13094999999997,
+   "mean_delay_lower_bound_s": 16.668402352941175,
+   "mean_entry_wait_s": 0.14020505665482844,
+   "backlog_growth_max": 26,
+   "controlled_flight_hours": 7.5026666666666735,
+   "controlled_completed_in_window": 382,
+   "attributable_uas_los": {
+    "per_hour": 0.13328594277590178,
+    "interval_if_independent": [
+     0.00337450790620534,
+     0.7426217421724132
+    ],
+    "events": 1,
+    "hours": 7.5026666666666735
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.49167577582822974
+    ],
+    "events": 0,
+    "hours": 7.5026666666666735
+   },
+   "attributable_uas_los_per_1000_completed": 2.6178010471204187,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.13328594277590178,
+    "interval_if_independent": [
+     0.00337450790620534,
+     0.7426217421724132
+    ],
+    "events": 1,
+    "hours": 7.5026666666666735
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.49167577582822974
+    ],
+    "events": 0,
+    "hours": 7.5026666666666735
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 2.1687244687198786,
+    "interval_if_independent": [
+     1.3424746277216604,
+     3.3151257242219048
+    ],
+    "events": 21,
+    "hours": 9.683111111111112
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.4130903749942626,
+    "interval_if_independent": [
+     0.11255322397114037,
+     1.0576754266148767
+    ],
+    "events": 4,
+    "hours": 9.683111111111112
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 1,
+    "uu": 19,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 4,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.41793401286308085
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.13316746638232332,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 16,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 478.80000000000047,
+   "entry_denials": 313,
+   "minimum_separation_m": 1.8726896554365642,
+   "mean_control_ms_per_controlled_step": 0.7139910573955704
+  },
+  {
+   "cell": {
+    "arm": "predictive-A4",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 48.41583333333325,
+   "peak_uas_occupancy": 65,
+   "uas_throughput_per_hour": 2700.0,
+   "controlled_throughput_per_hour": 1910.0,
+   "controlled_operations": 425,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 16.65381411764706,
+   "p95_delay_completed_s": 48.845399999999984,
+   "mean_delay_lower_bound_s": 16.65381411764706,
+   "mean_entry_wait_s": 0.1929705733130386,
+   "backlog_growth_max": 26,
+   "controlled_flight_hours": 7.4998888888888935,
+   "controlled_completed_in_window": 382,
+   "attributable_uas_los": {
+    "per_hour": 0.533341234684958,
+    "interval_if_independent": [
+     0.14531753600256206,
+     1.3655653873188227
+    ],
+    "events": 4,
+    "hours": 7.4998888888888935
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.49185788066527497
+    ],
+    "events": 0,
+    "hours": 7.4998888888888935
+   },
+   "attributable_uas_los_per_1000_completed": 10.471204188481675,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.533341234684958,
+    "interval_if_independent": [
+     0.14531753600256206,
+     1.3655653873188227
+    ],
+    "events": 4,
+    "hours": 7.4998888888888935
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.49185788066527497
+    ],
+    "events": 0,
+    "hours": 7.4998888888888935
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 3.2014320384171864,
+    "interval_if_independent": [
+     2.1752177468605502,
+     4.544177232301638
+    ],
+    "events": 31,
+    "hours": 9.683166666666661
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.4130880049570563,
+    "interval_if_independent": [
+     0.11255257821576903,
+     1.0576693583783234
+    ],
+    "events": 4,
+    "hours": 9.683166666666661
+   },
+   "los_by_category": {
+    "cc": 0,
+    "cu": 4,
+    "uu": 24,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 4,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 2,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 2,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.42717801457151616,
+    1.2605042016806751
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": 0.1398613312789819,
+   "daidalus_unresolved_fraction": null,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 23,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 478.6000000000008,
+   "entry_denials": 424,
+   "minimum_separation_m": 2.031945352096591,
+   "mean_control_ms_per_controlled_step": 0.6639675563838983
+  },
+  {
+   "cell": {
+    "arm": "daidalus",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.412777777777784,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1365.0,
+   "controlled_throughput_per_hour": 1245.0,
+   "controlled_operations": 250,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.11230799999999998,
+   "p95_delay_completed_s": 0.5995499999999999,
+   "mean_delay_lower_bound_s": 0.11230799999999998,
+   "mean_entry_wait_s": 0.01007751937984483,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 3.3389444444444516,
+   "controlled_completed_in_window": 249,
+   "attributable_uas_los": {
+    "per_hour": 0.5989916973095277,
+    "interval_if_independent": [
+     0.07254067342958304,
+     2.1637639643105935
+    ],
+    "events": 2,
+    "hours": 3.3389444444444516
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.104804082694975
+    ],
+    "events": 0,
+    "hours": 3.3389444444444516
+   },
+   "attributable_uas_los_per_1000_completed": 8.032128514056225,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.5989916973095277,
+    "interval_if_independent": [
+     0.07254067342958304,
+     2.1637639643105935
+    ],
+    "events": 2,
+    "hours": 3.3389444444444516
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.104804082694975
+    ],
+    "events": 0,
+    "hours": 3.3389444444444516
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.5431011073228131,
+    "interval_if_independent": [
+     0.06577206369054367,
+     1.9618679362011773
+    ],
+    "events": 2,
+    "hours": 3.6825555555555565
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0017172581548262
+    ],
+    "events": 0,
+    "hours": 3.6825555555555565
+   },
+   "los_by_category": {
+    "cc": 1,
+    "cu": 1,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.8399832003359927,
+    0.9603072983354631,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": 0.00800794176042356,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 227.4000000000011,
+   "entry_denials": 13,
+   "minimum_separation_m": 6.847196246149408,
+   "mean_control_ms_per_controlled_step": 0.9619433817981621
+  },
+  {
+   "cell": {
+    "arm": "daidalus",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.412777777777784,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1365.0,
+   "controlled_throughput_per_hour": 1245.0,
+   "controlled_operations": 250,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.019507999999999966,
+   "p95_delay_completed_s": 0.6065999999999998,
+   "mean_delay_lower_bound_s": 0.019507999999999966,
+   "mean_entry_wait_s": 0.01007751937984483,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 3.3391111111111185,
+   "controlled_completed_in_window": 249,
+   "attributable_uas_los": {
+    "per_hour": 0.5989617995474498,
+    "interval_if_independent": [
+     0.07253705267189155,
+     2.1636559633141053
+    ],
+    "events": 2,
+    "hours": 3.3391111111111185
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.1047489380748483
+    ],
+    "events": 0,
+    "hours": 3.3391111111111185
+   },
+   "attributable_uas_los_per_1000_completed": 8.032128514056225,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.5989617995474498,
+    "interval_if_independent": [
+     0.07253705267189155,
+     2.1636559633141053
+    ],
+    "events": 2,
+    "hours": 3.3391111111111185
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.1047489380748483
+    ],
+    "events": 0,
+    "hours": 3.3391111111111185
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.543101107322813,
+    "interval_if_independent": [
+     0.06577206369054366,
+     1.9618679362011766
+    ],
+    "events": 2,
+    "hours": 3.6825555555555574
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.001717258154826
+    ],
+    "events": 0,
+    "hours": 3.6825555555555574
+   },
+   "los_by_category": {
+    "cc": 1,
+    "cu": 1,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.839944003733084,
+    0.9603072983354631,
+    0.0
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": 0.008152714257307616,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 227.4000000000011,
+   "entry_denials": 13,
+   "minimum_separation_m": 6.847196246149408,
+   "mean_control_ms_per_controlled_step": 0.9472755550754353
+  },
+  {
+   "cell": {
+    "arm": "daidalus",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.420555555555556,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1365.0,
+   "controlled_throughput_per_hour": 1010.0,
+   "controlled_operations": 200,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.08216999999999999,
+   "p95_delay_completed_s": 1.0334499999999989,
+   "mean_delay_lower_bound_s": 0.08216999999999999,
+   "mean_entry_wait_s": 0.012435897435897255,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 2.6962777777777798,
+   "controlled_completed_in_window": 202,
+   "attributable_uas_los": {
+    "per_hour": 1.1126450044299747,
+    "interval_if_independent": [
+     0.2294541489732933,
+     3.251620861174082
+    ],
+    "events": 3,
+    "hours": 2.6962777777777798
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.368137765521414
+    ],
+    "events": 0,
+    "hours": 2.6962777777777798
+   },
+   "attributable_uas_los_per_1000_completed": 14.851485148514852,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 1.1126450044299747,
+    "interval_if_independent": [
+     0.2294541489732933,
+     3.251620861174082
+    ],
+    "events": 3,
+    "hours": 2.6962777777777798
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.368137765521414
+    ],
+    "events": 0,
+    "hours": 2.6962777777777798
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 1.0857435835570162,
+    "interval_if_independent": [
+     0.2958285840889386,
+     2.779934797437441
+    ],
+    "events": 4,
+    "hours": 3.684111111111113
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.0012942994548784
+    ],
+    "events": 0,
+    "hours": 3.684111111111113
+   },
+   "los_by_category": {
+    "cc": 1,
+    "cu": 2,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    1.1146891255883025,
+    1.1758557616932308,
+    1.0540493060842107
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": 0.01015228426395939,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 214.40000000000094,
+   "entry_denials": 13,
+   "minimum_separation_m": 6.847196246149408,
+   "mean_control_ms_per_controlled_step": 0.9575709035169465
+  },
+  {
+   "cell": {
+    "arm": "daidalus",
+    "demand.uas_per_hour": 1440,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 1375.0,
+   "mean_uas_occupancy": 18.462777777777784,
+   "peak_uas_occupancy": 28,
+   "uas_throughput_per_hour": 1365.0,
+   "controlled_throughput_per_hour": 1010.0,
+   "controlled_operations": 200,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.18117,
+   "p95_delay_completed_s": 0.972999999999999,
+   "mean_delay_lower_bound_s": 0.18117,
+   "mean_entry_wait_s": 0.012435897435897255,
+   "backlog_growth_max": 6,
+   "controlled_flight_hours": 2.7025555555555583,
+   "controlled_completed_in_window": 202,
+   "attributable_uas_los": {
+    "per_hour": 0.7400402910825138,
+    "interval_if_independent": [
+     0.08962231249828094,
+     2.673279982301343
+    ],
+    "events": 2,
+    "hours": 2.7025555555555583
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3649597124953905
+    ],
+    "events": 0,
+    "hours": 2.7025555555555583
+   },
+   "attributable_uas_los_per_1000_completed": 9.900990099009901,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.7400402910825138,
+    "interval_if_independent": [
+     0.08962231249828094,
+     2.673279982301343
+    ],
+    "events": 2,
+    "hours": 2.7025555555555583
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     1.3649597124953905
+    ],
+    "events": 0,
+    "hours": 2.7025555555555583
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 1.3540757680618656,
+    "interval_if_independent": [
+     0.43966471612751856,
+     3.1599611444619486
+    ],
+    "events": 5,
+    "hours": 3.6925555555555576
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.27081515361237307,
+    "interval_if_independent": [
+     0.0068564460583940496,
+     1.5088854607904807
+    ],
+    "events": 1,
+    "hours": 3.6925555555555576
+   },
+   "los_by_category": {
+    "cc": 1,
+    "cu": 1,
+    "uu": 3,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    1.1709601873536275,
+    1.0509721492380493
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": 0.01193297915815284,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 0,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 214.40000000000094,
+   "entry_denials": 13,
+   "minimum_separation_m": 3.2275773992618784,
+   "mean_control_ms_per_controlled_step": 0.9512486959540624
+  },
+  {
+   "cell": {
+    "arm": "daidalus",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 39.89777777777778,
+   "peak_uas_occupancy": 53,
+   "uas_throughput_per_hour": 2880.0,
+   "controlled_throughput_per_hour": 2640.0,
+   "controlled_operations": 536,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.9008097014925374,
+   "p95_delay_completed_s": 6.3085,
+   "mean_delay_lower_bound_s": 0.9008097014925374,
+   "mean_entry_wait_s": 0.10477491967994745,
+   "backlog_growth_max": 18,
+   "controlled_flight_hours": 7.29994444444444,
+   "controlled_completed_in_window": 528,
+   "attributable_uas_los": {
+    "per_hour": 0.1369873438915061,
+    "interval_if_independent": [
+     0.003468219268923047,
+     0.7632446292353838
+    ],
+    "events": 1,
+    "hours": 7.29994444444444
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.5053297983550169
+    ],
+    "events": 0,
+    "hours": 7.29994444444444
+   },
+   "attributable_uas_los_per_1000_completed": 1.893939393939394,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.1369873438915061,
+    "interval_if_independent": [
+     0.003468219268923047,
+     0.7632446292353838
+    ],
+    "events": 1,
+    "hours": 7.29994444444444
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.5053297983550169
+    ],
+    "events": 0,
+    "hours": 7.29994444444444
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.12532026289406265,
+    "interval_if_independent": [
+     0.003172834352492615,
+     0.6982398145044293
+    ],
+    "events": 1,
+    "hours": 7.979555555555553
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.4622913429740646
+    ],
+    "events": 0,
+    "hours": 7.979555555555553
+   },
+   "los_by_category": {
+    "cc": 1,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.0,
+    0.0,
+    0.4113533525298226
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": 0.017950590239746867,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 4,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 500.00000000000017,
+   "entry_denials": 292,
+   "minimum_separation_m": 4.759798144981482,
+   "mean_control_ms_per_controlled_step": 1.7157029913633732
+  },
+  {
+   "cell": {
+    "arm": "daidalus",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.1
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 39.88750000000005,
+   "peak_uas_occupancy": 53,
+   "uas_throughput_per_hour": 2885.0,
+   "controlled_throughput_per_hour": 2645.0,
+   "controlled_operations": 536,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.7922276119402984,
+   "p95_delay_completed_s": 5.99925,
+   "mean_delay_lower_bound_s": 0.7922276119402984,
+   "mean_entry_wait_s": 0.11450844127939079,
+   "backlog_growth_max": 18,
+   "controlled_flight_hours": 7.3001111111111054,
+   "controlled_completed_in_window": 529,
+   "attributable_uas_los": {
+    "per_hour": 0.8219052982450806,
+    "interval_if_independent": [
+     0.30162475885325557,
+     1.7889418152336833
+    ],
+    "events": 6,
+    "hours": 7.3001111111111054
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.5053182613206106
+    ],
+    "events": 0,
+    "hours": 7.3001111111111054
+   },
+   "attributable_uas_los_per_1000_completed": 11.342155009451796,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 0.8219052982450806,
+    "interval_if_independent": [
+     0.30162475885325557,
+     1.7889418152336833
+    ],
+    "events": 6,
+    "hours": 7.3001111111111054
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.5053182613206106
+    ],
+    "events": 0,
+    "hours": 7.3001111111111054
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 0.8774678784080231,
+    "interval_if_independent": [
+     0.3527875965552963,
+     1.80791919294295
+    ],
+    "events": 7,
+    "hours": 7.977499999999996
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.46241046118632867
+    ],
+    "events": 0,
+    "hours": 7.977499999999996
+   },
+   "los_by_category": {
+    "cc": 3,
+    "cu": 3,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 0,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    1.1943467586756022,
+    0.4245583413920811,
+    0.8220679576178287
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": 0.019176829268292683,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 7,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 499.8000000000002,
+   "entry_denials": 318,
+   "minimum_separation_m": 4.9048821946465395,
+   "mean_control_ms_per_controlled_step": 1.6981721661792957
+  },
+  {
+   "cell": {
+    "arm": "daidalus",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 1.5,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 39.898055555555636,
+   "peak_uas_occupancy": 53,
+   "uas_throughput_per_hour": 2890.0,
+   "controlled_throughput_per_hour": 2090.0,
+   "controlled_operations": 425,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 0.9276964705882352,
+   "p95_delay_completed_s": 7.314799999999947,
+   "mean_delay_lower_bound_s": 0.9276964705882352,
+   "mean_entry_wait_s": 0.11410578386605763,
+   "backlog_growth_max": 17,
+   "controlled_flight_hours": 5.799166666666674,
+   "controlled_completed_in_window": 418,
+   "attributable_uas_los": {
+    "per_hour": 1.2070699813191534,
+    "interval_if_independent": [
+     0.48530473657477297,
+     2.4870254970603285
+    ],
+    "events": 7,
+    "hours": 5.799166666666674
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6361050933951309
+    ],
+    "events": 0,
+    "hours": 5.799166666666674
+   },
+   "attributable_uas_los_per_1000_completed": 16.74641148325359,
+   "attributable_uas_contacts_per_1000_completed": 0.0,
+   "attributable_los": {
+    "per_hour": 1.2070699813191534,
+    "interval_if_independent": [
+     0.48530473657477297,
+     2.4870254970603285
+    ],
+    "events": 7,
+    "hours": 5.799166666666674
+   },
+   "attributable_contacts": {
+    "per_hour": 0.0,
+    "interval_if_independent": [
+     0.0,
+     0.6361050933951309
+    ],
+    "events": 0,
+    "hours": 5.799166666666674
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 3.383623540551266,
+    "interval_if_independent": [
+     2.2298292340323247,
+     4.922994604393958
+    ],
+    "events": 27,
+    "hours": 7.979611111111112
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.5012775615631505,
+    "interval_if_independent": [
+     0.13658126423087927,
+     1.2834696494347855
+    ],
+    "events": 4,
+    "hours": 7.979611111111112
+   },
+   "los_by_category": {
+    "cc": 1,
+    "cu": 6,
+    "uu": 19,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 4,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.4852667619227337,
+    0.0,
+    3.2366339007432265
+   ],
+   "runs_with_attributable_uas_contact": [
+    0,
+    3,
+    [
+     0.0,
+     0.7075982261787133
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": 0.020533567421090797,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 2,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 478.2000000000007,
+   "entry_denials": 256,
+   "minimum_separation_m": 1.8726896554365642,
+   "mean_control_ms_per_controlled_step": 1.617682225032289
+  },
+  {
+   "cell": {
+    "arm": "daidalus",
+    "demand.uas_per_hour": 2880,
+    "fleet.noncompliant_acceleration_mps2": 3.0,
+    "fleet.noncompliant_fraction": 0.3
+   },
+   "runs": 3,
+   "seeds": [
+    21,
+    22,
+    23
+   ],
+   "offered_uas_per_hour": 2945.0,
+   "mean_uas_occupancy": 40.03083333333336,
+   "peak_uas_occupancy": 53,
+   "uas_throughput_per_hour": 2885.0,
+   "controlled_throughput_per_hour": 2095.0,
+   "controlled_operations": 425,
+   "controlled_completion_fraction": 1.0,
+   "mean_delay_completed_s": 1.1818141176470587,
+   "p95_delay_completed_s": 8.686599999999995,
+   "mean_delay_lower_bound_s": 1.1818141176470587,
+   "mean_entry_wait_s": 0.10458565871807851,
+   "backlog_growth_max": 17,
+   "controlled_flight_hours": 5.822888888888906,
+   "controlled_completed_in_window": 419,
+   "attributable_uas_los": {
+    "per_hour": 1.5456245468076129,
+    "interval_if_independent": [
+     0.7067579642866256,
+     2.934076843544099
+    ],
+    "events": 9,
+    "hours": 5.822888888888906
+   },
+   "attributable_uas_contacts": {
+    "per_hour": 0.17173606075640144,
+    "interval_if_independent": [
+     0.004347980610208925,
+     0.9568520878992849
+    ],
+    "events": 1,
+    "hours": 5.822888888888906
+   },
+   "attributable_uas_los_per_1000_completed": 21.479713603818617,
+   "attributable_uas_contacts_per_1000_completed": 2.386634844868735,
+   "attributable_los": {
+    "per_hour": 1.5456245468076129,
+    "interval_if_independent": [
+     0.7067579642866256,
+     2.934076843544099
+    ],
+    "events": 9,
+    "hours": 5.822888888888906
+   },
+   "attributable_contacts": {
+    "per_hour": 0.17173606075640144,
+    "interval_if_independent": [
+     0.004347980610208925,
+     0.9568520878992849
+    ],
+    "events": 1,
+    "hours": 5.822888888888906
+   },
+   "all_los_per_uas_hour": {
+    "per_hour": 4.2467264816703745,
+    "interval_if_independent": [
+     2.940981541466638,
+     5.9343745981476435
+    ],
+    "events": 34,
+    "hours": 8.006166666666676
+   },
+   "all_contacts_per_uas_hour": {
+    "per_hour": 0.6245186002456432,
+    "interval_if_independent": [
+     0.2027794895749223,
+     1.4574180834759856
+    ],
+    "events": 5,
+    "hours": 8.006166666666676
+   },
+   "los_by_category": {
+    "cc": 1,
+    "cu": 8,
+    "uu": 24,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "contacts_by_category": {
+    "cc": 0,
+    "cu": 1,
+    "uu": 4,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "entry_phase_attributable_uas_los": 0,
+   "entry_phase_attributable_uas_contacts": 0,
+   "entry_phase_los_by_category": {
+    "cc": 0,
+    "cu": 0,
+    "uu": 1,
+    "cm": 0,
+    "um": 0,
+    "mm": 0
+   },
+   "per_run_attributable_uas_los_per_hour": [
+    0.9598976109214993,
+    1.581444385872425,
+    2.1711597611724196
+   ],
+   "runs_with_attributable_uas_contact": [
+    1,
+    3,
+    [
+     0.008403758659612664,
+     0.9057006759497539
+    ]
+   ],
+   "fallback_fraction": null,
+   "daidalus_unresolved_fraction": 0.023530753440279783,
+   "obstacle_contacts_controlled": 0,
+   "volume_exits_controlled": 5,
+   "kinematic_violation_steps": 0,
+   "unknown_traffic_seconds": 478.6000000000007,
+   "entry_denials": 234,
+   "minimum_separation_m": 2.031945352096591,
+   "mean_control_ms_per_controlled_step": 1.3466036596645843
+  }
+ ],
+ "units": {
+  "rates": "events per flight-hour inside the measurement window",
+  "run": "one fixed-duration simulation; the independent replicate",
+  "interval_if_independent": "exact Poisson interval assuming independent events; optimistic when events cluster within runs"
+ }
+}

@@ -6,10 +6,12 @@
 *.js text eol=lf
 *.html text eol=lf
 *.css text eol=lf
+*.cpp text eol=lf
+*.conf text eol=lf
+*.cff text eol=lf
 *.gz binary
 *.png binary
-models/*.json linguist-generated=true
-models/**/*.json linguist-generated=true
-experiments/**/summary.json linguist-generated=true
-experiments/**/runs.jsonl linguist-generated=true
+*.jpg binary
+experiments/**/*.json linguist-generated=true
 experiments/**/report.html linguist-generated=true
+experiments/**/REPORT.md linguist-generated=true

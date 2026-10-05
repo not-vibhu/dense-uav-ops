@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software or its evidence, please cite it as below."
+title: "dense-uav-ops: a research simulator for the safety–capacity frontier of dense, mixed-equipage UAS traffic"
+abstract: >-
+  Open research software that simulates dense low-altitude UAS traffic with mixed
+  equipage, delayed and bounded-error surveillance, and configurable assumptions
+  about other aircraft's motion, and measures attributable separation risk against
+  delivered service. Includes a NASA DAIDALUS baseline, optional learned rankers,
+  declared and resumable experiment campaigns, and validated historical evidence.
+  Results are simulation evidence under stated assumptions, not operational safety
+  or capacity claims.
+type: software
+authors:
+  - family-names: Tripathi
+    given-names: Vibhu
+repository-code: "https://github.com/not-vibhu/dense-uav-ops"
+license: MIT
+version: 0.5.0
+keywords:
+  - unmanned aircraft systems
+  - UTM
+  - tactical deconfliction
+  - airspace capacity
+  - detect and avoid
+  - simulation
+  - DAIDALUS

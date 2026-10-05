@@ -1,0 +1,4 @@
+Python 3.14.6
+NumPy 2.5.3
+Platform macOS-26.5.1-arm64-arm-64bit-Mach-O
+Source c3d4f662d87979c735ad3a81d0779a9124e3fa0df80897429f8f3e30b9cef660

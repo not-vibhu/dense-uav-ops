@@ -1,0 +1,15 @@
+{
+  "name": "degraded-surveillance",
+  "surveillance": {
+    "period_s": 1.0,
+    "latency_s": 1.5,
+    "loss": 0.15,
+    "position_error_m": 5.0,
+    "velocity_error_mps": 1.0,
+    "outage_start_s": 120.0,
+    "outage_duration_s": 8.0
+  },
+  "demand": {
+    "uas_per_hour": 1440.0
+  }
+}

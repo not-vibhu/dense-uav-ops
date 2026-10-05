@@ -1,0 +1,102 @@
+{
+  "name": "frontier-base",
+  "seed": 0,
+  "airspace": {
+    "side_m": 400.0,
+    "floor_m": 30.0,
+    "ceiling_m": 120.0,
+    "obstacles": []
+  },
+  "demand": {
+    "uas_per_hour": 720.0,
+    "arrivals": "poisson",
+    "pattern": "crossing",
+    "entry_inset_m": 15.0,
+    "exit_inset_m": 25.0,
+    "uas_altitude_min_m": null,
+    "uas_altitude_max_m": null,
+    "lane_half_width_m": null,
+    "manned_per_hour": 0.0,
+    "manned_altitude_m": 100.0,
+    "manned_lateral_offset_m": 0.0,
+    "manned_lookahead_s": 15.0
+  },
+  "fleet": {
+    "fixed_wing_fraction": 0.4,
+    "cooperative_fraction": 1.0,
+    "noncompliant_fraction": 0.0,
+    "noncompliant_acceleration_mps2": 2.0
+  },
+  "multirotor": {
+    "cruise_mps": 8.0,
+    "max_speed_mps": 12.0,
+    "acceleration_mps2": 4.0,
+    "radius_m": 1.2
+  },
+  "fixed_wing": {
+    "cruise_mps": 8.0,
+    "min_speed_mps": 6.0,
+    "max_speed_mps": 12.0,
+    "acceleration_mps2": 4.0,
+    "longitudinal_mps2": 2.0,
+    "lateral_mps2": 3.0,
+    "vertical_mps2": 2.0,
+    "turn_rate_dps": 35.0,
+    "climb_mps": 3.0,
+    "radius_m": 2.5
+  },
+  "manned": {
+    "speed_mps": 35.0,
+    "radius_m": 6.0
+  },
+  "surveillance": {
+    "period_s": 1.0,
+    "latency_s": 0.2,
+    "loss": 0.03,
+    "position_error_m": 1.5,
+    "velocity_error_mps": 0.3,
+    "bias_fraction": 0.6,
+    "range_m": 1000.0,
+    "manned_detection": 1.0,
+    "uncooperative_detection": 1.0,
+    "uncooperative_error_scale": 1.0,
+    "outage_start_s": 0.0,
+    "outage_duration_s": 0.0
+  },
+  "environment": {
+    "wind_mps2": 0.4,
+    "wind_period_s": 60.0,
+    "actuator_time_constant_s": 0.0,
+    "command_drop_probability": 0.0
+  },
+  "assumptions": {
+    "traffic_acceleration_mps2": 4.0,
+    "own_disturbance_mps2": 0.8,
+    "horizon_s": 2.4
+  },
+  "controller": {
+    "kind": "predictive",
+    "progress_weight": 1.0,
+    "effort_weight": 0.03,
+    "turn_weight": 0.1,
+    "vertical_weight": 0.1,
+    "checkpoint": "",
+    "daidalus_period_s": 1.0,
+    "daidalus_manifest": "artifacts/daidalus/manifest.json"
+  },
+  "admission": {
+    "occupancy_limit": 500,
+    "entry_check": "spacing"
+  },
+  "requirements": {
+    "separation_m": 10.0,
+    "manned_separation_m": 60.0,
+    "goal_radius_m": 3.0
+  },
+  "window": {
+    "dt_s": 0.2,
+    "warmup_s": 60.0,
+    "measurement_s": 240.0,
+    "drain_s": 90.0
+  }
+}

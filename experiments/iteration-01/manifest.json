@@ -1,0 +1,69 @@
+{
+  "scenarios": [
+    "head_on",
+    "crossing",
+    "overtaking",
+    "merge",
+    "corridor",
+    "vertical",
+    "urban",
+    "blocked_escape",
+    "overload",
+    "boundary_handoff",
+    "sudden_turn",
+    "stopped_legacy",
+    "packet_loss",
+    "stale_telemetry",
+    "network_outage",
+    "sensor_occlusion",
+    "gnss_bias",
+    "datum_error",
+    "identity_ambiguity",
+    "wind_gust",
+    "actuator_lag",
+    "bound_violation",
+    "solver_overrun",
+    "partial_commit"
+  ],
+  "counts": [
+    10,
+    50,
+    100,
+    200
+  ],
+  "fractions": [
+    0,
+    0.1,
+    0.5,
+    0.9,
+    1
+  ],
+  "controllers": [
+    "goal",
+    "repulsion",
+    "barrier",
+    "negotiated"
+  ],
+  "discovery_seeds": [
+    0,
+    1
+  ],
+  "holdout_seeds": [
+    1001,
+    1002
+  ],
+  "fixed_wing_fraction": 0.4,
+  "duration_s": 36,
+  "dt_s": 0.2,
+  "expected_runs": 7680,
+  "source_sha256": "a7037124a2ea7b9b8d89160d7a60be07f46adc9f0f828b66dab082e3fdc5ccf9",
+  "vehicle_model": "mixed-point-mass-v0",
+  "ranking_order": [
+    "participant collisions",
+    "participant obstacle collisions",
+    "participant volume exits",
+    "worst stratum collisions",
+    "separation exposure",
+    "mission completion"
+  ]
+}

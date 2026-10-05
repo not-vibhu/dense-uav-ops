@@ -1,0 +1,20 @@
+{
+  "name": "mixed-equipage-manned",
+  "demand": {
+    "uas_per_hour": 1440.0,
+    "manned_per_hour": 30.0,
+    "manned_altitude_m": 140.0,
+    "manned_lookahead_s": 20.0
+  },
+  "airspace": {
+    "ceiling_m": 120.0
+  },
+  "fleet": {
+    "cooperative_fraction": 0.5,
+    "noncompliant_fraction": 0.05,
+    "noncompliant_acceleration_mps2": 2.0
+  },
+  "requirements": {
+    "manned_separation_m": 60.0
+  }
+}

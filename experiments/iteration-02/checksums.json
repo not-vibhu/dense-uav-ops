@@ -1,0 +1,16 @@
+{
+  "ADDITIONS.md": "e247bac4cf2bf822639f09526dcc47a225a00fe659649b52f09a1c35917e998f",
+  "README.md": "b23dfb86e6cd48a25ea74dde0a240928d7221ce93872c8f77e9b31be7938b911",
+  "catalog-manifest.json": "efd6c621864cfb764d24cfb9e14955a96292eb842f92b38b6ca91f1b03d3c0ce",
+  "catalog-report.html": "340c02150eaa0af72aff27ac0fc82ff6dab9365eb02e49a543dbb1ceadecbc88",
+  "catalog-runs.jsonl.gz": "5a09f24a9eaba9548a5cb9a9424e7b20f7a6f07e91ddfb47defff7441ae41557",
+  "catalog-summary.json": "28922d39027a5edb2f13493b1bb164aa4f8a9045f57f6afb13aad44923b3a470",
+  "environment.txt": "34976325bae8a05a271b388111a1a7d138b4853b8d8f3aa362e1e6dec9f43a6b",
+  "preferences.json": "18e49d4f018054dab45560c9de0eb6e6bd91c7b20dca00eefeba3fa75befd326",
+  "preferences.training.json.gz": "dff17332ecb76f448f516222c47d1a240e951c6f8d591d2c6f4d25da6e9e792f",
+  "scale-manifest.json": "2ea7df560a74713a993c96cd55729460cfc615a1e3c7b014a9663e1b35b1c5c6",
+  "scale-report.html": "f1817da01ec89e21ab641bfab730da5341f59df48003614d93a65f6ca3f2d7cd",
+  "scale-runs.jsonl.gz": "c7ecbac1efa1a2dda27eb59d66dfa6f9e8a58fa5e0084a28c43e6895920992da",
+  "scale-summary.json": "a0f6718b5e82545f8ef2072f26cf5eedd9d5cfabaee1c66cb88d12bb2b4da30e",
+  "source-snapshot.tar.gz": "4dcdd8acdb28121f9ec9e7d47244f6e193fd30e92b9f8b9e08cd2710d854b231"
+}
